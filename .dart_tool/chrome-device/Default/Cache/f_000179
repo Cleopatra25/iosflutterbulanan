@@ -1,0 +1,401 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_inspector.dart', 'packages/bulanan/models/ModelCart.dart', 'packages/bulanan/size_config.dart', 'packages/flutter/src/material/card.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/cached_network_image/src/cached_image_widget.dart', 'packages/flutter/src/material/progress_indicator.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/painting/placeholder_span.dart', 'packages/bulanan/constants.dart', 'packages/intl/src/intl/number_parser.dart', 'packages/bulanan/screens/cart/components/childcart.dart'], (function load__packages__bulanan__screens__cart__cardrow_dart(dart_sdk, packages__flutter__src__widgets__widget_inspector$46dart, packages__bulanan__models__ModelCart$46dart, packages__bulanan__size_config$46dart, packages__flutter__src__material__card$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__alignment$46dart, packages__cached_network_image__src__cached_image_widget$46dart, packages__flutter__src__material__progress_indicator$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__painting__placeholder_span$46dart, packages__bulanan__constants$46dart, packages__intl__src__intl__number_parser$46dart, packages__bulanan__screens__cart__components__childcart$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__widget_inspector;
+  const basic = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__text;
+  const ModelCart = packages__bulanan__models__ModelCart$46dart.models__ModelCart;
+  const size_config = packages__bulanan__size_config$46dart.size_config;
+  const card = packages__flutter__src__material__card$46dart.src__material__card;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const cached_image_widget = packages__cached_network_image__src__cached_image_widget$46dart.src__cached_image_widget;
+  const progress_indicator = packages__flutter__src__material__progress_indicator$46dart.src__material__progress_indicator;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const text_painter = packages__flutter__src__painting__placeholder_span$46dart.src__painting__text_painter;
+  const text_style = packages__flutter__src__painting__placeholder_span$46dart.src__painting__text_style;
+  const constants = packages__bulanan__constants$46dart.constants;
+  const number_format = packages__intl__src__intl__number_parser$46dart.src__intl__number_format;
+  const childcart = packages__bulanan__screens__cart__components__childcart$46dart.screens__cart__components__childcart;
+  var cardrow = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $toString = dartx.toString;
+  var $addAll = dartx.addAll;
+  var $removeAt = dartx.removeAt;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    CircularProgressIndicatorL: () => (T.CircularProgressIndicatorL = dart.constFn(dart.legacy(progress_indicator.CircularProgressIndicator)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    BuildContextLAndStringLToCircularProgressIndicatorL: () => (T.BuildContextLAndStringLToCircularProgressIndicatorL = dart.constFn(dart.fnType(T.CircularProgressIndicatorL(), [T.BuildContextL(), T.StringL()])))(),
+    IconL: () => (T.IconL = dart.constFn(dart.legacy(icon.Icon)))(),
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))(),
+    BuildContextLAndStringLAndObjectLToIconL: () => (T.BuildContextLAndStringLAndObjectLToIconL = dart.constFn(dart.fnType(T.IconL(), [T.BuildContextL(), T.StringL(), T.ObjectL()])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 14,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CircularProgressIndicator",
+        [_Location_column]: 33,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Icon",
+        [_Location_column]: 33,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CachedNetworkImage",
+        [_Location_column]: 30,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 21,
+        [_Location_line]: 69,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 36,
+        [_Location_line]: 86,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 27,
+        [_Location_line]: 84,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 31,
+        [_Location_line]: 109,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 31,
+        [_Location_line]: 119,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 31,
+        [_Location_line]: 129,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 29,
+        [_Location_line]: 140,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 29,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 30,
+        [_Location_line]: 82,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Padding",
+        [_Location_column]: 21,
+        [_Location_line]: 80,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 17,
+        [_Location_line]: 67,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Childcart",
+        [_Location_column]: 26,
+        [_Location_line]: 167,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Align",
+        [_Location_column]: 17,
+        [_Location_line]: 165,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Stack",
+        [_Location_column]: 20,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "InkWell",
+        [_Location_column]: 18,
+        [_Location_line]: 62,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Card",
+        [_Location_column]: 16,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 14,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cart/cardrow.dart"
+      });
+    }
+  }, false);
+  var C = Array(21).fill(void 0);
+  var I = ["package:bulanan/screens/cart/cardrow.dart"];
+  var idMember$ = dart.privateName(cardrow, "Cartrow.idMember");
+  var idCity$ = dart.privateName(cardrow, "Cartrow.idCity");
+  var idDevice$ = dart.privateName(cardrow, "Cartrow.idDevice");
+  var authHeader$ = dart.privateName(cardrow, "Cartrow.authHeader");
+  var position$ = dart.privateName(cardrow, "Cartrow.position");
+  var models$ = dart.privateName(cardrow, "Cartrow.models");
+  var updatecarts$ = dart.privateName(cardrow, "Cartrow.updatecarts");
+  cardrow.Cartrow = class Cartrow extends framework.StatefulWidget {
+    get idMember() {
+      return this[idMember$];
+    }
+    set idMember(value) {
+      super.idMember = value;
+    }
+    get idCity() {
+      return this[idCity$];
+    }
+    set idCity(value) {
+      super.idCity = value;
+    }
+    get idDevice() {
+      return this[idDevice$];
+    }
+    set idDevice(value) {
+      super.idDevice = value;
+    }
+    get authHeader() {
+      return this[authHeader$];
+    }
+    set authHeader(value) {
+      super.authHeader = value;
+    }
+    get position() {
+      return this[position$];
+    }
+    set position(value) {
+      super.position = value;
+    }
+    get models() {
+      return this[models$];
+    }
+    set models(value) {
+      this[models$] = value;
+    }
+    get updatecarts() {
+      return this[updatecarts$];
+    }
+    set updatecarts(value) {
+      super.updatecarts = value;
+    }
+    createState() {
+      return new cardrow._CartrowState.new();
+    }
+  };
+  (cardrow.Cartrow.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let idMember = opts && 'idMember' in opts ? opts.idMember : null;
+    let idCity = opts && 'idCity' in opts ? opts.idCity : null;
+    let idDevice = opts && 'idDevice' in opts ? opts.idDevice : null;
+    let authHeader = opts && 'authHeader' in opts ? opts.authHeader : null;
+    let updatecarts = opts && 'updatecarts' in opts ? opts.updatecarts : null;
+    let position = opts && 'position' in opts ? opts.position : null;
+    let models = opts && 'models' in opts ? opts.models : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[idMember$] = idMember;
+    this[idCity$] = idCity;
+    this[idDevice$] = idDevice;
+    this[authHeader$] = authHeader;
+    this[updatecarts$] = updatecarts;
+    this[position$] = position;
+    this[models$] = models;
+    cardrow.Cartrow.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = cardrow.Cartrow.prototype;
+  dart.addTypeTests(cardrow.Cartrow);
+  dart.addTypeCaches(cardrow.Cartrow);
+  dart.setMethodSignature(cardrow.Cartrow, () => ({
+    __proto__: dart.getMethods(cardrow.Cartrow.__proto__),
+    createState: dart.fnType(dart.legacy(cardrow._CartrowState), [])
+  }));
+  dart.setLibraryUri(cardrow.Cartrow, I[0]);
+  dart.setFieldSignature(cardrow.Cartrow, () => ({
+    __proto__: dart.getFields(cardrow.Cartrow.__proto__),
+    idMember: dart.finalFieldType(dart.legacy(core.String)),
+    idCity: dart.finalFieldType(dart.legacy(core.String)),
+    idDevice: dart.finalFieldType(dart.legacy(core.String)),
+    authHeader: dart.finalFieldType(dart.legacy(core.String)),
+    position: dart.finalFieldType(dart.legacy(core.int)),
+    models: dart.fieldType(dart.legacy(ModelCart.ModelCart)),
+    updatecarts: dart.finalFieldType(dart.legacy(core.Function))
+  }));
+  var _containercart = dart.privateName(cardrow, "_containercart");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  cardrow._CartrowState = class _CartrowState extends framework.State$(dart.legacy(cardrow.Cartrow)) {
+    build(context) {
+      return this[_containercart](context, this.widget.position, this.widget.models);
+    }
+    [_containercart](context, index, modelproduct) {
+      if (!dart.test(this.active)) {
+        return new container.Container.new({width: 0.0, height: 0.0, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0});
+      } else {
+        return new container.Container.new({width: 1 / 0, height: size_config.getProportionateScreenWidth(130.0), child: new card.Card.new({margin: new edge_insets.EdgeInsets.all(size_config.getProportionateScreenWidth(8.0)), child: new ink_well.InkWell.new({splashColor: colors.Colors.blue.withAlpha(30), child: new basic.Stack.new({alignment: alignment.Alignment.topRight, children: T.JSArrayOfWidgetL().of([new basic.Row.new({children: T.JSArrayOfWidgetL().of([new container.Container.new({width: size_config.getProportionateScreenHeight(100.0), height: size_config.getProportionateScreenHeight(90.0), child: new cached_image_widget.CachedNetworkImage.new({imageUrl: modelproduct.data.product[$_get](index).productPhoto, placeholder: dart.fn((context, url) => new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), T.BuildContextLAndStringLToCircularProgressIndicatorL()), errorWidget: dart.fn((context, url, error) => new icon.Icon.new(icons.Icons.error, {$creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), T.BuildContextLAndStringLAndObjectLToIconL()), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), new basic.Padding.new({padding: new edge_insets.EdgeInsets.all(size_config.getProportionateScreenWidth(10.0)), child: new basic.Column.new({children: (() => {
+                            let t0 = T.JSArrayOfWidgetL().of([new container.Container.new({width: size_config.getProportionateScreenWidth(200.0), child: new text.Text.new(modelproduct.data.product[$_get](index).productName, {maxLines: 2, textAlign: ui.TextAlign.left, overflow: text_painter.TextOverflow.ellipsis, style: new text_style.TextStyle.new({color: constants.kTextColor, fontSize: size_config.getProportionateScreenHeight(10.0), fontWeight: ui.FontWeight.bold}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6})]);
+                            if (dart.toString(modelproduct.data.product[$_get](index).productDiscount) === "0" || modelproduct.data.product[$_get](index).productDiscount == null)
+                              t0[$addAll]((() => {
+                                let t1 = T.JSArrayOfWidgetL().of([]);
+                                if (dart.toString(modelproduct.data.product[$_get](index).promoPrice) === "0" || modelproduct.data.product[$_get](index).promoPrice == null)
+                                  t1[$addAll](T.JSArrayOfWidgetL().of([new container.Container.new({width: size_config.getProportionateScreenWidth(200.0), child: constants.buildtextnormal(number_format.NumberFormat.currency({locale: "id", name: "Rp "}).format(core.int.parse(modelproduct.data.product[$_get](index).productPrice)), constants.kTextColor, false), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7})]));
+                                else
+                                  t1[$addAll](T.JSArrayOfWidgetL().of([new container.Container.new({width: size_config.getProportionateScreenWidth(200.0), child: constants.buildtextnormal(number_format.NumberFormat.currency({locale: "id", name: "Rp "}).format(core.int.parse(modelproduct.data.product[$_get](index).productPrice)), constants.kTextColor, true), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), new container.Container.new({width: size_config.getProportionateScreenWidth(200.0), child: constants.buildtextbold(number_format.NumberFormat.currency({locale: "id", name: "Rp "}).format(core.int.parse(modelproduct.data.product[$_get](index).promoPrice)), constants.accentColor), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9})]));
+                                return t1;
+                              })());
+                            else
+                              t0[$addAll](T.JSArrayOfWidgetL().of([new container.Container.new({width: size_config.getProportionateScreenWidth(200.0), child: constants.buildtextnormal(number_format.NumberFormat.currency({locale: "id", name: "Rp "}).format(core.int.parse(modelproduct.data.product[$_get](index).productPrice)), constants.kTextColor, true), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), new container.Container.new({width: size_config.getProportionateScreenWidth(200.0), child: constants.buildtextbold(number_format.NumberFormat.currency({locale: "id", name: "Rp "}).format(core.int.parse(modelproduct.data.product[$_get](index).productDiscount)), constants.accentColor), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11})]));
+                            return t0;
+                          })(), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13})]), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), new basic.Align.new({alignment: alignment.Alignment.bottomRight, child: new childcart.Childcart.new({quantitys: core.int.parse(modelproduct.data.product[$_get](index).quantity), idProduk: modelproduct.data.product[$_get](index).idProduct, position: index, authHeaders: this.widget.authHeader, idDevices: this.widget.idDevice, idCitys: this.widget.idCity, updatecarts: this.widget.updatecarts, removedata: dart.bind(this, 'removedata'), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16})]), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), onTap: dart.fn(() => {
+                core.print("Card tapped.");
+              }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20});
+      }
+    }
+    removedata(position) {
+      this.setState(dart.fn(() => {
+        this.widget.models.data.product[$removeAt](position);
+        this.active = false;
+      }, T.VoidToNull()));
+    }
+  };
+  (cardrow._CartrowState.new = function() {
+    this.active = true;
+    cardrow._CartrowState.__proto__.new.call(this);
+    ;
+  }).prototype = cardrow._CartrowState.prototype;
+  dart.addTypeTests(cardrow._CartrowState);
+  dart.addTypeCaches(cardrow._CartrowState);
+  dart.setMethodSignature(cardrow._CartrowState, () => ({
+    __proto__: dart.getMethods(cardrow._CartrowState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    [_containercart]: dart.fnType(dart.legacy(container.Container), [dart.legacy(framework.BuildContext), dart.legacy(core.int), dart.legacy(ModelCart.ModelCart)]),
+    removedata: dart.fnType(dart.void, [dart.legacy(core.int)])
+  }));
+  dart.setLibraryUri(cardrow._CartrowState, I[0]);
+  dart.setFieldSignature(cardrow._CartrowState, () => ({
+    __proto__: dart.getFields(cardrow._CartrowState.__proto__),
+    active: dart.fieldType(dart.legacy(core.bool))
+  }));
+  dart.trackLibraries("packages/bulanan/screens/cart/cardrow.dart", {
+    "package:bulanan/screens/cart/cardrow.dart": cardrow
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["cardrow.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../packages/bulanan/screens/cart/cardrow.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__cart__cardrow: cardrow
+  };
+}));
+
+//# sourceMappingURL=cardrow.dart.lib.js.map

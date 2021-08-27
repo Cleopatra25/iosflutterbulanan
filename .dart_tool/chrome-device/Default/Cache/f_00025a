@@ -1,0 +1,1020 @@
+define(['dart_sdk'], (function load__packages__bulanan__models__ModelDetailTransaksi_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var ModelDetailTransaksi = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $_set = dartx._set;
+  var $add = dartx.add;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    MapOfStringL$dynamic: () => (T.MapOfStringL$dynamic = dart.constFn(core.Map$(T.StringL(), dart.dynamic)))(),
+    MapLOfStringL$dynamic: () => (T.MapLOfStringL$dynamic = dart.constFn(dart.legacy(T.MapOfStringL$dynamic())))(),
+    LinkedMapOfStringL$dynamic: () => (T.LinkedMapOfStringL$dynamic = dart.constFn(_js_helper.LinkedMap$(T.StringL(), dart.dynamic)))(),
+    ProductL: () => (T.ProductL = dart.constFn(dart.legacy(ModelDetailTransaksi.Product)))(),
+    JSArrayOfProductL: () => (T.JSArrayOfProductL = dart.constFn(_interceptors.JSArray$(T.ProductL())))(),
+    dynamicToNull: () => (T.dynamicToNull = dart.constFn(dart.fnType(core.Null, [dart.dynamic])))(),
+    ProductLToMapLOfStringL$dynamic: () => (T.ProductLToMapLOfStringL$dynamic = dart.constFn(dart.fnType(T.MapLOfStringL$dynamic(), [T.ProductL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var I = ["package:bulanan/models/ModelDetailTransaksi.dart"];
+  var status$ = dart.privateName(ModelDetailTransaksi, "ModelDetailTransaksi.status");
+  var message$ = dart.privateName(ModelDetailTransaksi, "ModelDetailTransaksi.message");
+  var count$ = dart.privateName(ModelDetailTransaksi, "ModelDetailTransaksi.count");
+  var data$ = dart.privateName(ModelDetailTransaksi, "ModelDetailTransaksi.data");
+  ModelDetailTransaksi.ModelDetailTransaksi = class ModelDetailTransaksi extends core.Object {
+    get status() {
+      return this[status$];
+    }
+    set status(value) {
+      this[status$] = value;
+    }
+    get message() {
+      return this[message$];
+    }
+    set message(value) {
+      this[message$] = value;
+    }
+    get count() {
+      return this[count$];
+    }
+    set count(value) {
+      this[count$] = value;
+    }
+    get data() {
+      return this[data$];
+    }
+    set data(value) {
+      this[data$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("status", this.status);
+      data[$_set]("message", this.message);
+      data[$_set]("count", this.count);
+      if (this.data != null) {
+        data[$_set]("data", this.data.toJson());
+      }
+      return data;
+    }
+  };
+  (ModelDetailTransaksi.ModelDetailTransaksi.new = function(opts) {
+    let status = opts && 'status' in opts ? opts.status : null;
+    let message = opts && 'message' in opts ? opts.message : null;
+    let count = opts && 'count' in opts ? opts.count : null;
+    let data = opts && 'data' in opts ? opts.data : null;
+    this[status$] = status;
+    this[message$] = message;
+    this[count$] = count;
+    this[data$] = data;
+    ;
+  }).prototype = ModelDetailTransaksi.ModelDetailTransaksi.prototype;
+  (ModelDetailTransaksi.ModelDetailTransaksi.fromJson = function(json) {
+    this[data$] = null;
+    this[count$] = null;
+    this[message$] = null;
+    this[status$] = null;
+    this.status = T.boolL().as(json[$_get]("status"));
+    this.message = T.StringL().as(json[$_get]("message"));
+    this.count = T.intL().as(json[$_get]("count"));
+    this.data = json[$_get]("data") != null ? new ModelDetailTransaksi.Data.fromJson(T.MapLOfStringL$dynamic().as(json[$_get]("data"))) : null;
+  }).prototype = ModelDetailTransaksi.ModelDetailTransaksi.prototype;
+  dart.addTypeTests(ModelDetailTransaksi.ModelDetailTransaksi);
+  dart.addTypeCaches(ModelDetailTransaksi.ModelDetailTransaksi);
+  dart.setMethodSignature(ModelDetailTransaksi.ModelDetailTransaksi, () => ({
+    __proto__: dart.getMethods(ModelDetailTransaksi.ModelDetailTransaksi.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailTransaksi.ModelDetailTransaksi, I[0]);
+  dart.setFieldSignature(ModelDetailTransaksi.ModelDetailTransaksi, () => ({
+    __proto__: dart.getFields(ModelDetailTransaksi.ModelDetailTransaksi.__proto__),
+    status: dart.fieldType(dart.legacy(core.bool)),
+    message: dart.fieldType(dart.legacy(core.String)),
+    count: dart.fieldType(dart.legacy(core.int)),
+    data: dart.fieldType(dart.legacy(ModelDetailTransaksi.Data))
+  }));
+  var transaction$ = dart.privateName(ModelDetailTransaksi, "Data.transaction");
+  var product$ = dart.privateName(ModelDetailTransaksi, "Data.product");
+  ModelDetailTransaksi.Data = class Data extends core.Object {
+    get transaction() {
+      return this[transaction$];
+    }
+    set transaction(value) {
+      this[transaction$] = value;
+    }
+    get product() {
+      return this[product$];
+    }
+    set product(value) {
+      this[product$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      if (this.transaction != null) {
+        data[$_set]("transaction", this.transaction.toJson());
+      }
+      if (this.product != null) {
+        data[$_set]("product", this.product[$map](T.MapLOfStringL$dynamic(), dart.fn(v => v.toJson(), T.ProductLToMapLOfStringL$dynamic()))[$toList]());
+      }
+      return data;
+    }
+  };
+  (ModelDetailTransaksi.Data.new = function(opts) {
+    let transaction = opts && 'transaction' in opts ? opts.transaction : null;
+    let product = opts && 'product' in opts ? opts.product : null;
+    this[transaction$] = transaction;
+    this[product$] = product;
+    ;
+  }).prototype = ModelDetailTransaksi.Data.prototype;
+  (ModelDetailTransaksi.Data.fromJson = function(json) {
+    this[product$] = null;
+    this[transaction$] = null;
+    this.transaction = json[$_get]("transaction") != null ? new ModelDetailTransaksi.Transaction.fromJson(T.MapLOfStringL$dynamic().as(json[$_get]("transaction"))) : null;
+    if (json[$_get]("product") != null) {
+      this.product = T.JSArrayOfProductL().of([]);
+      dart.dsend(json[$_get]("product"), 'forEach', [dart.fn(v => {
+          this.product[$add](new ModelDetailTransaksi.Product.fromJson(T.MapLOfStringL$dynamic().as(v)));
+        }, T.dynamicToNull())]);
+    }
+  }).prototype = ModelDetailTransaksi.Data.prototype;
+  dart.addTypeTests(ModelDetailTransaksi.Data);
+  dart.addTypeCaches(ModelDetailTransaksi.Data);
+  dart.setMethodSignature(ModelDetailTransaksi.Data, () => ({
+    __proto__: dart.getMethods(ModelDetailTransaksi.Data.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailTransaksi.Data, I[0]);
+  dart.setFieldSignature(ModelDetailTransaksi.Data, () => ({
+    __proto__: dart.getFields(ModelDetailTransaksi.Data.__proto__),
+    transaction: dart.fieldType(dart.legacy(ModelDetailTransaksi.Transaction)),
+    product: dart.fieldType(dart.legacy(core.List$(dart.legacy(ModelDetailTransaksi.Product))))
+  }));
+  var idTransaction$ = dart.privateName(ModelDetailTransaksi, "Transaction.idTransaction");
+  var transactionCode$ = dart.privateName(ModelDetailTransaksi, "Transaction.transactionCode");
+  var transactionType$ = dart.privateName(ModelDetailTransaksi, "Transaction.transactionType");
+  var idMember$ = dart.privateName(ModelDetailTransaksi, "Transaction.idMember");
+  var paymentGateway$ = dart.privateName(ModelDetailTransaksi, "Transaction.paymentGateway");
+  var paymentMethod$ = dart.privateName(ModelDetailTransaksi, "Transaction.paymentMethod");
+  var paymentChannel$ = dart.privateName(ModelDetailTransaksi, "Transaction.paymentChannel");
+  var paymentStatus$ = dart.privateName(ModelDetailTransaksi, "Transaction.paymentStatus");
+  var paymentDate$ = dart.privateName(ModelDetailTransaksi, "Transaction.paymentDate");
+  var idCountry$ = dart.privateName(ModelDetailTransaksi, "Transaction.idCountry");
+  var idAddress$ = dart.privateName(ModelDetailTransaksi, "Transaction.idAddress");
+  var idCity$ = dart.privateName(ModelDetailTransaksi, "Transaction.idCity");
+  var idDriver$ = dart.privateName(ModelDetailTransaksi, "Transaction.idDriver");
+  var statusDriver$ = dart.privateName(ModelDetailTransaksi, "Transaction.statusDriver");
+  var note$ = dart.privateName(ModelDetailTransaksi, "Transaction.note");
+  var deliveryPrice$ = dart.privateName(ModelDetailTransaksi, "Transaction.deliveryPrice");
+  var couponCode$ = dart.privateName(ModelDetailTransaksi, "Transaction.couponCode");
+  var paymentProof$ = dart.privateName(ModelDetailTransaksi, "Transaction.paymentProof");
+  var deliveryMethod$ = dart.privateName(ModelDetailTransaksi, "Transaction.deliveryMethod");
+  var totalNominal$ = dart.privateName(ModelDetailTransaksi, "Transaction.totalNominal");
+  var grandTotal$ = dart.privateName(ModelDetailTransaksi, "Transaction.grandTotal");
+  var grandTotalUnique$ = dart.privateName(ModelDetailTransaksi, "Transaction.grandTotalUnique");
+  var status$0 = dart.privateName(ModelDetailTransaksi, "Transaction.status");
+  var emergency$ = dart.privateName(ModelDetailTransaksi, "Transaction.emergency");
+  var jadwal$ = dart.privateName(ModelDetailTransaksi, "Transaction.jadwal");
+  var statusPrint$ = dart.privateName(ModelDetailTransaksi, "Transaction.statusPrint");
+  var idSuratJalan$ = dart.privateName(ModelDetailTransaksi, "Transaction.idSuratJalan");
+  var totalUangDiterima$ = dart.privateName(ModelDetailTransaksi, "Transaction.totalUangDiterima");
+  var createdDate$ = dart.privateName(ModelDetailTransaksi, "Transaction.createdDate");
+  var updatedDate$ = dart.privateName(ModelDetailTransaksi, "Transaction.updatedDate");
+  var address$ = dart.privateName(ModelDetailTransaksi, "Transaction.address");
+  ModelDetailTransaksi.Transaction = class Transaction extends core.Object {
+    get idTransaction() {
+      return this[idTransaction$];
+    }
+    set idTransaction(value) {
+      this[idTransaction$] = value;
+    }
+    get transactionCode() {
+      return this[transactionCode$];
+    }
+    set transactionCode(value) {
+      this[transactionCode$] = value;
+    }
+    get transactionType() {
+      return this[transactionType$];
+    }
+    set transactionType(value) {
+      this[transactionType$] = value;
+    }
+    get idMember() {
+      return this[idMember$];
+    }
+    set idMember(value) {
+      this[idMember$] = value;
+    }
+    get paymentGateway() {
+      return this[paymentGateway$];
+    }
+    set paymentGateway(value) {
+      this[paymentGateway$] = value;
+    }
+    get paymentMethod() {
+      return this[paymentMethod$];
+    }
+    set paymentMethod(value) {
+      this[paymentMethod$] = value;
+    }
+    get paymentChannel() {
+      return this[paymentChannel$];
+    }
+    set paymentChannel(value) {
+      this[paymentChannel$] = value;
+    }
+    get paymentStatus() {
+      return this[paymentStatus$];
+    }
+    set paymentStatus(value) {
+      this[paymentStatus$] = value;
+    }
+    get paymentDate() {
+      return this[paymentDate$];
+    }
+    set paymentDate(value) {
+      this[paymentDate$] = value;
+    }
+    get idCountry() {
+      return this[idCountry$];
+    }
+    set idCountry(value) {
+      this[idCountry$] = value;
+    }
+    get idAddress() {
+      return this[idAddress$];
+    }
+    set idAddress(value) {
+      this[idAddress$] = value;
+    }
+    get idCity() {
+      return this[idCity$];
+    }
+    set idCity(value) {
+      this[idCity$] = value;
+    }
+    get idDriver() {
+      return this[idDriver$];
+    }
+    set idDriver(value) {
+      this[idDriver$] = value;
+    }
+    get statusDriver() {
+      return this[statusDriver$];
+    }
+    set statusDriver(value) {
+      this[statusDriver$] = value;
+    }
+    get note() {
+      return this[note$];
+    }
+    set note(value) {
+      this[note$] = value;
+    }
+    get deliveryPrice() {
+      return this[deliveryPrice$];
+    }
+    set deliveryPrice(value) {
+      this[deliveryPrice$] = value;
+    }
+    get couponCode() {
+      return this[couponCode$];
+    }
+    set couponCode(value) {
+      this[couponCode$] = value;
+    }
+    get paymentProof() {
+      return this[paymentProof$];
+    }
+    set paymentProof(value) {
+      this[paymentProof$] = value;
+    }
+    get deliveryMethod() {
+      return this[deliveryMethod$];
+    }
+    set deliveryMethod(value) {
+      this[deliveryMethod$] = value;
+    }
+    get totalNominal() {
+      return this[totalNominal$];
+    }
+    set totalNominal(value) {
+      this[totalNominal$] = value;
+    }
+    get grandTotal() {
+      return this[grandTotal$];
+    }
+    set grandTotal(value) {
+      this[grandTotal$] = value;
+    }
+    get grandTotalUnique() {
+      return this[grandTotalUnique$];
+    }
+    set grandTotalUnique(value) {
+      this[grandTotalUnique$] = value;
+    }
+    get status() {
+      return this[status$0];
+    }
+    set status(value) {
+      this[status$0] = value;
+    }
+    get emergency() {
+      return this[emergency$];
+    }
+    set emergency(value) {
+      this[emergency$] = value;
+    }
+    get jadwal() {
+      return this[jadwal$];
+    }
+    set jadwal(value) {
+      this[jadwal$] = value;
+    }
+    get statusPrint() {
+      return this[statusPrint$];
+    }
+    set statusPrint(value) {
+      this[statusPrint$] = value;
+    }
+    get idSuratJalan() {
+      return this[idSuratJalan$];
+    }
+    set idSuratJalan(value) {
+      this[idSuratJalan$] = value;
+    }
+    get totalUangDiterima() {
+      return this[totalUangDiterima$];
+    }
+    set totalUangDiterima(value) {
+      this[totalUangDiterima$] = value;
+    }
+    get createdDate() {
+      return this[createdDate$];
+    }
+    set createdDate(value) {
+      this[createdDate$] = value;
+    }
+    get updatedDate() {
+      return this[updatedDate$];
+    }
+    set updatedDate(value) {
+      this[updatedDate$] = value;
+    }
+    get address() {
+      return this[address$];
+    }
+    set address(value) {
+      this[address$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("id_transaction", this.idTransaction);
+      data[$_set]("transaction_code", this.transactionCode);
+      data[$_set]("transaction_type", this.transactionType);
+      data[$_set]("id_member", this.idMember);
+      data[$_set]("payment_gateway", this.paymentGateway);
+      data[$_set]("payment_method", this.paymentMethod);
+      data[$_set]("payment_channel", this.paymentChannel);
+      data[$_set]("payment_status", this.paymentStatus);
+      data[$_set]("payment_date", this.paymentDate);
+      data[$_set]("id_country", this.idCountry);
+      data[$_set]("id_address", this.idAddress);
+      data[$_set]("id_city", this.idCity);
+      data[$_set]("id_driver", this.idDriver);
+      data[$_set]("status_driver", this.statusDriver);
+      data[$_set]("note", this.note);
+      data[$_set]("delivery_price", this.deliveryPrice);
+      data[$_set]("coupon_code", this.couponCode);
+      data[$_set]("payment_proof", this.paymentProof);
+      data[$_set]("delivery_method", this.deliveryMethod);
+      data[$_set]("total_nominal", this.totalNominal);
+      data[$_set]("grand_total", this.grandTotal);
+      data[$_set]("grand_total_unique", this.grandTotalUnique);
+      data[$_set]("status", this.status);
+      data[$_set]("emergency", this.emergency);
+      data[$_set]("jadwal", this.jadwal);
+      data[$_set]("status_print", this.statusPrint);
+      data[$_set]("id_surat_jalan", this.idSuratJalan);
+      data[$_set]("total_uang_diterima", this.totalUangDiterima);
+      data[$_set]("created_date", this.createdDate);
+      data[$_set]("updated_date", this.updatedDate);
+      if (this.address != null) {
+        data[$_set]("address", this.address.toJson());
+      }
+      return data;
+    }
+  };
+  (ModelDetailTransaksi.Transaction.new = function(opts) {
+    let idTransaction = opts && 'idTransaction' in opts ? opts.idTransaction : null;
+    let transactionCode = opts && 'transactionCode' in opts ? opts.transactionCode : null;
+    let transactionType = opts && 'transactionType' in opts ? opts.transactionType : null;
+    let idMember = opts && 'idMember' in opts ? opts.idMember : null;
+    let paymentGateway = opts && 'paymentGateway' in opts ? opts.paymentGateway : null;
+    let paymentMethod = opts && 'paymentMethod' in opts ? opts.paymentMethod : null;
+    let paymentChannel = opts && 'paymentChannel' in opts ? opts.paymentChannel : null;
+    let paymentStatus = opts && 'paymentStatus' in opts ? opts.paymentStatus : null;
+    let paymentDate = opts && 'paymentDate' in opts ? opts.paymentDate : null;
+    let idCountry = opts && 'idCountry' in opts ? opts.idCountry : null;
+    let idAddress = opts && 'idAddress' in opts ? opts.idAddress : null;
+    let idCity = opts && 'idCity' in opts ? opts.idCity : null;
+    let idDriver = opts && 'idDriver' in opts ? opts.idDriver : null;
+    let statusDriver = opts && 'statusDriver' in opts ? opts.statusDriver : null;
+    let note = opts && 'note' in opts ? opts.note : null;
+    let deliveryPrice = opts && 'deliveryPrice' in opts ? opts.deliveryPrice : null;
+    let couponCode = opts && 'couponCode' in opts ? opts.couponCode : null;
+    let paymentProof = opts && 'paymentProof' in opts ? opts.paymentProof : null;
+    let deliveryMethod = opts && 'deliveryMethod' in opts ? opts.deliveryMethod : null;
+    let totalNominal = opts && 'totalNominal' in opts ? opts.totalNominal : null;
+    let grandTotal = opts && 'grandTotal' in opts ? opts.grandTotal : null;
+    let grandTotalUnique = opts && 'grandTotalUnique' in opts ? opts.grandTotalUnique : null;
+    let status = opts && 'status' in opts ? opts.status : null;
+    let emergency = opts && 'emergency' in opts ? opts.emergency : null;
+    let jadwal = opts && 'jadwal' in opts ? opts.jadwal : null;
+    let statusPrint = opts && 'statusPrint' in opts ? opts.statusPrint : null;
+    let idSuratJalan = opts && 'idSuratJalan' in opts ? opts.idSuratJalan : null;
+    let totalUangDiterima = opts && 'totalUangDiterima' in opts ? opts.totalUangDiterima : null;
+    let createdDate = opts && 'createdDate' in opts ? opts.createdDate : null;
+    let updatedDate = opts && 'updatedDate' in opts ? opts.updatedDate : null;
+    let address = opts && 'address' in opts ? opts.address : null;
+    this[idTransaction$] = idTransaction;
+    this[transactionCode$] = transactionCode;
+    this[transactionType$] = transactionType;
+    this[idMember$] = idMember;
+    this[paymentGateway$] = paymentGateway;
+    this[paymentMethod$] = paymentMethod;
+    this[paymentChannel$] = paymentChannel;
+    this[paymentStatus$] = paymentStatus;
+    this[paymentDate$] = paymentDate;
+    this[idCountry$] = idCountry;
+    this[idAddress$] = idAddress;
+    this[idCity$] = idCity;
+    this[idDriver$] = idDriver;
+    this[statusDriver$] = statusDriver;
+    this[note$] = note;
+    this[deliveryPrice$] = deliveryPrice;
+    this[couponCode$] = couponCode;
+    this[paymentProof$] = paymentProof;
+    this[deliveryMethod$] = deliveryMethod;
+    this[totalNominal$] = totalNominal;
+    this[grandTotal$] = grandTotal;
+    this[grandTotalUnique$] = grandTotalUnique;
+    this[status$0] = status;
+    this[emergency$] = emergency;
+    this[jadwal$] = jadwal;
+    this[statusPrint$] = statusPrint;
+    this[idSuratJalan$] = idSuratJalan;
+    this[totalUangDiterima$] = totalUangDiterima;
+    this[createdDate$] = createdDate;
+    this[updatedDate$] = updatedDate;
+    this[address$] = address;
+    ;
+  }).prototype = ModelDetailTransaksi.Transaction.prototype;
+  (ModelDetailTransaksi.Transaction.fromJson = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18, t0$19, t0$20, t0$21, t0$22, t0$23, t0$24, t0$25, t0$26, t0$27;
+    this[address$] = null;
+    this[updatedDate$] = null;
+    this[createdDate$] = null;
+    this[totalUangDiterima$] = null;
+    this[idSuratJalan$] = null;
+    this[statusPrint$] = null;
+    this[jadwal$] = null;
+    this[emergency$] = null;
+    this[status$0] = null;
+    this[grandTotalUnique$] = null;
+    this[grandTotal$] = null;
+    this[totalNominal$] = null;
+    this[deliveryMethod$] = null;
+    this[paymentProof$] = null;
+    this[couponCode$] = null;
+    this[deliveryPrice$] = null;
+    this[note$] = null;
+    this[statusDriver$] = null;
+    this[idDriver$] = null;
+    this[idCity$] = null;
+    this[idAddress$] = null;
+    this[idCountry$] = null;
+    this[paymentDate$] = null;
+    this[paymentStatus$] = null;
+    this[paymentChannel$] = null;
+    this[paymentMethod$] = null;
+    this[paymentGateway$] = null;
+    this[idMember$] = null;
+    this[transactionType$] = null;
+    this[transactionCode$] = null;
+    this[idTransaction$] = null;
+    this.idTransaction = T.StringL().as((t0 = json[$_get]("id_transaction"), t0 == null ? "" : t0));
+    this.transactionCode = T.StringL().as((t0$ = json[$_get]("transaction_code"), t0$ == null ? "" : t0$));
+    this.transactionType = T.StringL().as((t0$0 = json[$_get]("transaction_type"), t0$0 == null ? "" : t0$0));
+    this.idMember = T.StringL().as((t0$1 = json[$_get]("id_member"), t0$1 == null ? "" : t0$1));
+    this.paymentGateway = T.StringL().as((t0$2 = json[$_get]("payment_gateway"), t0$2 == null ? "" : t0$2));
+    this.paymentMethod = T.StringL().as((t0$3 = json[$_get]("payment_method"), t0$3 == null ? "" : t0$3));
+    this.paymentChannel = T.StringL().as((t0$4 = json[$_get]("payment_channel"), t0$4 == null ? "" : t0$4));
+    this.paymentStatus = T.StringL().as((t0$5 = json[$_get]("payment_status"), t0$5 == null ? "" : t0$5));
+    this.paymentDate = T.StringL().as((t0$6 = json[$_get]("payment_date"), t0$6 == null ? "" : t0$6));
+    this.idCountry = T.StringL().as((t0$7 = json[$_get]("id_country"), t0$7 == null ? "" : t0$7));
+    this.idAddress = T.StringL().as((t0$8 = json[$_get]("id_address"), t0$8 == null ? "" : t0$8));
+    this.idCity = T.StringL().as((t0$9 = json[$_get]("id_city"), t0$9 == null ? "" : t0$9));
+    this.idDriver = T.StringL().as((t0$10 = json[$_get]("id_driver"), t0$10 == null ? "" : t0$10));
+    this.statusDriver = T.StringL().as((t0$11 = json[$_get]("status_driver"), t0$11 == null ? "" : t0$11));
+    this.note = T.StringL().as((t0$12 = json[$_get]("note"), t0$12 == null ? "Tidak Ada Catatan" : t0$12));
+    this.deliveryPrice = T.StringL().as((t0$13 = json[$_get]("delivery_price"), t0$13 == null ? "" : t0$13));
+    this.couponCode = T.StringL().as((t0$14 = json[$_get]("coupon_code"), t0$14 == null ? "-" : t0$14));
+    this.paymentProof = T.StringL().as((t0$15 = json[$_get]("payment_proof"), t0$15 == null ? "" : t0$15));
+    this.deliveryMethod = T.StringL().as((t0$16 = json[$_get]("delivery_method"), t0$16 == null ? "" : t0$16));
+    this.totalNominal = T.StringL().as((t0$17 = json[$_get]("total_nominal"), t0$17 == null ? "" : t0$17));
+    this.grandTotal = T.StringL().as((t0$18 = json[$_get]("grand_total"), t0$18 == null ? "" : t0$18));
+    this.grandTotalUnique = T.StringL().as((t0$19 = json[$_get]("grand_total_unique"), t0$19 == null ? "" : t0$19));
+    this.status = T.StringL().as((t0$20 = json[$_get]("status"), t0$20 == null ? "" : t0$20));
+    this.emergency = T.StringL().as((t0$21 = json[$_get]("emergency"), t0$21 == null ? "" : t0$21));
+    this.jadwal = T.StringL().as((t0$22 = json[$_get]("jadwal"), t0$22 == null ? "" : t0$22));
+    this.statusPrint = T.StringL().as((t0$23 = json[$_get]("status_print"), t0$23 == null ? "" : t0$23));
+    this.idSuratJalan = T.StringL().as((t0$24 = json[$_get]("id_surat_jalan"), t0$24 == null ? "" : t0$24));
+    this.totalUangDiterima = T.StringL().as((t0$25 = json[$_get]("total_uang_diterima"), t0$25 == null ? "" : t0$25));
+    this.createdDate = T.StringL().as((t0$26 = json[$_get]("created_date"), t0$26 == null ? "" : t0$26));
+    this.updatedDate = T.StringL().as((t0$27 = json[$_get]("updated_date"), t0$27 == null ? "" : t0$27));
+    this.address = json[$_get]("address") != null ? new ModelDetailTransaksi.Address.fromJson(T.MapLOfStringL$dynamic().as(json[$_get]("address"))) : null;
+  }).prototype = ModelDetailTransaksi.Transaction.prototype;
+  dart.addTypeTests(ModelDetailTransaksi.Transaction);
+  dart.addTypeCaches(ModelDetailTransaksi.Transaction);
+  dart.setMethodSignature(ModelDetailTransaksi.Transaction, () => ({
+    __proto__: dart.getMethods(ModelDetailTransaksi.Transaction.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailTransaksi.Transaction, I[0]);
+  dart.setFieldSignature(ModelDetailTransaksi.Transaction, () => ({
+    __proto__: dart.getFields(ModelDetailTransaksi.Transaction.__proto__),
+    idTransaction: dart.fieldType(dart.legacy(core.String)),
+    transactionCode: dart.fieldType(dart.legacy(core.String)),
+    transactionType: dart.fieldType(dart.legacy(core.String)),
+    idMember: dart.fieldType(dart.legacy(core.String)),
+    paymentGateway: dart.fieldType(dart.legacy(core.String)),
+    paymentMethod: dart.fieldType(dart.legacy(core.String)),
+    paymentChannel: dart.fieldType(dart.legacy(core.String)),
+    paymentStatus: dart.fieldType(dart.legacy(core.String)),
+    paymentDate: dart.fieldType(dart.legacy(core.String)),
+    idCountry: dart.fieldType(dart.legacy(core.String)),
+    idAddress: dart.fieldType(dart.legacy(core.String)),
+    idCity: dart.fieldType(dart.legacy(core.String)),
+    idDriver: dart.fieldType(dart.legacy(core.String)),
+    statusDriver: dart.fieldType(dart.legacy(core.String)),
+    note: dart.fieldType(dart.legacy(core.String)),
+    deliveryPrice: dart.fieldType(dart.legacy(core.String)),
+    couponCode: dart.fieldType(dart.legacy(core.String)),
+    paymentProof: dart.fieldType(dart.legacy(core.String)),
+    deliveryMethod: dart.fieldType(dart.legacy(core.String)),
+    totalNominal: dart.fieldType(dart.legacy(core.String)),
+    grandTotal: dart.fieldType(dart.legacy(core.String)),
+    grandTotalUnique: dart.fieldType(dart.legacy(core.String)),
+    status: dart.fieldType(dart.legacy(core.String)),
+    emergency: dart.fieldType(dart.legacy(core.String)),
+    jadwal: dart.fieldType(dart.legacy(core.String)),
+    statusPrint: dart.fieldType(dart.legacy(core.String)),
+    idSuratJalan: dart.fieldType(dart.legacy(core.String)),
+    totalUangDiterima: dart.fieldType(dart.legacy(core.String)),
+    createdDate: dart.fieldType(dart.legacy(core.String)),
+    updatedDate: dart.fieldType(dart.legacy(core.String)),
+    address: dart.fieldType(dart.legacy(ModelDetailTransaksi.Address))
+  }));
+  var idAddress$0 = dart.privateName(ModelDetailTransaksi, "Address.idAddress");
+  var idMember$0 = dart.privateName(ModelDetailTransaksi, "Address.idMember");
+  var idProvince$ = dart.privateName(ModelDetailTransaksi, "Address.idProvince");
+  var idCity$0 = dart.privateName(ModelDetailTransaksi, "Address.idCity");
+  var address$0 = dart.privateName(ModelDetailTransaksi, "Address.address");
+  var map$ = dart.privateName(ModelDetailTransaksi, "Address.map");
+  var latitude$ = dart.privateName(ModelDetailTransaksi, "Address.latitude");
+  var longitude$ = dart.privateName(ModelDetailTransaksi, "Address.longitude");
+  var postalCode$ = dart.privateName(ModelDetailTransaksi, "Address.postalCode");
+  var phone$ = dart.privateName(ModelDetailTransaksi, "Address.phone");
+  var nameAcc$ = dart.privateName(ModelDetailTransaksi, "Address.nameAcc");
+  var createdDate$0 = dart.privateName(ModelDetailTransaksi, "Address.createdDate");
+  var updatedDate$0 = dart.privateName(ModelDetailTransaksi, "Address.updatedDate");
+  var createdBy$ = dart.privateName(ModelDetailTransaksi, "Address.createdBy");
+  var updatedBy$ = dart.privateName(ModelDetailTransaksi, "Address.updatedBy");
+  ModelDetailTransaksi.Address = class Address extends core.Object {
+    get idAddress() {
+      return this[idAddress$0];
+    }
+    set idAddress(value) {
+      this[idAddress$0] = value;
+    }
+    get idMember() {
+      return this[idMember$0];
+    }
+    set idMember(value) {
+      this[idMember$0] = value;
+    }
+    get idProvince() {
+      return this[idProvince$];
+    }
+    set idProvince(value) {
+      this[idProvince$] = value;
+    }
+    get idCity() {
+      return this[idCity$0];
+    }
+    set idCity(value) {
+      this[idCity$0] = value;
+    }
+    get address() {
+      return this[address$0];
+    }
+    set address(value) {
+      this[address$0] = value;
+    }
+    get map() {
+      return this[map$];
+    }
+    set map(value) {
+      this[map$] = value;
+    }
+    get latitude() {
+      return this[latitude$];
+    }
+    set latitude(value) {
+      this[latitude$] = value;
+    }
+    get longitude() {
+      return this[longitude$];
+    }
+    set longitude(value) {
+      this[longitude$] = value;
+    }
+    get postalCode() {
+      return this[postalCode$];
+    }
+    set postalCode(value) {
+      this[postalCode$] = value;
+    }
+    get phone() {
+      return this[phone$];
+    }
+    set phone(value) {
+      this[phone$] = value;
+    }
+    get nameAcc() {
+      return this[nameAcc$];
+    }
+    set nameAcc(value) {
+      this[nameAcc$] = value;
+    }
+    get createdDate() {
+      return this[createdDate$0];
+    }
+    set createdDate(value) {
+      this[createdDate$0] = value;
+    }
+    get updatedDate() {
+      return this[updatedDate$0];
+    }
+    set updatedDate(value) {
+      this[updatedDate$0] = value;
+    }
+    get createdBy() {
+      return this[createdBy$];
+    }
+    set createdBy(value) {
+      this[createdBy$] = value;
+    }
+    get updatedBy() {
+      return this[updatedBy$];
+    }
+    set updatedBy(value) {
+      this[updatedBy$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("id_address", this.idAddress);
+      data[$_set]("id_member", this.idMember);
+      data[$_set]("id_province", this.idProvince);
+      data[$_set]("id_city", this.idCity);
+      data[$_set]("address", this.address);
+      data[$_set]("map", this.map);
+      data[$_set]("latitude", this.latitude);
+      data[$_set]("longitude", this.longitude);
+      data[$_set]("postal_code", this.postalCode);
+      data[$_set]("phone", this.phone);
+      data[$_set]("name_acc", this.nameAcc);
+      data[$_set]("created_date", this.createdDate);
+      data[$_set]("updated_date", this.updatedDate);
+      data[$_set]("created_by", this.createdBy);
+      data[$_set]("updated_by", this.updatedBy);
+      return data;
+    }
+  };
+  (ModelDetailTransaksi.Address.new = function(opts) {
+    let idAddress = opts && 'idAddress' in opts ? opts.idAddress : null;
+    let idMember = opts && 'idMember' in opts ? opts.idMember : null;
+    let idProvince = opts && 'idProvince' in opts ? opts.idProvince : null;
+    let idCity = opts && 'idCity' in opts ? opts.idCity : null;
+    let address = opts && 'address' in opts ? opts.address : null;
+    let map = opts && 'map' in opts ? opts.map : null;
+    let latitude = opts && 'latitude' in opts ? opts.latitude : null;
+    let longitude = opts && 'longitude' in opts ? opts.longitude : null;
+    let postalCode = opts && 'postalCode' in opts ? opts.postalCode : null;
+    let phone = opts && 'phone' in opts ? opts.phone : null;
+    let nameAcc = opts && 'nameAcc' in opts ? opts.nameAcc : null;
+    let createdDate = opts && 'createdDate' in opts ? opts.createdDate : null;
+    let updatedDate = opts && 'updatedDate' in opts ? opts.updatedDate : null;
+    let createdBy = opts && 'createdBy' in opts ? opts.createdBy : null;
+    let updatedBy = opts && 'updatedBy' in opts ? opts.updatedBy : null;
+    this[idAddress$0] = idAddress;
+    this[idMember$0] = idMember;
+    this[idProvince$] = idProvince;
+    this[idCity$0] = idCity;
+    this[address$0] = address;
+    this[map$] = map;
+    this[latitude$] = latitude;
+    this[longitude$] = longitude;
+    this[postalCode$] = postalCode;
+    this[phone$] = phone;
+    this[nameAcc$] = nameAcc;
+    this[createdDate$0] = createdDate;
+    this[updatedDate$0] = updatedDate;
+    this[createdBy$] = createdBy;
+    this[updatedBy$] = updatedBy;
+    ;
+  }).prototype = ModelDetailTransaksi.Address.prototype;
+  (ModelDetailTransaksi.Address.fromJson = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12;
+    this[updatedBy$] = null;
+    this[createdBy$] = null;
+    this[updatedDate$0] = null;
+    this[createdDate$0] = null;
+    this[nameAcc$] = null;
+    this[phone$] = null;
+    this[postalCode$] = null;
+    this[longitude$] = null;
+    this[latitude$] = null;
+    this[map$] = null;
+    this[address$0] = null;
+    this[idCity$0] = null;
+    this[idProvince$] = null;
+    this[idMember$0] = null;
+    this[idAddress$0] = null;
+    this.idAddress = T.StringL().as((t0 = json[$_get]("id_address"), t0 == null ? "" : t0));
+    this.idMember = T.StringL().as((t0$ = json[$_get]("id_member"), t0$ == null ? "" : t0$));
+    this.idProvince = T.StringL().as((t0$0 = json[$_get]("id_province"), t0$0 == null ? "" : t0$0));
+    this.idCity = T.StringL().as((t0$1 = json[$_get]("id_city"), t0$1 == null ? "" : t0$1));
+    this.address = T.StringL().as((t0$2 = json[$_get]("address"), t0$2 == null ? "" : t0$2));
+    this.map = T.StringL().as((t0$3 = json[$_get]("map"), t0$3 == null ? "" : t0$3));
+    this.latitude = T.StringL().as((t0$4 = json[$_get]("latitude"), t0$4 == null ? "" : t0$4));
+    this.longitude = T.StringL().as((t0$5 = json[$_get]("longitude"), t0$5 == null ? "" : t0$5));
+    this.postalCode = T.StringL().as((t0$6 = json[$_get]("postal_code"), t0$6 == null ? "" : t0$6));
+    this.phone = T.StringL().as((t0$7 = json[$_get]("phone"), t0$7 == null ? "" : t0$7));
+    this.nameAcc = T.StringL().as((t0$8 = json[$_get]("name_acc"), t0$8 == null ? "" : t0$8));
+    this.createdDate = T.StringL().as((t0$9 = json[$_get]("created_date"), t0$9 == null ? "" : t0$9));
+    this.updatedDate = T.StringL().as((t0$10 = json[$_get]("updated_date"), t0$10 == null ? "" : t0$10));
+    this.createdBy = T.StringL().as((t0$11 = json[$_get]("created_by"), t0$11 == null ? "" : t0$11));
+    this.updatedBy = T.StringL().as((t0$12 = json[$_get]("updated_by"), t0$12 == null ? "" : t0$12));
+  }).prototype = ModelDetailTransaksi.Address.prototype;
+  dart.addTypeTests(ModelDetailTransaksi.Address);
+  dart.addTypeCaches(ModelDetailTransaksi.Address);
+  dart.setMethodSignature(ModelDetailTransaksi.Address, () => ({
+    __proto__: dart.getMethods(ModelDetailTransaksi.Address.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailTransaksi.Address, I[0]);
+  dart.setFieldSignature(ModelDetailTransaksi.Address, () => ({
+    __proto__: dart.getFields(ModelDetailTransaksi.Address.__proto__),
+    idAddress: dart.fieldType(dart.legacy(core.String)),
+    idMember: dart.fieldType(dart.legacy(core.String)),
+    idProvince: dart.fieldType(dart.legacy(core.String)),
+    idCity: dart.fieldType(dart.legacy(core.String)),
+    address: dart.fieldType(dart.legacy(core.String)),
+    map: dart.fieldType(dart.legacy(core.String)),
+    latitude: dart.fieldType(dart.legacy(core.String)),
+    longitude: dart.fieldType(dart.legacy(core.String)),
+    postalCode: dart.fieldType(dart.legacy(core.String)),
+    phone: dart.fieldType(dart.legacy(core.String)),
+    nameAcc: dart.fieldType(dart.legacy(core.String)),
+    createdDate: dart.fieldType(dart.legacy(core.String)),
+    updatedDate: dart.fieldType(dart.legacy(core.String)),
+    createdBy: dart.fieldType(dart.legacy(core.String)),
+    updatedBy: dart.fieldType(dart.legacy(core.String))
+  }));
+  var idTransactionDetail$ = dart.privateName(ModelDetailTransaksi, "Product.idTransactionDetail");
+  var transactionCode$0 = dart.privateName(ModelDetailTransaksi, "Product.transactionCode");
+  var idProduct$ = dart.privateName(ModelDetailTransaksi, "Product.idProduct");
+  var productPrice$ = dart.privateName(ModelDetailTransaksi, "Product.productPrice");
+  var quantity$ = dart.privateName(ModelDetailTransaksi, "Product.quantity");
+  var totalPrice$ = dart.privateName(ModelDetailTransaksi, "Product.totalPrice");
+  var pengembalian$ = dart.privateName(ModelDetailTransaksi, "Product.pengembalian");
+  var createdDate$1 = dart.privateName(ModelDetailTransaksi, "Product.createdDate");
+  var updatedDate$1 = dart.privateName(ModelDetailTransaksi, "Product.updatedDate");
+  var createdBy$0 = dart.privateName(ModelDetailTransaksi, "Product.createdBy");
+  var updatedBy$0 = dart.privateName(ModelDetailTransaksi, "Product.updatedBy");
+  var productName$ = dart.privateName(ModelDetailTransaksi, "Product.productName");
+  var image$ = dart.privateName(ModelDetailTransaksi, "Product.image");
+  var emergency$0 = dart.privateName(ModelDetailTransaksi, "Product.emergency");
+  ModelDetailTransaksi.Product = class Product extends core.Object {
+    get idTransactionDetail() {
+      return this[idTransactionDetail$];
+    }
+    set idTransactionDetail(value) {
+      this[idTransactionDetail$] = value;
+    }
+    get transactionCode() {
+      return this[transactionCode$0];
+    }
+    set transactionCode(value) {
+      this[transactionCode$0] = value;
+    }
+    get idProduct() {
+      return this[idProduct$];
+    }
+    set idProduct(value) {
+      this[idProduct$] = value;
+    }
+    get productPrice() {
+      return this[productPrice$];
+    }
+    set productPrice(value) {
+      this[productPrice$] = value;
+    }
+    get quantity() {
+      return this[quantity$];
+    }
+    set quantity(value) {
+      this[quantity$] = value;
+    }
+    get totalPrice() {
+      return this[totalPrice$];
+    }
+    set totalPrice(value) {
+      this[totalPrice$] = value;
+    }
+    get pengembalian() {
+      return this[pengembalian$];
+    }
+    set pengembalian(value) {
+      this[pengembalian$] = value;
+    }
+    get createdDate() {
+      return this[createdDate$1];
+    }
+    set createdDate(value) {
+      this[createdDate$1] = value;
+    }
+    get updatedDate() {
+      return this[updatedDate$1];
+    }
+    set updatedDate(value) {
+      this[updatedDate$1] = value;
+    }
+    get createdBy() {
+      return this[createdBy$0];
+    }
+    set createdBy(value) {
+      this[createdBy$0] = value;
+    }
+    get updatedBy() {
+      return this[updatedBy$0];
+    }
+    set updatedBy(value) {
+      this[updatedBy$0] = value;
+    }
+    get productName() {
+      return this[productName$];
+    }
+    set productName(value) {
+      this[productName$] = value;
+    }
+    get image() {
+      return this[image$];
+    }
+    set image(value) {
+      this[image$] = value;
+    }
+    get emergency() {
+      return this[emergency$0];
+    }
+    set emergency(value) {
+      this[emergency$0] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("id_transaction_detail", this.idTransactionDetail);
+      data[$_set]("transaction_code", this.transactionCode);
+      data[$_set]("id_product", this.idProduct);
+      data[$_set]("product_price", this.productPrice);
+      data[$_set]("quantity", this.quantity);
+      data[$_set]("total_price", this.totalPrice);
+      data[$_set]("pengembalian", this.pengembalian);
+      data[$_set]("created_date", this.createdDate);
+      data[$_set]("updated_date", this.updatedDate);
+      data[$_set]("created_by", this.createdBy);
+      data[$_set]("updated_by", this.updatedBy);
+      data[$_set]("product_name", this.productName);
+      data[$_set]("image", this.image);
+      data[$_set]("emergency", this.emergency);
+      return data;
+    }
+  };
+  (ModelDetailTransaksi.Product.new = function(opts) {
+    let idTransactionDetail = opts && 'idTransactionDetail' in opts ? opts.idTransactionDetail : null;
+    let transactionCode = opts && 'transactionCode' in opts ? opts.transactionCode : null;
+    let idProduct = opts && 'idProduct' in opts ? opts.idProduct : null;
+    let productPrice = opts && 'productPrice' in opts ? opts.productPrice : null;
+    let quantity = opts && 'quantity' in opts ? opts.quantity : null;
+    let totalPrice = opts && 'totalPrice' in opts ? opts.totalPrice : null;
+    let pengembalian = opts && 'pengembalian' in opts ? opts.pengembalian : null;
+    let createdDate = opts && 'createdDate' in opts ? opts.createdDate : null;
+    let updatedDate = opts && 'updatedDate' in opts ? opts.updatedDate : null;
+    let createdBy = opts && 'createdBy' in opts ? opts.createdBy : null;
+    let updatedBy = opts && 'updatedBy' in opts ? opts.updatedBy : null;
+    let productName = opts && 'productName' in opts ? opts.productName : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let emergency = opts && 'emergency' in opts ? opts.emergency : null;
+    this[idTransactionDetail$] = idTransactionDetail;
+    this[transactionCode$0] = transactionCode;
+    this[idProduct$] = idProduct;
+    this[productPrice$] = productPrice;
+    this[quantity$] = quantity;
+    this[totalPrice$] = totalPrice;
+    this[pengembalian$] = pengembalian;
+    this[createdDate$1] = createdDate;
+    this[updatedDate$1] = updatedDate;
+    this[createdBy$0] = createdBy;
+    this[updatedBy$0] = updatedBy;
+    this[productName$] = productName;
+    this[image$] = image;
+    this[emergency$0] = emergency;
+    ;
+  }).prototype = ModelDetailTransaksi.Product.prototype;
+  (ModelDetailTransaksi.Product.fromJson = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11;
+    this[emergency$0] = null;
+    this[image$] = null;
+    this[productName$] = null;
+    this[updatedBy$0] = null;
+    this[createdBy$0] = null;
+    this[updatedDate$1] = null;
+    this[createdDate$1] = null;
+    this[pengembalian$] = null;
+    this[totalPrice$] = null;
+    this[quantity$] = null;
+    this[productPrice$] = null;
+    this[idProduct$] = null;
+    this[transactionCode$0] = null;
+    this[idTransactionDetail$] = null;
+    this.idTransactionDetail = T.StringL().as((t0 = json[$_get]("id_transaction_detail"), t0 == null ? "" : t0));
+    this.transactionCode = T.StringL().as((t0$ = json[$_get]("transaction_code"), t0$ == null ? "" : t0$));
+    this.idProduct = T.StringL().as((t0$0 = json[$_get]("id_product"), t0$0 == null ? "" : t0$0));
+    this.productPrice = T.StringL().as((t0$1 = json[$_get]("product_price"), t0$1 == null ? "" : t0$1));
+    this.quantity = T.StringL().as((t0$2 = json[$_get]("quantity"), t0$2 == null ? "" : t0$2));
+    this.totalPrice = T.StringL().as((t0$3 = json[$_get]("total_price"), t0$3 == null ? "" : t0$3));
+    this.pengembalian = T.StringL().as((t0$4 = json[$_get]("pengembalian"), t0$4 == null ? "" : t0$4));
+    this.createdDate = T.StringL().as((t0$5 = json[$_get]("created_date"), t0$5 == null ? "" : t0$5));
+    this.updatedDate = T.StringL().as((t0$6 = json[$_get]("updated_date"), t0$6 == null ? "" : t0$6));
+    this.createdBy = T.StringL().as((t0$7 = json[$_get]("created_by"), t0$7 == null ? "" : t0$7));
+    this.updatedBy = T.StringL().as((t0$8 = json[$_get]("updated_by"), t0$8 == null ? "" : t0$8));
+    this.productName = T.StringL().as((t0$9 = json[$_get]("product_name"), t0$9 == null ? "" : t0$9));
+    this.image = T.StringL().as((t0$10 = json[$_get]("image"), t0$10 == null ? "" : t0$10));
+    this.emergency = T.StringL().as((t0$11 = json[$_get]("emergency"), t0$11 == null ? "" : t0$11));
+  }).prototype = ModelDetailTransaksi.Product.prototype;
+  dart.addTypeTests(ModelDetailTransaksi.Product);
+  dart.addTypeCaches(ModelDetailTransaksi.Product);
+  dart.setMethodSignature(ModelDetailTransaksi.Product, () => ({
+    __proto__: dart.getMethods(ModelDetailTransaksi.Product.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailTransaksi.Product, I[0]);
+  dart.setFieldSignature(ModelDetailTransaksi.Product, () => ({
+    __proto__: dart.getFields(ModelDetailTransaksi.Product.__proto__),
+    idTransactionDetail: dart.fieldType(dart.legacy(core.String)),
+    transactionCode: dart.fieldType(dart.legacy(core.String)),
+    idProduct: dart.fieldType(dart.legacy(core.String)),
+    productPrice: dart.fieldType(dart.legacy(core.String)),
+    quantity: dart.fieldType(dart.legacy(core.String)),
+    totalPrice: dart.fieldType(dart.legacy(core.String)),
+    pengembalian: dart.fieldType(dart.legacy(core.String)),
+    createdDate: dart.fieldType(dart.legacy(core.String)),
+    updatedDate: dart.fieldType(dart.legacy(core.String)),
+    createdBy: dart.fieldType(dart.legacy(core.String)),
+    updatedBy: dart.fieldType(dart.legacy(core.String)),
+    productName: dart.fieldType(dart.legacy(core.String)),
+    image: dart.fieldType(dart.legacy(core.String)),
+    emergency: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/bulanan/models/ModelDetailTransaksi.dart", {
+    "package:bulanan/models/ModelDetailTransaksi.dart": ModelDetailTransaksi
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["ModelDetailTransaksi.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/bulanan/models/ModelDetailTransaksi.dart.lib.js"}');
+  // Exports:
+  return {
+    models__ModelDetailTransaksi: ModelDetailTransaksi
+  };
+}));
+
+//# sourceMappingURL=ModelDetailTransaksi.dart.lib.js.map

@@ -1,0 +1,1487 @@
+define(['dart_sdk', 'packages/http/src/browser_client.dart', 'packages/chopper/src/response.dart', 'packages/chopper/src/constants.dart', 'packages/logging/src/logger.dart', 'packages/http/src/multipart_request.dart', 'packages/http/src/multipart_file_stub.dart', 'packages/http/src/streamed_request.dart'], (function load__packages__chopper__src__interceptor_dart(dart_sdk, packages__http__src__browser_client$46dart, packages__chopper__src__response$46dart, packages__chopper__src__constants$46dart, packages__logging__src__logger$46dart, packages__http__src__multipart_request$46dart, packages__http__src__multipart_file_stub$46dart, packages__http__src__streamed_request$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const convert = dart_sdk.convert;
+  const _js_helper = dart_sdk._js_helper;
+  const _interceptors = dart_sdk._interceptors;
+  const collection = dart_sdk.collection;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const request = packages__http__src__browser_client$46dart.src__request;
+  const response$ = packages__http__src__browser_client$46dart.src__response;
+  const client$ = packages__http__src__browser_client$46dart.src__client;
+  const base_request = packages__http__src__browser_client$46dart.src__base_request;
+  const response$0 = packages__chopper__src__response$46dart.src__response;
+  const constants = packages__chopper__src__constants$46dart.src__constants;
+  const logger = packages__logging__src__logger$46dart.src__logger;
+  const multipart_request = packages__http__src__multipart_request$46dart.src__multipart_request;
+  const multipart_file = packages__http__src__multipart_file_stub$46dart.src__multipart_file;
+  const streamed_request = packages__http__src__streamed_request$46dart.src__streamed_request;
+  var interceptor = Object.create(dart.library);
+  var base = Object.create(dart.library);
+  var utils = Object.create(dart.library);
+  var request$ = Object.create(dart.library);
+  var annotations = Object.create(dart.library);
+  var chopper = Object.create(dart.library);
+  var $forEach = dartx.forEach;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $contains = dartx.contains;
+  var $toString = dartx.toString;
+  var $_set = dartx._set;
+  var $every = dartx.every;
+  var $join = dartx.join;
+  var $where = dartx.where;
+  var $addAll = dartx.addAll;
+  var $toSet = dartx.toSet;
+  var $clear = dartx.clear;
+  var $keys = dartx.keys;
+  var $containsKey = dartx.containsKey;
+  var $map = dartx.map;
+  var $startsWith = dartx.startsWith;
+  var $endsWith = dartx.endsWith;
+  var $add = dartx.add;
+  var $runtimeType = dartx.runtimeType;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    RequestL: () => (T.RequestL = dart.constFn(dart.legacy(request$.Request)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    StringLAndStringLToNull: () => (T.StringLAndStringLToNull = dart.constFn(dart.fnType(core.Null, [T.StringL(), T.StringL()])))(),
+    RequestL$1: () => (T.RequestL$1 = dart.constFn(dart.legacy(request.Request)))(),
+    StringLAndStringLTovoid: () => (T.StringLAndStringLTovoid = dart.constFn(dart.fnType(dart.void, [T.StringL(), T.StringL()])))(),
+    ResponseL: () => (T.ResponseL = dart.constFn(dart.legacy(response$.Response)))(),
+    MapOfStringL$StringL: () => (T.MapOfStringL$StringL = dart.constFn(core.Map$(T.StringL(), T.StringL())))(),
+    MapLOfStringL$StringL: () => (T.MapLOfStringL$StringL = dart.constFn(dart.legacy(T.MapOfStringL$StringL())))(),
+    MapL: () => (T.MapL = dart.constFn(dart.legacy(core.Map)))(),
+    IdentityMapOfStringL$StringL: () => (T.IdentityMapOfStringL$StringL = dart.constFn(_js_helper.IdentityMap$(T.StringL(), T.StringL())))(),
+    dynamicAnddynamicToNull: () => (T.dynamicAnddynamicToNull = dart.constFn(dart.fnType(core.Null, [dart.dynamic, dart.dynamic])))(),
+    ChopperServiceL: () => (T.ChopperServiceL = dart.constFn(dart.legacy(base.ChopperService)))(),
+    TypeL: () => (T.TypeL = dart.constFn(dart.legacy(core.Type)))(),
+    LinkedMapOfTypeL$ChopperServiceL: () => (T.LinkedMapOfTypeL$ChopperServiceL = dart.constFn(_js_helper.LinkedMap$(T.TypeL(), T.ChopperServiceL())))(),
+    StreamControllerOfRequestL: () => (T.StreamControllerOfRequestL = dart.constFn(async.StreamController$(T.RequestL())))(),
+    ResponseL$1: () => (T.ResponseL$1 = dart.constFn(dart.legacy(response$0.Response)))(),
+    StreamControllerOfResponseL: () => (T.StreamControllerOfResponseL = dart.constFn(async.StreamController$(T.ResponseL$1())))(),
+    ChopperServiceLToNull: () => (T.ChopperServiceLToNull = dart.constFn(dart.fnType(core.Null, [T.ChopperServiceL()])))(),
+    RequestInterceptorL: () => (T.RequestInterceptorL = dart.constFn(dart.legacy(interceptor.RequestInterceptor)))(),
+    FutureOrOfRequestL: () => (T.FutureOrOfRequestL = dart.constFn(async.FutureOr$(T.RequestL())))(),
+    FutureOrLOfRequestL: () => (T.FutureOrLOfRequestL = dart.constFn(dart.legacy(T.FutureOrOfRequestL())))(),
+    RequestLToFutureOrLOfRequestL: () => (T.RequestLToFutureOrLOfRequestL = dart.constFn(dart.fnType(T.FutureOrLOfRequestL(), [T.RequestL()])))(),
+    RequestLToLFutureOrLOfRequestL: () => (T.RequestLToLFutureOrLOfRequestL = dart.constFn(dart.legacy(T.RequestLToFutureOrLOfRequestL())))(),
+    ResponseInterceptorL: () => (T.ResponseInterceptorL = dart.constFn(dart.legacy(interceptor.ResponseInterceptor)))(),
+    ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL: () => (T.ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL = dart.constFn(dart.gFnType(BodyType => {
+      var __t$BodyTypeL = () => (__t$BodyTypeL = dart.constFn(dart.legacy(BodyType)))();
+      var __t$ResponseOfBodyTypeL = () => (__t$ResponseOfBodyTypeL = dart.constFn(response$0.Response$(__t$BodyTypeL())))();
+      var __t$ResponseLOfBodyTypeL = () => (__t$ResponseLOfBodyTypeL = dart.constFn(dart.legacy(__t$ResponseOfBodyTypeL())))();
+      var __t$FutureOrOfResponseLOfBodyTypeL = () => (__t$FutureOrOfResponseLOfBodyTypeL = dart.constFn(async.FutureOr$(__t$ResponseLOfBodyTypeL())))();
+      var __t$FutureOrLOfResponseLOfBodyTypeL = () => (__t$FutureOrLOfResponseLOfBodyTypeL = dart.constFn(dart.legacy(__t$FutureOrOfResponseLOfBodyTypeL())))();
+      return [__t$FutureOrLOfResponseLOfBodyTypeL(), [__t$ResponseLOfBodyTypeL()]];
+    })))(),
+    ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL: () => (T.ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL = dart.constFn(dart.legacy(T.ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL())))(),
+    ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL$1: () => (T.ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL$1 = dart.constFn(dart.gFnType((BodyType, InnerType) => {
+      var __t$BodyTypeL = () => (__t$BodyTypeL = dart.constFn(dart.legacy(BodyType)))();
+      var __t$ResponseOfBodyTypeL = () => (__t$ResponseOfBodyTypeL = dart.constFn(response$0.Response$(__t$BodyTypeL())))();
+      var __t$ResponseLOfBodyTypeL = () => (__t$ResponseLOfBodyTypeL = dart.constFn(dart.legacy(__t$ResponseOfBodyTypeL())))();
+      var __t$FutureOrOfResponseLOfBodyTypeL = () => (__t$FutureOrOfResponseLOfBodyTypeL = dart.constFn(async.FutureOr$(__t$ResponseLOfBodyTypeL())))();
+      var __t$FutureOrLOfResponseLOfBodyTypeL = () => (__t$FutureOrLOfResponseLOfBodyTypeL = dart.constFn(dart.legacy(__t$FutureOrOfResponseLOfBodyTypeL())))();
+      return [__t$FutureOrLOfResponseLOfBodyTypeL(), [__t$ResponseLOfBodyTypeL()]];
+    })))(),
+    ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL$1: () => (T.ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL$1 = dart.constFn(dart.legacy(T.ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL$1())))(),
+    FutureOrOfResponseL: () => (T.FutureOrOfResponseL = dart.constFn(async.FutureOr$(T.ResponseL$1())))(),
+    FutureOrLOfResponseL: () => (T.FutureOrLOfResponseL = dart.constFn(dart.legacy(T.FutureOrOfResponseL())))(),
+    ResponseLToFutureOrLOfResponseL: () => (T.ResponseLToFutureOrLOfResponseL = dart.constFn(dart.fnType(T.FutureOrLOfResponseL(), [T.ResponseL$1()])))(),
+    ResponseLToLFutureOrLOfResponseL: () => (T.ResponseLToLFutureOrLOfResponseL = dart.constFn(dart.legacy(T.ResponseLToFutureOrLOfResponseL())))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    ListOfintL: () => (T.ListOfintL = dart.constFn(core.List$(T.intL())))(),
+    ListLOfintL: () => (T.ListLOfintL = dart.constFn(dart.legacy(T.ListOfintL())))(),
+    StreamOfListLOfintL: () => (T.StreamOfListLOfintL = dart.constFn(async.Stream$(T.ListLOfintL())))(),
+    StreamLOfListLOfintL: () => (T.StreamLOfListLOfintL = dart.constFn(dart.legacy(T.StreamOfListLOfintL())))(),
+    ResponseOfStringL: () => (T.ResponseOfStringL = dart.constFn(response$0.Response$(T.StringL())))(),
+    TypeLAndChopperServiceLTovoid: () => (T.TypeLAndChopperServiceLTovoid = dart.constFn(dart.fnType(dart.void, [T.TypeL(), T.ChopperServiceL()])))(),
+    JSArrayOfTypeL: () => (T.JSArrayOfTypeL = dart.constFn(_interceptors.JSArray$(T.TypeL())))(),
+    LinkedHashMapOfStringL$StringL: () => (T.LinkedHashMapOfStringL$StringL = dart.constFn(collection.LinkedHashMap$(T.StringL(), T.StringL())))(),
+    _PairOfStringL$StringL: () => (T._PairOfStringL$StringL = dart.constFn(utils._Pair$(T.StringL(), T.StringL())))(),
+    _PairLOfStringL$StringL: () => (T._PairLOfStringL$StringL = dart.constFn(dart.legacy(T._PairOfStringL$StringL())))(),
+    _HashSetOf_PairLOfStringL$StringL: () => (T._HashSetOf_PairLOfStringL$StringL = dart.constFn(collection._HashSet$(T._PairLOfStringL$StringL())))(),
+    IterableL: () => (T.IterableL = dart.constFn(dart.legacy(core.Iterable)))(),
+    MapOfStringL$dynamic: () => (T.MapOfStringL$dynamic = dart.constFn(core.Map$(T.StringL(), dart.dynamic)))(),
+    MapLOfStringL$dynamic: () => (T.MapLOfStringL$dynamic = dart.constFn(dart.legacy(T.MapOfStringL$dynamic())))(),
+    StringLAnddynamicToNull: () => (T.StringLAnddynamicToNull = dart.constFn(dart.fnType(core.Null, [T.StringL(), dart.dynamic])))(),
+    dynamicTo_PairLOfStringL$StringL: () => (T.dynamicTo_PairLOfStringL$StringL = dart.constFn(dart.fnType(T._PairLOfStringL$StringL(), [dart.dynamic])))(),
+    PartValueL: () => (T.PartValueL = dart.constFn(dart.legacy(request$.PartValue)))(),
+    BaseRequestL: () => (T.BaseRequestL = dart.constFn(dart.legacy(base_request.BaseRequest)))(),
+    UriL: () => (T.UriL = dart.constFn(dart.legacy(core.Uri)))(),
+    MultipartFileL: () => (T.MultipartFileL = dart.constFn(dart.legacy(multipart_file.MultipartFile)))(),
+    IterableOfMultipartFileL: () => (T.IterableOfMultipartFileL = dart.constFn(core.Iterable$(T.MultipartFileL())))(),
+    IterableLOfMultipartFileL: () => (T.IterableLOfMultipartFileL = dart.constFn(dart.legacy(T.IterableOfMultipartFileL())))(),
+    PartValueFileL: () => (T.PartValueFileL = dart.constFn(dart.legacy(request$.PartValueFile)))(),
+    MultipartRequestL: () => (T.MultipartRequestL = dart.constFn(dart.legacy(multipart_request.MultipartRequest)))(),
+    StreamedRequestL: () => (T.StreamedRequestL = dart.constFn(dart.legacy(streamed_request.StreamedRequest)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: interceptor.JsonConverter.prototype
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: interceptor.FormUrlEncodedConverter.prototype
+      });
+    },
+    get C2() {
+      return C[2] = dart.constList([], dart.dynamic);
+    },
+    get C3() {
+      return C[3] = dart.constList([], T.ChopperServiceL());
+    },
+    get C4() {
+      return C[4] = dart.constMap(T.StringL(), dart.dynamic, []);
+    },
+    get C5() {
+      return C[5] = dart.constMap(T.StringL(), T.StringL(), []);
+    },
+    get C6() {
+      return C[6] = dart.constList([], T.PartValueL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: annotations.Multipart.prototype
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: annotations.Body.prototype
+      });
+    }
+  }, false);
+  var C = Array(9).fill(void 0);
+  var I = [
+    "package:chopper/src/interceptor.dart",
+    "file:///C:/Users/patra/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/chopper-3.0.6/lib/src/base.dart",
+    "package:chopper/src/base.dart",
+    "package:chopper/src/utils.dart",
+    "package:chopper/src/request.dart",
+    "package:chopper/src/annotations.dart"
+  ];
+  interceptor.ResponseInterceptor = class ResponseInterceptor extends core.Object {};
+  (interceptor.ResponseInterceptor.new = function() {
+    ;
+  }).prototype = interceptor.ResponseInterceptor.prototype;
+  dart.addTypeTests(interceptor.ResponseInterceptor);
+  dart.addTypeCaches(interceptor.ResponseInterceptor);
+  dart.setLibraryUri(interceptor.ResponseInterceptor, I[0]);
+  interceptor.RequestInterceptor = class RequestInterceptor extends core.Object {};
+  (interceptor.RequestInterceptor.new = function() {
+    ;
+  }).prototype = interceptor.RequestInterceptor.prototype;
+  dart.addTypeTests(interceptor.RequestInterceptor);
+  dart.addTypeCaches(interceptor.RequestInterceptor);
+  dart.setLibraryUri(interceptor.RequestInterceptor, I[0]);
+  interceptor.Converter = class Converter extends core.Object {};
+  (interceptor.Converter.new = function() {
+    ;
+  }).prototype = interceptor.Converter.prototype;
+  dart.addTypeTests(interceptor.Converter);
+  dart.addTypeCaches(interceptor.Converter);
+  dart.setLibraryUri(interceptor.Converter, I[0]);
+  interceptor.ErrorConverter = class ErrorConverter extends core.Object {};
+  (interceptor.ErrorConverter.new = function() {
+    ;
+  }).prototype = interceptor.ErrorConverter.prototype;
+  dart.addTypeTests(interceptor.ErrorConverter);
+  dart.addTypeCaches(interceptor.ErrorConverter);
+  dart.setLibraryUri(interceptor.ErrorConverter, I[0]);
+  var headers$ = dart.privateName(interceptor, "HeadersInterceptor.headers");
+  interceptor.HeadersInterceptor = class HeadersInterceptor extends core.Object {
+    get headers() {
+      return this[headers$];
+    }
+    set headers(value) {
+      super.headers = value;
+    }
+    onRequest(request) {
+      return async.async(T.RequestL(), (function* onRequest() {
+        return utils.applyHeaders(request, this.headers);
+      }).bind(this));
+    }
+  };
+  (interceptor.HeadersInterceptor.new = function(headers) {
+    this[headers$] = headers;
+    ;
+  }).prototype = interceptor.HeadersInterceptor.prototype;
+  dart.addTypeTests(interceptor.HeadersInterceptor);
+  dart.addTypeCaches(interceptor.HeadersInterceptor);
+  interceptor.HeadersInterceptor[dart.implements] = () => [interceptor.RequestInterceptor];
+  dart.setMethodSignature(interceptor.HeadersInterceptor, () => ({
+    __proto__: dart.getMethods(interceptor.HeadersInterceptor.__proto__),
+    onRequest: dart.fnType(dart.legacy(async.Future$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)])
+  }));
+  dart.setLibraryUri(interceptor.HeadersInterceptor, I[0]);
+  dart.setFieldSignature(interceptor.HeadersInterceptor, () => ({
+    __proto__: dart.getFields(interceptor.HeadersInterceptor.__proto__),
+    headers: dart.finalFieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))))
+  }));
+  interceptor.CurlInterceptor = class CurlInterceptor extends core.Object {
+    onRequest(request) {
+      return async.async(T.RequestL(), function* onRequest() {
+        let baseRequest = (yield request.toBaseRequest());
+        let method = baseRequest.method;
+        let url = dart.toString(baseRequest.url);
+        let headers = baseRequest.headers;
+        let curl = "";
+        curl = curl + "curl";
+        curl = curl + " -v";
+        curl = curl + (" -X " + dart.str(method));
+        headers[$forEach](dart.fn((k, v) => {
+          curl = curl + (" -H '" + dart.str(k) + ": " + dart.str(v) + "'");
+        }, T.StringLAndStringLToNull()));
+        if (T.RequestL$1().is(baseRequest)) {
+          let body = baseRequest.body;
+          if (body != null && body[$isNotEmpty]) {
+            curl = curl + (" -d '" + dart.str(body) + "'");
+          }
+        }
+        curl = curl + (" " + dart.str(url));
+        utils.chopperLogger.info(curl);
+        return request;
+      });
+    }
+  };
+  (interceptor.CurlInterceptor.new = function() {
+    ;
+  }).prototype = interceptor.CurlInterceptor.prototype;
+  dart.addTypeTests(interceptor.CurlInterceptor);
+  dart.addTypeCaches(interceptor.CurlInterceptor);
+  interceptor.CurlInterceptor[dart.implements] = () => [interceptor.RequestInterceptor];
+  dart.setMethodSignature(interceptor.CurlInterceptor, () => ({
+    __proto__: dart.getMethods(interceptor.CurlInterceptor.__proto__),
+    onRequest: dart.fnType(dart.legacy(async.Future$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)])
+  }));
+  dart.setLibraryUri(interceptor.CurlInterceptor, I[0]);
+  interceptor.HttpLoggingInterceptor = class HttpLoggingInterceptor extends core.Object {
+    onRequest(request) {
+      return async.async(T.RequestL(), function* onRequest() {
+        let base = (yield request.toBaseRequest());
+        utils.chopperLogger.info("--> " + dart.str(base.method) + " " + dart.str(base.url));
+        base.headers[$forEach](dart.fn((k, v) => utils.chopperLogger.info(dart.str(k) + ": " + dart.str(v)), T.StringLAndStringLTovoid()));
+        let bytes = "";
+        if (T.RequestL$1().is(base)) {
+          let body = base.body;
+          if (body != null && body[$isNotEmpty]) {
+            utils.chopperLogger.info(body);
+            bytes = " (" + dart.str(base.bodyBytes[$length]) + "-byte body)";
+          }
+        }
+        utils.chopperLogger.info("--> END " + dart.str(base.method) + bytes);
+        return request;
+      });
+    }
+    onResponse(response) {
+      let t0;
+      let base = response.base.request;
+      utils.chopperLogger.info("<-- " + dart.str(response.statusCode) + " " + dart.str(base.url));
+      response.base.headers[$forEach](dart.fn((k, v) => utils.chopperLogger.info(dart.str(k) + ": " + dart.str(v)), T.StringLAndStringLTovoid()));
+      let bytes = null;
+      if (T.ResponseL().is(response.base)) {
+        let resp = T.ResponseL().as(response.base);
+        if (resp.body != null && resp.body[$isNotEmpty]) {
+          utils.chopperLogger.info(resp.body);
+          bytes = " (" + dart.str((t0 = response.bodyBytes, t0 == null ? null : t0[$length])) + "-byte body)";
+        }
+      }
+      utils.chopperLogger.info("--> END " + dart.str(base.method) + dart.str(bytes));
+      return response;
+    }
+  };
+  (interceptor.HttpLoggingInterceptor.new = function() {
+    ;
+  }).prototype = interceptor.HttpLoggingInterceptor.prototype;
+  dart.addTypeTests(interceptor.HttpLoggingInterceptor);
+  dart.addTypeCaches(interceptor.HttpLoggingInterceptor);
+  interceptor.HttpLoggingInterceptor[dart.implements] = () => [interceptor.RequestInterceptor, interceptor.ResponseInterceptor];
+  dart.setMethodSignature(interceptor.HttpLoggingInterceptor, () => ({
+    __proto__: dart.getMethods(interceptor.HttpLoggingInterceptor.__proto__),
+    onRequest: dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)]),
+    onResponse: dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(response$0.Response))), [dart.legacy(response$0.Response)])
+  }));
+  dart.setLibraryUri(interceptor.HttpLoggingInterceptor, I[0]);
+  var _tryDecodeJson = dart.privateName(interceptor, "_tryDecodeJson");
+  interceptor.JsonConverter = class JsonConverter extends core.Object {
+    convertRequest(request) {
+      let req = utils.applyHeader(request, "content-type", "application/json", {override: false});
+      return this.encodeJson(req);
+    }
+    encodeJson(request) {
+      let contentType = request.headers[$_get]("content-type");
+      if (contentType != null && contentType[$contains]("application/json")) {
+        return request.copyWith({body: convert.json.encode(request.body)});
+      }
+      return request;
+    }
+    decodeJson(BodyType, InnerType, response) {
+      let contentType = response.headers[$_get]("content-type");
+      let body = response.body;
+      if (contentType != null && contentType[$contains]("application/json")) {
+        body = convert.utf8.decode(response.bodyBytes);
+      }
+      body = this[_tryDecodeJson](T.StringL().as(body));
+      if (dart.test(utils.isTypeOf(dart.legacy(BodyType), dart.legacy(core.Iterable$(dart.legacy(InnerType)))))) {
+        body = dart.dgsend(body, [dart.legacy(InnerType)], 'cast', []);
+      } else if (dart.test(utils.isTypeOf(dart.legacy(BodyType), dart.legacy(core.Map$(T.StringL(), dart.legacy(InnerType)))))) {
+        body = dart.dgsend(body, [T.StringL(), dart.legacy(InnerType)], 'cast', []);
+      }
+      return response.copyWith(dart.legacy(BodyType), {body: dart.legacy(BodyType).as(body)});
+    }
+    convertResponse(BodyType, InnerType, response) {
+      return dart.legacy(response$0.Response$(dart.legacy(BodyType))).as(this.decodeJson(dart.legacy(BodyType), dart.legacy(InnerType), response));
+    }
+    [_tryDecodeJson](data) {
+      try {
+        return convert.json.decode(data);
+      } catch (e$) {
+        let e = dart.getThrown(e$);
+        utils.chopperLogger.warning(e);
+        return data;
+      }
+    }
+    convertError(BodyType, InnerType, response) {
+      return this.decodeJson(dart.dynamic, dart.dynamic, response);
+    }
+    static responseFactory(BodyType, InnerType, response) {
+      return (C[0] || CT.C0).convertResponse(dart.legacy(BodyType), dart.legacy(InnerType), response);
+    }
+    static requestFactory(request) {
+      return (C[0] || CT.C0).convertRequest(request);
+    }
+  };
+  (interceptor.JsonConverter.new = function() {
+    ;
+  }).prototype = interceptor.JsonConverter.prototype;
+  dart.addTypeTests(interceptor.JsonConverter);
+  dart.addTypeCaches(interceptor.JsonConverter);
+  interceptor.JsonConverter[dart.implements] = () => [interceptor.Converter, interceptor.ErrorConverter];
+  dart.setMethodSignature(interceptor.JsonConverter, () => ({
+    __proto__: dart.getMethods(interceptor.JsonConverter.__proto__),
+    convertRequest: dart.fnType(dart.legacy(request$.Request), [dart.legacy(request$.Request)]),
+    encodeJson: dart.fnType(dart.legacy(request$.Request), [dart.legacy(request$.Request)]),
+    decodeJson: dart.gFnType((BodyType, InnerType) => [dart.legacy(response$0.Response), [dart.legacy(response$0.Response)]]),
+    convertResponse: dart.gFnType((BodyType, InnerType) => [dart.legacy(response$0.Response$(dart.legacy(BodyType))), [dart.legacy(response$0.Response)]]),
+    [_tryDecodeJson]: dart.fnType(dart.dynamic, [dart.legacy(core.String)]),
+    convertError: dart.gFnType((BodyType, InnerType) => [dart.legacy(response$0.Response), [dart.legacy(response$0.Response)]])
+  }));
+  dart.setLibraryUri(interceptor.JsonConverter, I[0]);
+  interceptor.FormUrlEncodedConverter = class FormUrlEncodedConverter extends core.Object {
+    convertRequest(request) {
+      let req = utils.applyHeader(request, "content-type", constants.formEncodedHeaders, {override: false});
+      if (T.MapLOfStringL$StringL().is(req.body)) return req;
+      if (T.MapL().is(req.body)) {
+        let body = new (T.IdentityMapOfStringL$StringL()).new();
+        dart.dsend(req.body, 'forEach', [dart.fn((key, val) => {
+            if (val != null) {
+              body[$_set](dart.toString(key), dart.toString(val));
+            }
+          }, T.dynamicAnddynamicToNull())]);
+        req = req.copyWith({body: body});
+      }
+      return req;
+    }
+    convertResponse(BodyType, InnerType, response) {
+      return dart.legacy(response$0.Response$(dart.legacy(BodyType))).as(response);
+    }
+    convertError(BodyType, InnerType, response) {
+      return response;
+    }
+    static requestFactory(request) {
+      return (C[1] || CT.C1).convertRequest(request);
+    }
+  };
+  (interceptor.FormUrlEncodedConverter.new = function() {
+    ;
+  }).prototype = interceptor.FormUrlEncodedConverter.prototype;
+  dart.addTypeTests(interceptor.FormUrlEncodedConverter);
+  dart.addTypeCaches(interceptor.FormUrlEncodedConverter);
+  interceptor.FormUrlEncodedConverter[dart.implements] = () => [interceptor.Converter, interceptor.ErrorConverter];
+  dart.setMethodSignature(interceptor.FormUrlEncodedConverter, () => ({
+    __proto__: dart.getMethods(interceptor.FormUrlEncodedConverter.__proto__),
+    convertRequest: dart.fnType(dart.legacy(request$.Request), [dart.legacy(request$.Request)]),
+    convertResponse: dart.gFnType((BodyType, InnerType) => [dart.legacy(response$0.Response$(dart.legacy(BodyType))), [dart.legacy(response$0.Response)]]),
+    convertError: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.FutureOr$(dart.legacy(response$0.Response))), [dart.legacy(response$0.Response)]])
+  }));
+  dart.setLibraryUri(interceptor.FormUrlEncodedConverter, I[0]);
+  var baseUrl$ = dart.privateName(base, "ChopperClient.baseUrl");
+  var httpClient = dart.privateName(base, "ChopperClient.httpClient");
+  var converter$ = dart.privateName(base, "ChopperClient.converter");
+  var errorConverter$ = dart.privateName(base, "ChopperClient.errorConverter");
+  var _services = dart.privateName(base, "_services");
+  var _requestInterceptors = dart.privateName(base, "_requestInterceptors");
+  var _responseInterceptors = dart.privateName(base, "_responseInterceptors");
+  var _requestController = dart.privateName(base, "_requestController");
+  var _responseController = dart.privateName(base, "_responseController");
+  var _clientIsInternal = dart.privateName(base, "_clientIsInternal");
+  var _isAnInterceptor = dart.privateName(base, "_isAnInterceptor");
+  var _isRequestInterceptor = dart.privateName(base, "_isRequestInterceptor");
+  var _isResponseInterceptor = dart.privateName(base, "_isResponseInterceptor");
+  var _encodeRequest = dart.privateName(base, "_encodeRequest");
+  var _decodeResponse = dart.privateName(base, "_decodeResponse");
+  var _interceptRequest = dart.privateName(base, "_interceptRequest");
+  var _interceptResponse = dart.privateName(base, "_interceptResponse");
+  var _handleErrorResponse = dart.privateName(base, "_handleErrorResponse");
+  var _handleSuccessResponse = dart.privateName(base, "_handleSuccessResponse");
+  var _handleRequestConverter = dart.privateName(base, "_handleRequestConverter");
+  base.ChopperClient = class ChopperClient extends core.Object {
+    get baseUrl() {
+      return this[baseUrl$];
+    }
+    set baseUrl(value) {
+      super.baseUrl = value;
+    }
+    get httpClient() {
+      return this[httpClient];
+    }
+    set httpClient(value) {
+      super.httpClient = value;
+    }
+    get converter() {
+      return this[converter$];
+    }
+    set converter(value) {
+      super.converter = value;
+    }
+    get errorConverter() {
+      return this[errorConverter$];
+    }
+    set errorConverter(value) {
+      super.errorConverter = value;
+    }
+    [_isRequestInterceptor](value) {
+      return T.RequestInterceptorL().is(value) || T.RequestLToLFutureOrLOfRequestL().is(value);
+    }
+    [_isResponseInterceptor](value) {
+      return T.ResponseInterceptorL().is(value) || T.ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL().is(value) || T.ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL$1().is(value) || T.ResponseLToLFutureOrLOfResponseL().is(value);
+    }
+    [_isAnInterceptor](value) {
+      return dart.test(this[_isResponseInterceptor](value)) || dart.test(this[_isRequestInterceptor](value));
+    }
+    getService(ServiceType) {
+      let serviceType = base._typeOf(dart.legacy(ServiceType));
+      if (dart.equals(serviceType, dart.wrapType(dart.dynamic)) || dart.equals(serviceType, dart.wrapType(base.ChopperService))) {
+        dart.throw(core.Exception.new("Service type should be provided, `dynamic` is not allowed."));
+      }
+      let service = this[_services][$_get](serviceType);
+      if (service == null) {
+        dart.throw(core.Exception.new("Service of type '" + dart.str(serviceType) + "' not found."));
+      }
+      return dart.legacy(ServiceType).as(service);
+    }
+    [_encodeRequest](request) {
+      return async.async(T.RequestL(), (function* _encodeRequest() {
+        if (this.converter != null) {
+          return this.converter.convertRequest(request);
+        }
+        return request;
+      }).bind(this));
+    }
+    [_decodeResponse](BodyType, InnerType, response, withConverter) {
+      return async.async(dart.legacy(response$0.Response$(dart.legacy(BodyType))), function* _decodeResponse() {
+        let converted = (yield withConverter.convertResponse(dart.legacy(BodyType), dart.legacy(InnerType), response));
+        if (converted == null) {
+          dart.throw(core.Exception.new("No converter found for type " + dart.str(dart.wrapType(dart.legacy(InnerType)))));
+        }
+        return converted;
+      });
+    }
+    [_interceptRequest](req) {
+      return async.async(T.RequestL(), (function* _interceptRequest() {
+        let body = req.body;
+        for (let i of this[_requestInterceptors]) {
+          if (T.RequestInterceptorL().is(i)) {
+            req = (yield i.onRequest(req));
+          } else if (T.RequestLToLFutureOrLOfRequestL().is(i)) {
+            req = (yield i(req));
+          }
+        }
+        if (!(req != null)) dart.assertFailed("Interceptors should return modified request", I[1], 184, 12, "req != null");
+        if (!dart.equals(body, req.body)) dart.assertFailed("Interceptors should not transform the body of the request" + "Use Request converter instead", I[1], 187, 7, "body == req.body");
+        return req;
+      }).bind(this));
+    }
+    [_interceptResponse](BodyType, InnerType, res) {
+      return async.async(dart.legacy(response$0.Response$(dart.legacy(BodyType))), (function* _interceptResponse() {
+        let body = res.body;
+        for (let i of this[_responseInterceptors]) {
+          if (T.ResponseInterceptorL().is(i)) {
+            res = dart.legacy(response$0.Response$(dart.legacy(BodyType))).as(yield i.onResponse(res));
+          } else if (T.ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL().is(i)) {
+            res = (yield i(dart.legacy(BodyType), res));
+          } else if (T.ResponseLOfBodyTypeLToLFutureOrLOfResponseLOfBodyTypeL$1().is(i)) {
+            res = (yield i(dart.legacy(BodyType), dart.legacy(InnerType), res));
+          } else if (T.ResponseLToLFutureOrLOfResponseL().is(i)) {
+            res = dart.legacy(response$0.Response$(dart.legacy(BodyType))).as(yield i(res));
+          }
+        }
+        if (!(res != null)) dart.assertFailed("Interceptors should return modified response", I[1], 210, 12, "res != null");
+        if (!dart.equals(body, res.body)) dart.assertFailed("Interceptors should not transform the body of the response" + "Use Response converter instead", I[1], 213, 7, "body == res.body");
+        return res;
+      }).bind(this));
+    }
+    [_handleErrorResponse](BodyType, InnerType, response) {
+      return async.async(dart.legacy(response$0.Response$(dart.legacy(BodyType))), (function* _handleErrorResponse() {
+        let t1;
+        let error = response.body;
+        if (this.errorConverter != null) {
+          let errorRes = (yield this.errorConverter.convertError(dart.legacy(BodyType), dart.legacy(InnerType), response));
+          error = (t1 = errorRes.error, t1 == null ? errorRes.body : t1);
+        }
+        return new (response$0.Response$(dart.legacy(BodyType))).new(response.base, null, {error: error});
+      }).bind(this));
+    }
+    [_handleSuccessResponse](BodyType, InnerType, response, responseConverter) {
+      return async.async(dart.legacy(response$0.Response$(dart.legacy(BodyType))), (function* _handleSuccessResponse() {
+        if (responseConverter != null) {
+          response = (yield responseConverter(response));
+        } else if (this.converter != null) {
+          response = (yield this[_decodeResponse](dart.legacy(BodyType), dart.legacy(InnerType), response, this.converter));
+        }
+        return new (response$0.Response$(dart.legacy(BodyType))).new(response.base, dart.legacy(BodyType).as(response.body));
+      }).bind(this));
+    }
+    [_handleRequestConverter](request, requestConverter) {
+      return async.async(T.RequestL(), (function* _handleRequestConverter() {
+        if (request.body != null || dart.test(request.parts[$isNotEmpty])) {
+          if (requestConverter != null) {
+            request = (yield requestConverter(request));
+          } else {
+            request = (yield this[_encodeRequest](request));
+          }
+        }
+        return request;
+      }).bind(this));
+    }
+    send(BodyType, InnerType, request, opts) {
+      let requestConverter = opts && 'requestConverter' in opts ? opts.requestConverter : null;
+      let responseConverter = opts && 'responseConverter' in opts ? opts.responseConverter : null;
+      return async.async(dart.legacy(response$0.Response$(dart.legacy(BodyType))), (function* send() {
+        let req = (yield this[_handleRequestConverter](request, requestConverter));
+        req = (yield this[_interceptRequest](req));
+        this[_requestController].add(req);
+        let streamRes = (yield this.httpClient.send(yield req.toBaseRequest()));
+        if (dart.test(utils.isTypeOf(dart.legacy(BodyType), T.StreamLOfListLOfintL()))) {
+          return new (response$0.Response$(dart.legacy(BodyType))).new(streamRes, dart.legacy(BodyType).as(streamRes.stream));
+        }
+        let response = (yield response$.Response.fromStream(streamRes));
+        let res = new (T.ResponseOfStringL()).new(response, response.body);
+        if (dart.test(base._responseIsSuccessful(response.statusCode))) {
+          res = (yield this[_handleSuccessResponse](dart.legacy(BodyType), dart.legacy(InnerType), T.ResponseL$1().as(res), responseConverter));
+        } else {
+          res = (yield this[_handleErrorResponse](dart.legacy(BodyType), dart.legacy(InnerType), T.ResponseL$1().as(res)));
+        }
+        res = (yield this[_interceptResponse](dart.legacy(BodyType), dart.legacy(InnerType), dart.legacy(response$0.Response$(dart.legacy(BodyType))).as(res)));
+        this[_responseController].add(T.ResponseL$1().as(res));
+        return dart.legacy(async.FutureOr$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))).as(res);
+      }).bind(this));
+    }
+    get(BodyType, InnerType, url, opts) {
+      let t1;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.send(dart.legacy(BodyType), dart.legacy(InnerType), new request$.Request.new("GET", url, (t1 = baseUrl, t1 == null ? this.baseUrl : t1), {headers: headers, parameters: parameters}));
+    }
+    post(BodyType, InnerType, url, opts) {
+      let t1;
+      let body = opts && 'body' in opts ? opts.body : null;
+      let parts = opts && 'parts' in opts ? opts.parts : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let multipart = opts && 'multipart' in opts ? opts.multipart : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.send(dart.legacy(BodyType), dart.legacy(InnerType), new request$.Request.new("POST", url, (t1 = baseUrl, t1 == null ? this.baseUrl : t1), {body: body, parts: parts, headers: headers, multipart: multipart, parameters: parameters}));
+    }
+    put(BodyType, InnerType, url, opts) {
+      let t1;
+      let body = opts && 'body' in opts ? opts.body : null;
+      let parts = opts && 'parts' in opts ? opts.parts : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let multipart = opts && 'multipart' in opts ? opts.multipart : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.send(dart.legacy(BodyType), dart.legacy(InnerType), new request$.Request.new("PUT", url, (t1 = baseUrl, t1 == null ? this.baseUrl : t1), {body: body, parts: parts, headers: headers, multipart: multipart, parameters: parameters}));
+    }
+    patch(BodyType, InnerType, url, opts) {
+      let t1;
+      let body = opts && 'body' in opts ? opts.body : null;
+      let parts = opts && 'parts' in opts ? opts.parts : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let multipart = opts && 'multipart' in opts ? opts.multipart : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.send(dart.legacy(BodyType), dart.legacy(InnerType), new request$.Request.new("PATCH", url, (t1 = baseUrl, t1 == null ? this.baseUrl : t1), {body: body, parts: parts, headers: headers, multipart: multipart, parameters: parameters}));
+    }
+    delete(BodyType, InnerType, url, opts) {
+      let t1;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.send(dart.legacy(BodyType), dart.legacy(InnerType), new request$.Request.new("DELETE", url, (t1 = baseUrl, t1 == null ? this.baseUrl : t1), {headers: headers, parameters: parameters}));
+    }
+    head(BodyType, InnerType, url, opts) {
+      let t1;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.send(dart.legacy(BodyType), dart.legacy(InnerType), new request$.Request.new("HEAD", url, (t1 = baseUrl, t1 == null ? this.baseUrl : t1), {headers: headers, parameters: parameters}));
+    }
+    dispose() {
+      this[_requestController].close();
+      this[_responseController].close();
+      this[_services][$forEach](dart.fn((_, s) => s.dispose(), T.TypeLAndChopperServiceLTovoid()));
+      this[_services][$clear]();
+      this[_requestInterceptors][$clear]();
+      this[_responseInterceptors][$clear]();
+      if (dart.test(this[_clientIsInternal])) {
+        this.httpClient.close();
+      }
+    }
+    get onRequest() {
+      return this[_requestController].stream;
+    }
+    get onResponse() {
+      return this[_responseController].stream;
+    }
+  };
+  (base.ChopperClient.new = function(opts) {
+    let t1;
+    let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : "";
+    let client = opts && 'client' in opts ? opts.client : null;
+    let interceptors = opts && 'interceptors' in opts ? opts.interceptors : C[2] || CT.C2;
+    let converter = opts && 'converter' in opts ? opts.converter : null;
+    let errorConverter = opts && 'errorConverter' in opts ? opts.errorConverter : null;
+    let services = opts && 'services' in opts ? opts.services : C[3] || CT.C3;
+    this[_services] = new (T.LinkedMapOfTypeL$ChopperServiceL()).new();
+    this[_requestInterceptors] = [];
+    this[_responseInterceptors] = [];
+    this[_requestController] = T.StreamControllerOfRequestL().broadcast();
+    this[_responseController] = T.StreamControllerOfResponseL().broadcast();
+    this[baseUrl$] = baseUrl;
+    this[converter$] = converter;
+    this[errorConverter$] = errorConverter;
+    this[httpClient] = (t1 = client, t1 == null ? client$.Client.new() : t1);
+    this[_clientIsInternal] = client == null;
+    if (interceptors[$every](dart.bind(this, _isAnInterceptor)) === false) {
+      dart.throw(new core.ArgumentError.new("Unsupported type for interceptors, it only support the following types:\n" + dart.str(base.allowedInterceptorsType[$join]("\n - "))));
+    }
+    this[_requestInterceptors][$addAll](interceptors[$where](dart.bind(this, _isRequestInterceptor)));
+    this[_responseInterceptors][$addAll](interceptors[$where](dart.bind(this, _isResponseInterceptor)));
+    services[$toSet]()[$forEach](dart.fn(s => {
+      s.client = this;
+      this[_services][$_set](s.definitionType, s);
+    }, T.ChopperServiceLToNull()));
+  }).prototype = base.ChopperClient.prototype;
+  dart.addTypeTests(base.ChopperClient);
+  dart.addTypeCaches(base.ChopperClient);
+  dart.setMethodSignature(base.ChopperClient, () => ({
+    __proto__: dart.getMethods(base.ChopperClient.__proto__),
+    [_isRequestInterceptor]: dart.fnType(dart.legacy(core.bool), [dart.dynamic]),
+    [_isResponseInterceptor]: dart.fnType(dart.legacy(core.bool), [dart.dynamic]),
+    [_isAnInterceptor]: dart.fnType(dart.legacy(core.bool), [dart.dynamic]),
+    getService: dart.gFnType(ServiceType => [dart.legacy(ServiceType), []], ServiceType => [dart.legacy(base.ChopperService)]),
+    [_encodeRequest]: dart.fnType(dart.legacy(async.Future$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)]),
+    [_decodeResponse]: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(response$0.Response), dart.legacy(interceptor.Converter)]]),
+    [_interceptRequest]: dart.fnType(dart.legacy(async.Future$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)]),
+    [_interceptResponse]: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(response$0.Response$(dart.legacy(BodyType)))]]),
+    [_handleErrorResponse]: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(response$0.Response)]]),
+    [_handleSuccessResponse]: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(response$0.Response), dart.legacy(dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(response$0.Response))), [dart.legacy(response$0.Response)]))]]),
+    [_handleRequestConverter]: dart.fnType(dart.legacy(async.Future$(dart.legacy(request$.Request))), [dart.legacy(request$.Request), dart.legacy(dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)]))]),
+    send: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(request$.Request)], {requestConverter: dart.legacy(dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)])), responseConverter: dart.legacy(dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(response$0.Response))), [dart.legacy(response$0.Response)]))}, {}]),
+    get: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(core.String)], {baseUrl: dart.legacy(core.String), headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic))}, {}]),
+    post: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(core.String)], {baseUrl: dart.legacy(core.String), body: dart.dynamic, headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), multipart: dart.legacy(core.bool), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), parts: dart.legacy(core.List$(dart.legacy(request$.PartValue)))}, {}]),
+    put: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(core.String)], {baseUrl: dart.legacy(core.String), body: dart.dynamic, headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), multipart: dart.legacy(core.bool), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), parts: dart.legacy(core.List$(dart.legacy(request$.PartValue)))}, {}]),
+    patch: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(core.String)], {baseUrl: dart.legacy(core.String), body: dart.dynamic, headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), multipart: dart.legacy(core.bool), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), parts: dart.legacy(core.List$(dart.legacy(request$.PartValue)))}, {}]),
+    delete: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(core.String)], {baseUrl: dart.legacy(core.String), headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic))}, {}]),
+    head: dart.gFnType((BodyType, InnerType) => [dart.legacy(async.Future$(dart.legacy(response$0.Response$(dart.legacy(BodyType))))), [dart.legacy(core.String)], {baseUrl: dart.legacy(core.String), headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic))}, {}]),
+    dispose: dart.fnType(dart.void, [])
+  }));
+  dart.setGetterSignature(base.ChopperClient, () => ({
+    __proto__: dart.getGetters(base.ChopperClient.__proto__),
+    onRequest: dart.legacy(async.Stream$(dart.legacy(request$.Request))),
+    onResponse: dart.legacy(async.Stream$(dart.legacy(response$0.Response)))
+  }));
+  dart.setLibraryUri(base.ChopperClient, I[2]);
+  dart.setFieldSignature(base.ChopperClient, () => ({
+    __proto__: dart.getFields(base.ChopperClient.__proto__),
+    baseUrl: dart.finalFieldType(dart.legacy(core.String)),
+    httpClient: dart.finalFieldType(dart.legacy(client$.Client)),
+    converter: dart.finalFieldType(dart.legacy(interceptor.Converter)),
+    errorConverter: dart.finalFieldType(dart.legacy(interceptor.ErrorConverter)),
+    [_services]: dart.finalFieldType(dart.legacy(core.Map$(dart.legacy(core.Type), dart.legacy(base.ChopperService)))),
+    [_requestInterceptors]: dart.finalFieldType(dart.legacy(core.List)),
+    [_responseInterceptors]: dart.finalFieldType(dart.legacy(core.List)),
+    [_requestController]: dart.finalFieldType(dart.legacy(async.StreamController$(dart.legacy(request$.Request)))),
+    [_responseController]: dart.finalFieldType(dart.legacy(async.StreamController$(dart.legacy(response$0.Response)))),
+    [_clientIsInternal]: dart.finalFieldType(dart.legacy(core.bool))
+  }));
+  var client = dart.privateName(base, "ChopperService.client");
+  base.ChopperService = class ChopperService extends core.Object {
+    get client() {
+      return this[client];
+    }
+    set client(value) {
+      this[client] = value;
+    }
+    dispose() {
+      this.client = null;
+    }
+  };
+  (base.ChopperService.new = function() {
+    this[client] = null;
+    ;
+  }).prototype = base.ChopperService.prototype;
+  dart.addTypeTests(base.ChopperService);
+  dart.addTypeCaches(base.ChopperService);
+  dart.setMethodSignature(base.ChopperService, () => ({
+    __proto__: dart.getMethods(base.ChopperService.__proto__),
+    dispose: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(base.ChopperService, I[2]);
+  dart.setFieldSignature(base.ChopperService, () => ({
+    __proto__: dart.getFields(base.ChopperService.__proto__),
+    client: dart.fieldType(dart.legacy(base.ChopperClient))
+  }));
+  base._typeOf = function _typeOf(T) {
+    return dart.wrapType(dart.legacy(T));
+  };
+  base._responseIsSuccessful = function _responseIsSuccessful(statusCode) {
+    return dart.notNull(statusCode) >= 200 && dart.notNull(statusCode) < 300;
+  };
+  dart.defineLazy(base, {
+    /*base.allowedInterceptorsType*/get allowedInterceptorsType() {
+      return T.JSArrayOfTypeL().of([dart.wrapType(interceptor.RequestInterceptor), dart.wrapType(T.RequestLToFutureOrLOfRequestL()), dart.wrapType(interceptor.ResponseInterceptor), dart.wrapType(T.ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL()), dart.wrapType(T.ResponseLOfBodyTypeLToFutureOrLOfResponseLOfBodyTypeL$1()), dart.wrapType(T.ResponseLToFutureOrLOfResponseL())]);
+    }
+  }, true);
+  const _is__Pair_default = Symbol('_is__Pair_default');
+  utils._Pair$ = dart.generic((A, B) => {
+    class _Pair extends core.Object {
+      toString() {
+        return dart.str(this.first) + "=" + dart.str(this.second);
+      }
+    }
+    (_Pair.new = function(first, second) {
+      this.first = first;
+      this.second = second;
+      ;
+    }).prototype = _Pair.prototype;
+    dart.addTypeTests(_Pair);
+    _Pair.prototype[_is__Pair_default] = true;
+    dart.addTypeCaches(_Pair);
+    dart.setMethodSignature(_Pair, () => ({
+      __proto__: dart.getMethods(_Pair.__proto__),
+      toString: dart.fnType(dart.legacy(core.String), []),
+      [$toString]: dart.fnType(dart.legacy(core.String), [])
+    }));
+    dart.setLibraryUri(_Pair, I[3]);
+    dart.setFieldSignature(_Pair, () => ({
+      __proto__: dart.getFields(_Pair.__proto__),
+      first: dart.finalFieldType(dart.legacy(A)),
+      second: dart.finalFieldType(dart.legacy(B))
+    }));
+    dart.defineExtensionMethods(_Pair, ['toString']);
+    return _Pair;
+  });
+  utils._Pair = utils._Pair$();
+  dart.addTypeTests(utils._Pair, _is__Pair_default);
+  const _is__Instance_default = Symbol('_is__Instance_default');
+  utils._Instance$ = dart.generic(T => {
+    class _Instance extends core.Object {}
+    (_Instance.new = function() {
+      ;
+    }).prototype = _Instance.prototype;
+    dart.addTypeTests(_Instance);
+    _Instance.prototype[_is__Instance_default] = true;
+    dart.addTypeCaches(_Instance);
+    dart.setLibraryUri(_Instance, I[3]);
+    return _Instance;
+  });
+  utils._Instance = utils._Instance$();
+  dart.addTypeTests(utils._Instance, _is__Instance_default);
+  utils.applyHeader = function applyHeader(request, name, value, opts) {
+    let override = opts && 'override' in opts ? opts.override : true;
+    return utils.applyHeaders(request, new (T.IdentityMapOfStringL$StringL()).from([name, value]), {override: override});
+  };
+  utils.applyHeaders = function applyHeaders(request, headers, opts) {
+    let override = opts && 'override' in opts ? opts.override : true;
+    let h = T.LinkedHashMapOfStringL$StringL().from(request.headers);
+    for (let k of headers[$keys]) {
+      if (!dart.test(override) && dart.test(h[$containsKey](k))) continue;
+      h[$_set](k, headers[$_get](k));
+    }
+    return request.copyWith({headers: h});
+  };
+  utils.mapToQuery = function mapToQuery(map) {
+    return utils._mapToQuery(map)[$join]("&");
+  };
+  utils._mapToQuery = function _mapToQuery(map, opts) {
+    let prefix = opts && 'prefix' in opts ? opts.prefix : null;
+    let pairs = new (T._HashSetOf_PairLOfStringL$StringL()).new();
+    map[$forEach](dart.fn((key, value) => {
+      if (value != null) {
+        let name = core.Uri.encodeQueryComponent(key);
+        if (prefix != null) {
+          name = dart.str(prefix) + "." + dart.str(name);
+        }
+        if (T.IterableL().is(value)) {
+          pairs.addAll(utils._iterableToQuery(name, value));
+        } else if (T.MapL().is(value)) {
+          pairs.addAll(utils._mapToQuery(T.MapLOfStringL$dynamic().as(value), {prefix: name}));
+        } else if (dart.toString(value)[$isNotEmpty] === true) {
+          pairs.add(new (T._PairOfStringL$StringL()).new(name, utils._normalizeValue(value)));
+        }
+      }
+    }, T.StringLAnddynamicToNull()));
+    return pairs;
+  };
+  utils._iterableToQuery = function _iterableToQuery(name, values) {
+    return values[$map](T._PairLOfStringL$StringL(), dart.fn(v => new (T._PairOfStringL$StringL()).new(name, utils._normalizeValue(v)), T.dynamicTo_PairLOfStringL$StringL()));
+  };
+  utils._normalizeValue = function _normalizeValue(value) {
+    return core.Uri.encodeQueryComponent(dart.toString(value));
+  };
+  utils.isTypeOf = function isTypeOf(ThisType, OfType) {
+    return dart.legacy(utils._Instance$(dart.legacy(OfType))).is(new (utils._Instance$(dart.legacy(ThisType))).new());
+  };
+  dart.defineLazy(utils, {
+    /*utils.chopperLogger*/get chopperLogger() {
+      return logger.Logger.new("Chopper");
+    }
+  }, true);
+  var method$ = dart.privateName(request$, "Request.method");
+  var baseUrl$0 = dart.privateName(request$, "Request.baseUrl");
+  var url$ = dart.privateName(request$, "Request.url");
+  var body$ = dart.privateName(request$, "Request.body");
+  var parts$ = dart.privateName(request$, "Request.parts");
+  var parameters$ = dart.privateName(request$, "Request.parameters");
+  var headers$0 = dart.privateName(request$, "Request.headers");
+  var multipart$ = dart.privateName(request$, "Request.multipart");
+  var _buildUri = dart.privateName(request$, "_buildUri");
+  var _buildHeaders = dart.privateName(request$, "_buildHeaders");
+  request$.Request = class Request extends core.Object {
+    get method() {
+      return this[method$];
+    }
+    set method(value) {
+      super.method = value;
+    }
+    get baseUrl() {
+      return this[baseUrl$0];
+    }
+    set baseUrl(value) {
+      super.baseUrl = value;
+    }
+    get url() {
+      return this[url$];
+    }
+    set url(value) {
+      super.url = value;
+    }
+    get body() {
+      return this[body$];
+    }
+    set body(value) {
+      super.body = value;
+    }
+    get parts() {
+      return this[parts$];
+    }
+    set parts(value) {
+      super.parts = value;
+    }
+    get parameters() {
+      return this[parameters$];
+    }
+    set parameters(value) {
+      super.parameters = value;
+    }
+    get headers() {
+      return this[headers$0];
+    }
+    set headers(value) {
+      super.headers = value;
+    }
+    get multipart() {
+      return this[multipart$];
+    }
+    set multipart(value) {
+      super.multipart = value;
+    }
+    replace(opts) {
+      let method = opts && 'method' in opts ? opts.method : null;
+      let url = opts && 'url' in opts ? opts.url : null;
+      let body = opts && 'body' in opts ? opts.body : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let encoding = opts && 'encoding' in opts ? opts.encoding : null;
+      let parts = opts && 'parts' in opts ? opts.parts : null;
+      let multipart = opts && 'multipart' in opts ? opts.multipart : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return this.copyWith({method: method, url: url, body: body, parameters: parameters, headers: headers, encoding: encoding, parts: parts, multipart: multipart, baseUrl: baseUrl});
+    }
+    copyWith(opts) {
+      let t1, t1$, t1$0, t1$1, t1$2, t1$3, t1$4, t1$5;
+      let method = opts && 'method' in opts ? opts.method : null;
+      let url = opts && 'url' in opts ? opts.url : null;
+      let body = opts && 'body' in opts ? opts.body : null;
+      let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+      let headers = opts && 'headers' in opts ? opts.headers : null;
+      let encoding = opts && 'encoding' in opts ? opts.encoding : null;
+      let parts = opts && 'parts' in opts ? opts.parts : null;
+      let multipart = opts && 'multipart' in opts ? opts.multipart : null;
+      let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : null;
+      return new request$.Request.new(T.StringL().as((t1 = method, t1 == null ? this.method : t1)), (t1$ = url, t1$ == null ? this.url : t1$), (t1$0 = baseUrl, t1$0 == null ? this.baseUrl : t1$0), {body: (t1$1 = body, t1$1 == null ? this.body : t1$1), parameters: (t1$2 = parameters, t1$2 == null ? this.parameters : t1$2), headers: (t1$3 = headers, t1$3 == null ? this.headers : t1$3), parts: (t1$4 = parts, t1$4 == null ? this.parts : t1$4), multipart: (t1$5 = multipart, t1$5 == null ? this.multipart : t1$5)});
+    }
+    [_buildUri]() {
+      return request$.buildUri(this.baseUrl, this.url, this.parameters);
+    }
+    [_buildHeaders]() {
+      return T.LinkedHashMapOfStringL$StringL().from(this.headers);
+    }
+    toBaseRequest() {
+      return async.async(T.BaseRequestL(), (function* toBaseRequest() {
+        let uri = this[_buildUri]();
+        let heads = this[_buildHeaders]();
+        if (T.StreamLOfListLOfintL().is(this.body)) {
+          return request$.toStreamedRequest(T.StreamLOfListLOfintL().as(this.body), this.method, uri, heads);
+        }
+        if (dart.test(this.multipart)) {
+          return request$.toMultipartRequest(this.parts, this.method, uri, heads);
+        }
+        return request$.toHttpRequest(this.body, this.method, uri, heads);
+      }).bind(this));
+    }
+  };
+  (request$.Request.new = function(method, url, baseUrl, opts) {
+    let t1, t1$, t1$0, t1$1;
+    let body = opts && 'body' in opts ? opts.body : null;
+    let parameters = opts && 'parameters' in opts ? opts.parameters : null;
+    let headers = opts && 'headers' in opts ? opts.headers : null;
+    let multipart = opts && 'multipart' in opts ? opts.multipart : null;
+    let parts = opts && 'parts' in opts ? opts.parts : null;
+    this[method$] = method;
+    this[url$] = url;
+    this[baseUrl$0] = baseUrl;
+    this[body$] = body;
+    this[parameters$] = (t1 = parameters, t1 == null ? C[4] || CT.C4 : t1);
+    this[headers$0] = (t1$ = headers, t1$ == null ? C[5] || CT.C5 : t1$);
+    this[multipart$] = (t1$0 = multipart, t1$0 == null ? false : t1$0);
+    this[parts$] = (t1$1 = parts, t1$1 == null ? C[6] || CT.C6 : t1$1);
+    ;
+  }).prototype = request$.Request.prototype;
+  dart.addTypeTests(request$.Request);
+  dart.addTypeCaches(request$.Request);
+  dart.setMethodSignature(request$.Request, () => ({
+    __proto__: dart.getMethods(request$.Request.__proto__),
+    replace: dart.fnType(dart.legacy(request$.Request), [], {baseUrl: dart.legacy(core.String), body: dart.dynamic, encoding: dart.legacy(convert.Encoding), headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), method: dart.legacy(constants.HttpMethod), multipart: dart.legacy(core.bool), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), parts: dart.legacy(core.List$(dart.legacy(request$.PartValue))), url: dart.legacy(core.String)}, {}),
+    copyWith: dart.fnType(dart.legacy(request$.Request), [], {baseUrl: dart.legacy(core.String), body: dart.dynamic, encoding: dart.legacy(convert.Encoding), headers: dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), method: dart.legacy(constants.HttpMethod), multipart: dart.legacy(core.bool), parameters: dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), parts: dart.legacy(core.List$(dart.legacy(request$.PartValue))), url: dart.legacy(core.String)}, {}),
+    [_buildUri]: dart.fnType(dart.legacy(core.Uri), []),
+    [_buildHeaders]: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String))), []),
+    toBaseRequest: dart.fnType(dart.legacy(async.Future$(dart.legacy(base_request.BaseRequest))), [])
+  }));
+  dart.setLibraryUri(request$.Request, I[4]);
+  dart.setFieldSignature(request$.Request, () => ({
+    __proto__: dart.getFields(request$.Request.__proto__),
+    method: dart.finalFieldType(dart.legacy(core.String)),
+    baseUrl: dart.finalFieldType(dart.legacy(core.String)),
+    url: dart.finalFieldType(dart.legacy(core.String)),
+    body: dart.finalFieldType(dart.dynamic),
+    parts: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(request$.PartValue)))),
+    parameters: dart.finalFieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic))),
+    headers: dart.finalFieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String)))),
+    multipart: dart.finalFieldType(dart.legacy(core.bool))
+  }));
+  var value$ = dart.privateName(request$, "PartValue.value");
+  var name$ = dart.privateName(request$, "PartValue.name");
+  const _is_PartValue_default = Symbol('_is_PartValue_default');
+  request$.PartValue$ = dart.generic(T => {
+    class PartValue extends core.Object {
+      get value() {
+        return this[value$];
+      }
+      set value(value) {
+        super.value = value;
+      }
+      get name() {
+        return this[name$];
+      }
+      set name(value) {
+        super.name = value;
+      }
+      replace(NewType, opts) {
+        let name = opts && 'name' in opts ? opts.name : null;
+        let value = opts && 'value' in opts ? opts.value : null;
+        return this.copyWith(dart.legacy(NewType), {name: name, value: value});
+      }
+      copyWith(NewType, opts) {
+        let t1, t1$;
+        let name = opts && 'name' in opts ? opts.name : null;
+        let value = opts && 'value' in opts ? opts.value : null;
+        return new (request$.PartValue$(dart.legacy(NewType))).new((t1 = name, t1 == null ? this.name : t1), dart.legacy(NewType).as((t1$ = value, t1$ == null ? this.value : t1$)));
+      }
+    }
+    (PartValue.new = function(name, value) {
+      this[name$] = name;
+      this[value$] = value;
+      ;
+    }).prototype = PartValue.prototype;
+    dart.addTypeTests(PartValue);
+    PartValue.prototype[_is_PartValue_default] = true;
+    dart.addTypeCaches(PartValue);
+    dart.setMethodSignature(PartValue, () => ({
+      __proto__: dart.getMethods(PartValue.__proto__),
+      replace: dart.gFnType(NewType => [dart.legacy(request$.PartValue$(dart.legacy(NewType))), [], {name: dart.legacy(core.String), value: dart.legacy(NewType)}, {}]),
+      copyWith: dart.gFnType(NewType => [dart.legacy(request$.PartValue$(dart.legacy(NewType))), [], {name: dart.legacy(core.String), value: dart.legacy(NewType)}, {}])
+    }));
+    dart.setLibraryUri(PartValue, I[4]);
+    dart.setFieldSignature(PartValue, () => ({
+      __proto__: dart.getFields(PartValue.__proto__),
+      value: dart.finalFieldType(dart.legacy(T)),
+      name: dart.finalFieldType(dart.legacy(core.String))
+    }));
+    return PartValue;
+  });
+  request$.PartValue = request$.PartValue$();
+  dart.addTypeTests(request$.PartValue, _is_PartValue_default);
+  const _is_PartValueFile_default = Symbol('_is_PartValueFile_default');
+  request$.PartValueFile$ = dart.generic(T => {
+    class PartValueFile extends request$.PartValue$(dart.legacy(T)) {}
+    (PartValueFile.new = function(name, value) {
+      PartValueFile.__proto__.new.call(this, name, value);
+      ;
+    }).prototype = PartValueFile.prototype;
+    dart.addTypeTests(PartValueFile);
+    PartValueFile.prototype[_is_PartValueFile_default] = true;
+    dart.addTypeCaches(PartValueFile);
+    dart.setLibraryUri(PartValueFile, I[4]);
+    return PartValueFile;
+  });
+  request$.PartValueFile = request$.PartValueFile$();
+  dart.addTypeTests(request$.PartValueFile, _is_PartValueFile_default);
+  request$.buildUri = function buildUri(baseUrl, url, parameters) {
+    let uri = null;
+    if (url[$startsWith]("http://") || url[$startsWith]("https://")) {
+      uri = core.Uri.parse(url);
+    } else {
+      if (!baseUrl[$endsWith]("/") && !url[$startsWith]("/")) {
+        uri = core.Uri.parse(dart.str(baseUrl) + "/" + dart.str(url));
+      } else {
+        uri = core.Uri.parse(dart.str(baseUrl) + dart.str(url));
+      }
+    }
+    let query = utils.mapToQuery(parameters);
+    if (query[$isNotEmpty]) {
+      if (dart.dtest(dart.dload(uri, 'hasQuery'))) {
+        query = dart.notNull(query) + ("&" + dart.str(dart.dload(uri, 'query')));
+      }
+      return T.UriL().as(dart.dsend(uri, 'replace', [], {query: query}));
+    }
+    return T.UriL().as(uri);
+  };
+  request$.toHttpRequest = function toHttpRequest(body, method, uri, headers) {
+    return async.async(T.RequestL$1(), function* toHttpRequest() {
+      let baseRequest = new request.Request.new(method, uri);
+      baseRequest.headers[$addAll](headers);
+      if (body != null) {
+        if (T.StringL().is(body)) {
+          baseRequest.body = body;
+        } else if (T.ListLOfintL().is(body)) {
+          baseRequest.bodyBytes = body;
+        } else if (T.MapLOfStringL$StringL().is(body)) {
+          baseRequest.bodyFields = body;
+        } else {
+          dart.throw(new core.ArgumentError.value(dart.str(body), "body"));
+        }
+      }
+      return baseRequest;
+    });
+  };
+  request$.toMultipartRequest = function toMultipartRequest(parts, method, uri, headers) {
+    return async.async(T.MultipartRequestL(), function* toMultipartRequest() {
+      let baseRequest = new multipart_request.MultipartRequest.new(method, uri);
+      baseRequest.headers[$addAll](headers);
+      for (let part of parts) {
+        if (part == null || part.value == null) continue;
+        if (T.MultipartFileL().is(part.value)) {
+          baseRequest.files[$add](T.MultipartFileL().as(part.value));
+        } else if (T.IterableLOfMultipartFileL().is(part.value)) {
+          baseRequest.files[$addAll](T.IterableLOfMultipartFileL().as(part.value));
+        } else if (T.PartValueFileL().is(part)) {
+          if (T.ListLOfintL().is(part.value)) {
+            baseRequest.files[$add](multipart_file.MultipartFile.fromBytes(part.name, T.ListLOfintL().as(part.value)));
+          } else if (T.StringL().is(part.value)) {
+            baseRequest.files[$add](yield multipart_file.MultipartFile.fromPath(part.name, T.StringL().as(part.value)));
+          } else {
+            dart.throw(new core.ArgumentError.new("Type " + dart.str(dart.runtimeType(part.value)) + " is not a supported type for PartFile" + "Please use one of the following types" + " - List<int>" + " - String (path of your file) " + " - MultipartFile (from package:http)"));
+          }
+        } else {
+          baseRequest.fields[$_set](part.name, dart.toString(part.value));
+        }
+      }
+      return baseRequest;
+    });
+  };
+  request$.toStreamedRequest = function toStreamedRequest(bodyStream, method, uri, headers) {
+    return async.async(T.StreamedRequestL(), function* toStreamedRequest() {
+      let req = new streamed_request.StreamedRequest.new(method, uri);
+      req.headers[$addAll](headers);
+      bodyStream.listen(dart.bind(req.sink, 'add'), {onDone: dart.bind(req.sink, 'close'), onError: dart.bind(req.sink, 'addError')});
+      return req;
+    });
+  };
+  var baseUrl$1 = dart.privateName(annotations, "ChopperApi.baseUrl");
+  annotations.ChopperApi = class ChopperApi extends core.Object {
+    get baseUrl() {
+      return this[baseUrl$1];
+    }
+    set baseUrl(value) {
+      super.baseUrl = value;
+    }
+  };
+  (annotations.ChopperApi.new = function(opts) {
+    let baseUrl = opts && 'baseUrl' in opts ? opts.baseUrl : "";
+    this[baseUrl$1] = baseUrl;
+    ;
+  }).prototype = annotations.ChopperApi.prototype;
+  dart.addTypeTests(annotations.ChopperApi);
+  dart.addTypeCaches(annotations.ChopperApi);
+  dart.setLibraryUri(annotations.ChopperApi, I[5]);
+  dart.setFieldSignature(annotations.ChopperApi, () => ({
+    __proto__: dart.getFields(annotations.ChopperApi.__proto__),
+    baseUrl: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  var name$0 = dart.privateName(annotations, "Path.name");
+  annotations.Path = class Path extends core.Object {
+    get name() {
+      return this[name$0];
+    }
+    set name(value) {
+      super.name = value;
+    }
+  };
+  (annotations.Path.new = function(name = null) {
+    this[name$0] = name;
+    ;
+  }).prototype = annotations.Path.prototype;
+  dart.addTypeTests(annotations.Path);
+  dart.addTypeCaches(annotations.Path);
+  dart.setLibraryUri(annotations.Path, I[5]);
+  dart.setFieldSignature(annotations.Path, () => ({
+    __proto__: dart.getFields(annotations.Path.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  var name$1 = dart.privateName(annotations, "Query.name");
+  annotations.Query = class Query extends core.Object {
+    get name() {
+      return this[name$1];
+    }
+    set name(value) {
+      super.name = value;
+    }
+  };
+  (annotations.Query.new = function(name = null) {
+    this[name$1] = name;
+    ;
+  }).prototype = annotations.Query.prototype;
+  dart.addTypeTests(annotations.Query);
+  dart.addTypeCaches(annotations.Query);
+  dart.setLibraryUri(annotations.Query, I[5]);
+  dart.setFieldSignature(annotations.Query, () => ({
+    __proto__: dart.getFields(annotations.Query.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  annotations.QueryMap = class QueryMap extends core.Object {};
+  (annotations.QueryMap.new = function() {
+    ;
+  }).prototype = annotations.QueryMap.prototype;
+  dart.addTypeTests(annotations.QueryMap);
+  dart.addTypeCaches(annotations.QueryMap);
+  dart.setLibraryUri(annotations.QueryMap, I[5]);
+  annotations.Body = class Body extends core.Object {};
+  (annotations.Body.new = function() {
+    ;
+  }).prototype = annotations.Body.prototype;
+  dart.addTypeTests(annotations.Body);
+  dart.addTypeCaches(annotations.Body);
+  dart.setLibraryUri(annotations.Body, I[5]);
+  var name$2 = dart.privateName(annotations, "Header.name");
+  annotations.Header = class Header extends core.Object {
+    get name() {
+      return this[name$2];
+    }
+    set name(value) {
+      super.name = value;
+    }
+  };
+  (annotations.Header.new = function(name = null) {
+    this[name$2] = name;
+    ;
+  }).prototype = annotations.Header.prototype;
+  dart.addTypeTests(annotations.Header);
+  dart.addTypeCaches(annotations.Header);
+  dart.setLibraryUri(annotations.Header, I[5]);
+  dart.setFieldSignature(annotations.Header, () => ({
+    __proto__: dart.getFields(annotations.Header.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  var method$0 = dart.privateName(annotations, "Method.method");
+  var path$ = dart.privateName(annotations, "Method.path");
+  var headers$1 = dart.privateName(annotations, "Method.headers");
+  var optionalBody$ = dart.privateName(annotations, "Method.optionalBody");
+  annotations.Method = class Method extends core.Object {
+    get method() {
+      return this[method$0];
+    }
+    set method(value) {
+      super.method = value;
+    }
+    get path() {
+      return this[path$];
+    }
+    set path(value) {
+      super.path = value;
+    }
+    get headers() {
+      return this[headers$1];
+    }
+    set headers(value) {
+      super.headers = value;
+    }
+    get optionalBody() {
+      return this[optionalBody$];
+    }
+    set optionalBody(value) {
+      super.optionalBody = value;
+    }
+  };
+  (annotations.Method.new = function(method, opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : null;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    this[method$0] = method;
+    this[optionalBody$] = optionalBody;
+    this[path$] = path;
+    this[headers$1] = headers;
+    ;
+  }).prototype = annotations.Method.prototype;
+  dart.addTypeTests(annotations.Method);
+  dart.addTypeCaches(annotations.Method);
+  dart.setLibraryUri(annotations.Method, I[5]);
+  dart.setFieldSignature(annotations.Method, () => ({
+    __proto__: dart.getFields(annotations.Method.__proto__),
+    method: dart.finalFieldType(dart.legacy(core.String)),
+    path: dart.finalFieldType(dart.legacy(core.String)),
+    headers: dart.finalFieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.String)))),
+    optionalBody: dart.finalFieldType(dart.legacy(core.bool))
+  }));
+  annotations.Get = class Get extends annotations.Method {};
+  (annotations.Get.new = function(opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : true;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    annotations.Get.__proto__.new.call(this, "GET", {optionalBody: optionalBody, path: path, headers: headers});
+    ;
+  }).prototype = annotations.Get.prototype;
+  dart.addTypeTests(annotations.Get);
+  dart.addTypeCaches(annotations.Get);
+  dart.setLibraryUri(annotations.Get, I[5]);
+  annotations.Post = class Post extends annotations.Method {};
+  (annotations.Post.new = function(opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : false;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    annotations.Post.__proto__.new.call(this, "POST", {optionalBody: optionalBody, path: path, headers: headers});
+    ;
+  }).prototype = annotations.Post.prototype;
+  dart.addTypeTests(annotations.Post);
+  dart.addTypeCaches(annotations.Post);
+  dart.setLibraryUri(annotations.Post, I[5]);
+  annotations.Delete = class Delete extends annotations.Method {};
+  (annotations.Delete.new = function(opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : true;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    annotations.Delete.__proto__.new.call(this, "DELETE", {optionalBody: optionalBody, path: path, headers: headers});
+    ;
+  }).prototype = annotations.Delete.prototype;
+  dart.addTypeTests(annotations.Delete);
+  dart.addTypeCaches(annotations.Delete);
+  dart.setLibraryUri(annotations.Delete, I[5]);
+  annotations.Put = class Put extends annotations.Method {};
+  (annotations.Put.new = function(opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : false;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    annotations.Put.__proto__.new.call(this, "PUT", {optionalBody: optionalBody, path: path, headers: headers});
+    ;
+  }).prototype = annotations.Put.prototype;
+  dart.addTypeTests(annotations.Put);
+  dart.addTypeCaches(annotations.Put);
+  dart.setLibraryUri(annotations.Put, I[5]);
+  annotations.Patch = class Patch extends annotations.Method {};
+  (annotations.Patch.new = function(opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : false;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    annotations.Patch.__proto__.new.call(this, "PATCH", {optionalBody: optionalBody, path: path, headers: headers});
+    ;
+  }).prototype = annotations.Patch.prototype;
+  dart.addTypeTests(annotations.Patch);
+  dart.addTypeCaches(annotations.Patch);
+  dart.setLibraryUri(annotations.Patch, I[5]);
+  annotations.Head = class Head extends annotations.Method {};
+  (annotations.Head.new = function(opts) {
+    let optionalBody = opts && 'optionalBody' in opts ? opts.optionalBody : true;
+    let path = opts && 'path' in opts ? opts.path : "";
+    let headers = opts && 'headers' in opts ? opts.headers : C[5] || CT.C5;
+    annotations.Head.__proto__.new.call(this, "HEAD", {optionalBody: optionalBody, path: path, headers: headers});
+    ;
+  }).prototype = annotations.Head.prototype;
+  dart.addTypeTests(annotations.Head);
+  dart.addTypeCaches(annotations.Head);
+  dart.setLibraryUri(annotations.Head, I[5]);
+  var request$0 = dart.privateName(annotations, "FactoryConverter.request");
+  var response$1 = dart.privateName(annotations, "FactoryConverter.response");
+  annotations.FactoryConverter = class FactoryConverter extends core.Object {
+    get request() {
+      return this[request$0];
+    }
+    set request(value) {
+      super.request = value;
+    }
+    get response() {
+      return this[response$1];
+    }
+    set response(value) {
+      super.response = value;
+    }
+  };
+  (annotations.FactoryConverter.new = function(opts) {
+    let request = opts && 'request' in opts ? opts.request : null;
+    let response = opts && 'response' in opts ? opts.response : null;
+    this[request$0] = request;
+    this[response$1] = response;
+    ;
+  }).prototype = annotations.FactoryConverter.prototype;
+  dart.addTypeTests(annotations.FactoryConverter);
+  dart.addTypeCaches(annotations.FactoryConverter);
+  dart.setLibraryUri(annotations.FactoryConverter, I[5]);
+  dart.setFieldSignature(annotations.FactoryConverter, () => ({
+    __proto__: dart.getFields(annotations.FactoryConverter.__proto__),
+    request: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(request$.Request))), [dart.legacy(request$.Request)]))),
+    response: dart.finalFieldType(dart.legacy(dart.fnType(dart.legacy(async.FutureOr$(dart.legacy(response$0.Response))), [dart.legacy(response$0.Response)])))
+  }));
+  var name$3 = dart.privateName(annotations, "Field.name");
+  annotations.Field = class Field extends core.Object {
+    get name() {
+      return this[name$3];
+    }
+    set name(value) {
+      super.name = value;
+    }
+  };
+  (annotations.Field.new = function(name = null) {
+    this[name$3] = name;
+    ;
+  }).prototype = annotations.Field.prototype;
+  dart.addTypeTests(annotations.Field);
+  dart.addTypeCaches(annotations.Field);
+  dart.setLibraryUri(annotations.Field, I[5]);
+  dart.setFieldSignature(annotations.Field, () => ({
+    __proto__: dart.getFields(annotations.Field.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  annotations.Multipart = class Multipart extends core.Object {};
+  (annotations.Multipart.new = function() {
+    ;
+  }).prototype = annotations.Multipart.prototype;
+  dart.addTypeTests(annotations.Multipart);
+  dart.addTypeCaches(annotations.Multipart);
+  dart.setLibraryUri(annotations.Multipart, I[5]);
+  var name$4 = dart.privateName(annotations, "Part.name");
+  annotations.Part = class Part extends core.Object {
+    get name() {
+      return this[name$4];
+    }
+    set name(value) {
+      super.name = value;
+    }
+  };
+  (annotations.Part.new = function(name = null) {
+    this[name$4] = name;
+    ;
+  }).prototype = annotations.Part.prototype;
+  dart.addTypeTests(annotations.Part);
+  dart.addTypeCaches(annotations.Part);
+  dart.setLibraryUri(annotations.Part, I[5]);
+  dart.setFieldSignature(annotations.Part, () => ({
+    __proto__: dart.getFields(annotations.Part.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  var name$5 = dart.privateName(annotations, "PartFile.name");
+  annotations.PartFile = class PartFile extends core.Object {
+    get name() {
+      return this[name$5];
+    }
+    set name(value) {
+      super.name = value;
+    }
+  };
+  (annotations.PartFile.new = function(name = null) {
+    this[name$5] = name;
+    ;
+  }).prototype = annotations.PartFile.prototype;
+  dart.addTypeTests(annotations.PartFile);
+  dart.addTypeCaches(annotations.PartFile);
+  dart.setLibraryUri(annotations.PartFile, I[5]);
+  dart.setFieldSignature(annotations.PartFile, () => ({
+    __proto__: dart.getFields(annotations.PartFile.__proto__),
+    name: dart.finalFieldType(dart.legacy(core.String))
+  }));
+  annotations.FileField = class FileField extends annotations.PartFile {};
+  (annotations.FileField.new = function(name = null) {
+    annotations.FileField.__proto__.new.call(this, name);
+    ;
+  }).prototype = annotations.FileField.prototype;
+  dart.addTypeTests(annotations.FileField);
+  dart.addTypeCaches(annotations.FileField);
+  dart.setLibraryUri(annotations.FileField, I[5]);
+  dart.defineLazy(annotations, {
+    /*annotations.multipart*/get multipart() {
+      return C[7] || CT.C7;
+    },
+    /*annotations.body*/get body() {
+      return C[8] || CT.C8;
+    }
+  }, true);
+  dart.trackLibraries("packages/chopper/src/interceptor.dart", {
+    "package:chopper/src/interceptor.dart": interceptor,
+    "package:chopper/src/base.dart": base,
+    "package:chopper/src/utils.dart": utils,
+    "package:chopper/src/request.dart": request$,
+    "package:chopper/src/annotations.dart": annotations,
+    "package:chopper/chopper.dart": chopper
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["interceptor.dart","base.dart","utils.dart","request.dart","annotations.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../../packages/chopper/src/interceptor.dart.lib.js"}');
+  // Exports:
+  return {
+    src__interceptor: interceptor,
+    src__base: base,
+    src__utils: utils,
+    src__request: request$,
+    src__annotations: annotations,
+    chopper: chopper
+  };
+}));
+
+//# sourceMappingURL=interceptor.dart.lib.js.map

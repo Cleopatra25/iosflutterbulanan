@@ -1,0 +1,443 @@
+define(['dart_sdk'], (function load__packages__bulanan__models__ModelCoupon_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const _js_helper = dart_sdk._js_helper;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var ModelCoupon = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $add = dartx.add;
+  var $_set = dartx._set;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    DataL: () => (T.DataL = dart.constFn(dart.legacy(ModelCoupon.Data)))(),
+    JSArrayOfDataL: () => (T.JSArrayOfDataL = dart.constFn(_interceptors.JSArray$(T.DataL())))(),
+    MapOfStringL$dynamic: () => (T.MapOfStringL$dynamic = dart.constFn(core.Map$(T.StringL(), dart.dynamic)))(),
+    MapLOfStringL$dynamic: () => (T.MapLOfStringL$dynamic = dart.constFn(dart.legacy(T.MapOfStringL$dynamic())))(),
+    dynamicToNull: () => (T.dynamicToNull = dart.constFn(dart.fnType(core.Null, [dart.dynamic])))(),
+    LinkedMapOfStringL$dynamic: () => (T.LinkedMapOfStringL$dynamic = dart.constFn(_js_helper.LinkedMap$(T.StringL(), dart.dynamic)))(),
+    DataLToMapLOfStringL$dynamic: () => (T.DataLToMapLOfStringL$dynamic = dart.constFn(dart.fnType(T.MapLOfStringL$dynamic(), [T.DataL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var I = ["package:bulanan/models/ModelCoupon.dart"];
+  var status$ = dart.privateName(ModelCoupon, "ModelCoupon.status");
+  var message$ = dart.privateName(ModelCoupon, "ModelCoupon.message");
+  var count$ = dart.privateName(ModelCoupon, "ModelCoupon.count");
+  var data$ = dart.privateName(ModelCoupon, "ModelCoupon.data");
+  ModelCoupon.ModelCoupon = class ModelCoupon extends core.Object {
+    get status() {
+      return this[status$];
+    }
+    set status(value) {
+      this[status$] = value;
+    }
+    get message() {
+      return this[message$];
+    }
+    set message(value) {
+      this[message$] = value;
+    }
+    get count() {
+      return this[count$];
+    }
+    set count(value) {
+      this[count$] = value;
+    }
+    get data() {
+      return this[data$];
+    }
+    set data(value) {
+      this[data$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("status", this.status);
+      data[$_set]("message", this.message);
+      data[$_set]("count", this.count);
+      if (this.data != null) {
+        data[$_set]("data", this.data[$map](T.MapLOfStringL$dynamic(), dart.fn(v => v.toJson(), T.DataLToMapLOfStringL$dynamic()))[$toList]());
+      }
+      return data;
+    }
+  };
+  (ModelCoupon.ModelCoupon.new = function(opts) {
+    let status = opts && 'status' in opts ? opts.status : null;
+    let message = opts && 'message' in opts ? opts.message : null;
+    let count = opts && 'count' in opts ? opts.count : null;
+    let data = opts && 'data' in opts ? opts.data : null;
+    this[status$] = status;
+    this[message$] = message;
+    this[count$] = count;
+    this[data$] = data;
+    ;
+  }).prototype = ModelCoupon.ModelCoupon.prototype;
+  (ModelCoupon.ModelCoupon.fromJson = function(json) {
+    this[data$] = null;
+    this[count$] = null;
+    this[message$] = null;
+    this[status$] = null;
+    this.status = T.boolL().as(json[$_get]("status"));
+    this.message = T.StringL().as(json[$_get]("message"));
+    this.count = T.intL().as(json[$_get]("count"));
+    if (json[$_get]("data") != null) {
+      this.data = T.JSArrayOfDataL().of([]);
+      dart.dsend(json[$_get]("data"), 'forEach', [dart.fn(v => {
+          this.data[$add](new ModelCoupon.Data.fromJson(T.MapLOfStringL$dynamic().as(v)));
+        }, T.dynamicToNull())]);
+    }
+  }).prototype = ModelCoupon.ModelCoupon.prototype;
+  dart.addTypeTests(ModelCoupon.ModelCoupon);
+  dart.addTypeCaches(ModelCoupon.ModelCoupon);
+  dart.setMethodSignature(ModelCoupon.ModelCoupon, () => ({
+    __proto__: dart.getMethods(ModelCoupon.ModelCoupon.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelCoupon.ModelCoupon, I[0]);
+  dart.setFieldSignature(ModelCoupon.ModelCoupon, () => ({
+    __proto__: dart.getFields(ModelCoupon.ModelCoupon.__proto__),
+    status: dart.fieldType(dart.legacy(core.bool)),
+    message: dart.fieldType(dart.legacy(core.String)),
+    count: dart.fieldType(dart.legacy(core.int)),
+    data: dart.fieldType(dart.legacy(core.List$(dart.legacy(ModelCoupon.Data))))
+  }));
+  var idCoupon$ = dart.privateName(ModelCoupon, "Data.idCoupon");
+  var couponName$ = dart.privateName(ModelCoupon, "Data.couponName");
+  var couponDescription$ = dart.privateName(ModelCoupon, "Data.couponDescription");
+  var couponCode$ = dart.privateName(ModelCoupon, "Data.couponCode");
+  var validFrom$ = dart.privateName(ModelCoupon, "Data.validFrom");
+  var validTo$ = dart.privateName(ModelCoupon, "Data.validTo");
+  var couponAmount$ = dart.privateName(ModelCoupon, "Data.couponAmount");
+  var persentasi$ = dart.privateName(ModelCoupon, "Data.persentasi");
+  var minimunOrder$ = dart.privateName(ModelCoupon, "Data.minimunOrder");
+  var maximalPrice$ = dart.privateName(ModelCoupon, "Data.maximalPrice");
+  var image$ = dart.privateName(ModelCoupon, "Data.image");
+  var type$ = dart.privateName(ModelCoupon, "Data.type");
+  var usesRestriction$ = dart.privateName(ModelCoupon, "Data.usesRestriction");
+  var isPublished$ = dart.privateName(ModelCoupon, "Data.isPublished");
+  var isHide$ = dart.privateName(ModelCoupon, "Data.isHide");
+  var isShop$ = dart.privateName(ModelCoupon, "Data.isShop");
+  var isActive$ = dart.privateName(ModelCoupon, "Data.isActive");
+  var qtyCoupoun$ = dart.privateName(ModelCoupon, "Data.qtyCoupoun");
+  var nomialShop$ = dart.privateName(ModelCoupon, "Data.nomialShop");
+  var createdDate$ = dart.privateName(ModelCoupon, "Data.createdDate");
+  var updatedDate$ = dart.privateName(ModelCoupon, "Data.updatedDate");
+  var createdBy$ = dart.privateName(ModelCoupon, "Data.createdBy");
+  var updatedBy$ = dart.privateName(ModelCoupon, "Data.updatedBy");
+  ModelCoupon.Data = class Data extends core.Object {
+    get idCoupon() {
+      return this[idCoupon$];
+    }
+    set idCoupon(value) {
+      this[idCoupon$] = value;
+    }
+    get couponName() {
+      return this[couponName$];
+    }
+    set couponName(value) {
+      this[couponName$] = value;
+    }
+    get couponDescription() {
+      return this[couponDescription$];
+    }
+    set couponDescription(value) {
+      this[couponDescription$] = value;
+    }
+    get couponCode() {
+      return this[couponCode$];
+    }
+    set couponCode(value) {
+      this[couponCode$] = value;
+    }
+    get validFrom() {
+      return this[validFrom$];
+    }
+    set validFrom(value) {
+      this[validFrom$] = value;
+    }
+    get validTo() {
+      return this[validTo$];
+    }
+    set validTo(value) {
+      this[validTo$] = value;
+    }
+    get couponAmount() {
+      return this[couponAmount$];
+    }
+    set couponAmount(value) {
+      this[couponAmount$] = value;
+    }
+    get persentasi() {
+      return this[persentasi$];
+    }
+    set persentasi(value) {
+      this[persentasi$] = value;
+    }
+    get minimunOrder() {
+      return this[minimunOrder$];
+    }
+    set minimunOrder(value) {
+      this[minimunOrder$] = value;
+    }
+    get maximalPrice() {
+      return this[maximalPrice$];
+    }
+    set maximalPrice(value) {
+      this[maximalPrice$] = value;
+    }
+    get image() {
+      return this[image$];
+    }
+    set image(value) {
+      this[image$] = value;
+    }
+    get type() {
+      return this[type$];
+    }
+    set type(value) {
+      this[type$] = value;
+    }
+    get usesRestriction() {
+      return this[usesRestriction$];
+    }
+    set usesRestriction(value) {
+      this[usesRestriction$] = value;
+    }
+    get isPublished() {
+      return this[isPublished$];
+    }
+    set isPublished(value) {
+      this[isPublished$] = value;
+    }
+    get isHide() {
+      return this[isHide$];
+    }
+    set isHide(value) {
+      this[isHide$] = value;
+    }
+    get isShop() {
+      return this[isShop$];
+    }
+    set isShop(value) {
+      this[isShop$] = value;
+    }
+    get isActive() {
+      return this[isActive$];
+    }
+    set isActive(value) {
+      this[isActive$] = value;
+    }
+    get qtyCoupoun() {
+      return this[qtyCoupoun$];
+    }
+    set qtyCoupoun(value) {
+      this[qtyCoupoun$] = value;
+    }
+    get nomialShop() {
+      return this[nomialShop$];
+    }
+    set nomialShop(value) {
+      this[nomialShop$] = value;
+    }
+    get createdDate() {
+      return this[createdDate$];
+    }
+    set createdDate(value) {
+      this[createdDate$] = value;
+    }
+    get updatedDate() {
+      return this[updatedDate$];
+    }
+    set updatedDate(value) {
+      this[updatedDate$] = value;
+    }
+    get createdBy() {
+      return this[createdBy$];
+    }
+    set createdBy(value) {
+      this[createdBy$] = value;
+    }
+    get updatedBy() {
+      return this[updatedBy$];
+    }
+    set updatedBy(value) {
+      this[updatedBy$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("id_coupon", this.idCoupon);
+      data[$_set]("coupon_name", this.couponName);
+      data[$_set]("coupon_description", this.couponDescription);
+      data[$_set]("coupon_code", this.couponCode);
+      data[$_set]("valid_from", this.validFrom);
+      data[$_set]("valid_to", this.validTo);
+      data[$_set]("coupon_amount", this.couponAmount);
+      data[$_set]("persentasi", this.persentasi);
+      data[$_set]("minimun_order", this.minimunOrder);
+      data[$_set]("maximal_price", this.maximalPrice);
+      data[$_set]("image", this.image);
+      data[$_set]("type", this.type);
+      data[$_set]("uses_restriction", this.usesRestriction);
+      data[$_set]("is_published", this.isPublished);
+      data[$_set]("is_hide", this.isHide);
+      data[$_set]("is_shop", this.isShop);
+      data[$_set]("is_active", this.isActive);
+      data[$_set]("qty_coupoun", this.qtyCoupoun);
+      data[$_set]("nomial_shop", this.nomialShop);
+      data[$_set]("created_date", this.createdDate);
+      data[$_set]("updated_date", this.updatedDate);
+      data[$_set]("created_by", this.createdBy);
+      data[$_set]("updated_by", this.updatedBy);
+      return data;
+    }
+  };
+  (ModelCoupon.Data.new = function(opts) {
+    let idCoupon = opts && 'idCoupon' in opts ? opts.idCoupon : null;
+    let couponName = opts && 'couponName' in opts ? opts.couponName : null;
+    let couponDescription = opts && 'couponDescription' in opts ? opts.couponDescription : null;
+    let couponCode = opts && 'couponCode' in opts ? opts.couponCode : null;
+    let validFrom = opts && 'validFrom' in opts ? opts.validFrom : null;
+    let validTo = opts && 'validTo' in opts ? opts.validTo : null;
+    let couponAmount = opts && 'couponAmount' in opts ? opts.couponAmount : null;
+    let persentasi = opts && 'persentasi' in opts ? opts.persentasi : null;
+    let minimunOrder = opts && 'minimunOrder' in opts ? opts.minimunOrder : null;
+    let maximalPrice = opts && 'maximalPrice' in opts ? opts.maximalPrice : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let type = opts && 'type' in opts ? opts.type : null;
+    let usesRestriction = opts && 'usesRestriction' in opts ? opts.usesRestriction : null;
+    let isPublished = opts && 'isPublished' in opts ? opts.isPublished : null;
+    let isHide = opts && 'isHide' in opts ? opts.isHide : null;
+    let isShop = opts && 'isShop' in opts ? opts.isShop : null;
+    let isActive = opts && 'isActive' in opts ? opts.isActive : null;
+    let qtyCoupoun = opts && 'qtyCoupoun' in opts ? opts.qtyCoupoun : null;
+    let nomialShop = opts && 'nomialShop' in opts ? opts.nomialShop : null;
+    let createdDate = opts && 'createdDate' in opts ? opts.createdDate : null;
+    let updatedDate = opts && 'updatedDate' in opts ? opts.updatedDate : null;
+    let createdBy = opts && 'createdBy' in opts ? opts.createdBy : null;
+    let updatedBy = opts && 'updatedBy' in opts ? opts.updatedBy : null;
+    this[idCoupon$] = idCoupon;
+    this[couponName$] = couponName;
+    this[couponDescription$] = couponDescription;
+    this[couponCode$] = couponCode;
+    this[validFrom$] = validFrom;
+    this[validTo$] = validTo;
+    this[couponAmount$] = couponAmount;
+    this[persentasi$] = persentasi;
+    this[minimunOrder$] = minimunOrder;
+    this[maximalPrice$] = maximalPrice;
+    this[image$] = image;
+    this[type$] = type;
+    this[usesRestriction$] = usesRestriction;
+    this[isPublished$] = isPublished;
+    this[isHide$] = isHide;
+    this[isShop$] = isShop;
+    this[isActive$] = isActive;
+    this[qtyCoupoun$] = qtyCoupoun;
+    this[nomialShop$] = nomialShop;
+    this[createdDate$] = createdDate;
+    this[updatedDate$] = updatedDate;
+    this[createdBy$] = createdBy;
+    this[updatedBy$] = updatedBy;
+    ;
+  }).prototype = ModelCoupon.Data.prototype;
+  (ModelCoupon.Data.fromJson = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18;
+    this[updatedBy$] = null;
+    this[createdBy$] = null;
+    this[updatedDate$] = null;
+    this[createdDate$] = null;
+    this[nomialShop$] = null;
+    this[qtyCoupoun$] = null;
+    this[isActive$] = null;
+    this[isShop$] = null;
+    this[isHide$] = null;
+    this[isPublished$] = null;
+    this[usesRestriction$] = null;
+    this[type$] = null;
+    this[image$] = null;
+    this[maximalPrice$] = null;
+    this[minimunOrder$] = null;
+    this[persentasi$] = null;
+    this[couponAmount$] = null;
+    this[validTo$] = null;
+    this[validFrom$] = null;
+    this[couponCode$] = null;
+    this[couponDescription$] = null;
+    this[couponName$] = null;
+    this[idCoupon$] = null;
+    this.idCoupon = T.StringL().as((t0 = json[$_get]("id_coupon"), t0 == null ? "" : t0));
+    this.couponName = T.StringL().as(json[$_get]("coupon_name"));
+    this.couponDescription = T.StringL().as((t0$ = json[$_get]("coupon_description"), t0$ == null ? "" : t0$));
+    this.couponCode = T.StringL().as((t0$0 = json[$_get]("coupon_code"), t0$0 == null ? "" : t0$0));
+    this.validFrom = T.StringL().as((t0$1 = json[$_get]("valid_from"), t0$1 == null ? "" : t0$1));
+    this.validTo = T.StringL().as((t0$2 = json[$_get]("valid_to"), t0$2 == null ? "" : t0$2));
+    this.couponAmount = (t0$3 = dart.toString(json[$_get]("coupon_amount")), t0$3 == null ? "0" : t0$3);
+    this.persentasi = T.StringL().as((t0$4 = json[$_get]("persentasi"), t0$4 == null ? "" : t0$4));
+    this.minimunOrder = (t0$5 = dart.toString(json[$_get]("minimun_order")), t0$5 == null ? "0" : t0$5);
+    this.maximalPrice = (t0$6 = dart.toString(json[$_get]("maximal_price")), t0$6 == null ? "0" : t0$6);
+    this.image = T.StringL().as((t0$7 = json[$_get]("image"), t0$7 == null ? "" : t0$7));
+    this.type = T.StringL().as((t0$8 = json[$_get]("type"), t0$8 == null ? "" : t0$8));
+    this.usesRestriction = T.StringL().as((t0$9 = json[$_get]("uses_restriction"), t0$9 == null ? "" : t0$9));
+    this.isPublished = T.StringL().as((t0$10 = json[$_get]("is_published"), t0$10 == null ? "" : t0$10));
+    this.isHide = T.StringL().as((t0$11 = json[$_get]("is_hide"), t0$11 == null ? "" : t0$11));
+    this.isShop = T.StringL().as((t0$12 = json[$_get]("is_shop"), t0$12 == null ? "" : t0$12));
+    this.isActive = T.StringL().as(json[$_get]("is_active"));
+    this.qtyCoupoun = (t0$13 = dart.toString(json[$_get]("qty_coupoun")), t0$13 == null ? "0" : t0$13);
+    this.nomialShop = (t0$14 = dart.toString(json[$_get]("nomial_shop")), t0$14 == null ? "0" : t0$14);
+    this.createdDate = T.StringL().as((t0$15 = json[$_get]("created_date"), t0$15 == null ? "" : t0$15));
+    this.updatedDate = T.StringL().as((t0$16 = json[$_get]("updated_date"), t0$16 == null ? "" : t0$16));
+    this.createdBy = T.StringL().as((t0$17 = json[$_get]("created_by"), t0$17 == null ? "" : t0$17));
+    this.updatedBy = T.StringL().as((t0$18 = json[$_get]("updated_by"), t0$18 == null ? "" : t0$18));
+  }).prototype = ModelCoupon.Data.prototype;
+  dart.addTypeTests(ModelCoupon.Data);
+  dart.addTypeCaches(ModelCoupon.Data);
+  dart.setMethodSignature(ModelCoupon.Data, () => ({
+    __proto__: dart.getMethods(ModelCoupon.Data.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelCoupon.Data, I[0]);
+  dart.setFieldSignature(ModelCoupon.Data, () => ({
+    __proto__: dart.getFields(ModelCoupon.Data.__proto__),
+    idCoupon: dart.fieldType(dart.legacy(core.String)),
+    couponName: dart.fieldType(dart.legacy(core.String)),
+    couponDescription: dart.fieldType(dart.legacy(core.String)),
+    couponCode: dart.fieldType(dart.legacy(core.String)),
+    validFrom: dart.fieldType(dart.legacy(core.String)),
+    validTo: dart.fieldType(dart.legacy(core.String)),
+    couponAmount: dart.fieldType(dart.legacy(core.String)),
+    persentasi: dart.fieldType(dart.legacy(core.String)),
+    minimunOrder: dart.fieldType(dart.legacy(core.String)),
+    maximalPrice: dart.fieldType(dart.legacy(core.String)),
+    image: dart.fieldType(dart.legacy(core.String)),
+    type: dart.fieldType(dart.legacy(core.String)),
+    usesRestriction: dart.fieldType(dart.legacy(core.String)),
+    isPublished: dart.fieldType(dart.legacy(core.String)),
+    isHide: dart.fieldType(dart.legacy(core.String)),
+    isShop: dart.fieldType(dart.legacy(core.String)),
+    isActive: dart.fieldType(dart.legacy(core.String)),
+    qtyCoupoun: dart.fieldType(dart.legacy(core.String)),
+    nomialShop: dart.fieldType(dart.legacy(core.String)),
+    createdDate: dart.fieldType(dart.legacy(core.String)),
+    updatedDate: dart.fieldType(dart.legacy(core.String)),
+    createdBy: dart.fieldType(dart.legacy(core.String)),
+    updatedBy: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/bulanan/models/ModelCoupon.dart", {
+    "package:bulanan/models/ModelCoupon.dart": ModelCoupon
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["ModelCoupon.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/bulanan/models/ModelCoupon.dart.lib.js"}');
+  // Exports:
+  return {
+    models__ModelCoupon: ModelCoupon
+  };
+}));
+
+//# sourceMappingURL=ModelCoupon.dart.lib.js.map

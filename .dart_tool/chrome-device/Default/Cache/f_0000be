@@ -1,0 +1,352 @@
+define(['dart_sdk', 'packages/chopper/src/interceptor.dart', 'packages/chopper/src/response.dart'], (function load__packages__bulanan__Network__network_api_service_dart(dart_sdk, packages__chopper__src__interceptor$46dart, packages__chopper__src__response$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const _js_helper = dart_sdk._js_helper;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const base = packages__chopper__src__interceptor$46dart.src__base;
+  const interceptor = packages__chopper__src__interceptor$46dart.src__interceptor;
+  const request = packages__chopper__src__interceptor$46dart.src__request;
+  const response = packages__chopper__src__response$46dart.src__response;
+  var network_api_service = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    ChopperServiceL: () => (T.ChopperServiceL = dart.constFn(dart.legacy(base.ChopperService)))(),
+    JSArrayOfChopperServiceL: () => (T.JSArrayOfChopperServiceL = dart.constFn(_interceptors.JSArray$(T.ChopperServiceL())))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    IdentityMapOfStringL$StringL: () => (T.IdentityMapOfStringL$StringL = dart.constFn(_js_helper.IdentityMap$(T.StringL(), T.StringL())))(),
+    IdentityMapOfStringL$dynamic: () => (T.IdentityMapOfStringL$dynamic = dart.constFn(_js_helper.IdentityMap$(T.StringL(), dart.dynamic)))(),
+    RequestL: () => (T.RequestL = dart.constFn(dart.legacy(request.Request)))(),
+    RequestLToRequestL: () => (T.RequestLToRequestL = dart.constFn(dart.fnType(T.RequestL(), [T.RequestL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.fn(interceptor.FormUrlEncodedConverter.requestFactory, T.RequestLToRequestL());
+    }
+  }, false);
+  var C = [void 0];
+  var I = ["package:bulanan/Network/network_api_service.dart"];
+  network_api_service.NetworkApiService = class NetworkApiService extends base.ChopperService {
+    static create() {
+      let client = new base.ChopperClient.new({baseUrl: "https://bulanan.app", services: T.JSArrayOfChopperServiceL().of([new network_api_service._$NetworkApiService.new()]), converter: new interceptor.JsonConverter.new(), interceptors: [new interceptor.HeadersInterceptor.new(new (T.IdentityMapOfStringL$StringL()).from(["api-key", "sembako168", "Access-Control-Allow-Methods", "GET,POST, OPTIONS,HEAD", "Access-Control-Allow-Origin", "*", "Access-Control-Allow-Credentials", "true", "Access-Control-Allow-Headers", "Origin,Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token,locale"])), new interceptor.HttpLoggingInterceptor.new()]});
+      return new network_api_service._$NetworkApiService.new(client);
+    }
+  };
+  (network_api_service.NetworkApiService.new = function() {
+    network_api_service.NetworkApiService.__proto__.new.call(this);
+    ;
+  }).prototype = network_api_service.NetworkApiService.prototype;
+  dart.addTypeTests(network_api_service.NetworkApiService);
+  dart.addTypeCaches(network_api_service.NetworkApiService);
+  dart.setLibraryUri(network_api_service.NetworkApiService, I[0]);
+  var definitionType = dart.privateName(network_api_service, "_$NetworkApiService.definitionType");
+  network_api_service._$NetworkApiService = class _$36NetworkApiService extends network_api_service.NetworkApiService {
+    get definitionType() {
+      return this[definitionType];
+    }
+    set definitionType(value) {
+      super.definitionType = value;
+    }
+    getBanner(headervalue) {
+      let $36url = "/api/banner";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getCityHome(headervalue) {
+      let $36url = "/api/address/location_city_by_province";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getpromo(headervalue, idMember, idDevice, idCity) {
+      let $36url = "/api/product/promo_product?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "id_city", idCity]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getrecomended(headervalue, idMember, idDevice, idCity) {
+      let $36url = "/api/product/recomend_product?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "id_city", idCity]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getHighlight(headervalue, idMember, idDevice, idCity) {
+      let $36url = "/api/product/highlight?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "id_city", idCity]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getMaincategory(headervalue, idMember, idDevice, idCity, idCategoryParent, offset, limit) {
+      let $36url = "/api/product/home_product2_categories?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "id_city", idCity, "id_category_parent", idCategoryParent, "offset", offset, "limit", limit]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getCouponList(headervalue, atuhheader) {
+      let $36url = "/api/cart/coupon";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getMaincategoryProduct(headervalue, idMember, idDevice, idCity, idCategoryParent, offset, limit) {
+      let $36url = "/api/product/product_home_product_categories?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "id_city", idCity, "id_category_parent", idCategoryParent, "offset", offset, "limit", limit]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getFlashsale(headervalue, idCity) {
+      let $36url = "/api/product/flash_sale";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_city", idCity]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getHomeCategory2(headervalue, idCity, limit, offset) {
+      let $36url = "/api/product/home_product2";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_city", idCity, "limit", limit, "offset", offset]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getCart(headervalue, atuhheader, idDevice) {
+      let $36url = "/api/cart/cart";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getDetailTransaction(headervalue, atuhheader, transactioncode) {
+      let $36url = "/api/member/transaction_detail";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["transaction_code", transactioncode]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getPending(headervalue, atuhheader, idMember) {
+      let $36url = "/api/member/transaction_pending";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getAll(headervalue, atuhheader, idMember) {
+      let $36url = "/api/member/transaction_all";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getMember(headervalue, atuhheader, idMember) {
+      let $36url = "/api/member";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getCompleted(headervalue, atuhheader, idMember) {
+      let $36url = "/api/member/transaction_completed";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getCancel(headervalue, atuhheader, idMember) {
+      let $36url = "/api/member/transaction_canceled";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getLastseen(headervalue, idMember, idDevice) {
+      let $36url = "/api/drivers/lastseen?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getSearch(headervalue, idMember, idDevice, keyword) {
+      let $36url = "/api/product/search?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "keyword", keyword]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getRecomemded(headervalue, idMember, idDevice, idCity) {
+      let $36url = "/api/product/recomend_product?id_member=" + dart.str(idMember);
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_device", idDevice, "id_city", idCity]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getOngoing(headervalue, atuhheader, idMember) {
+      let $36url = "/api/member/transaction_ongoing";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getAlamat(headervalue, atuhheader, id_member) {
+      let $36url = "/api/member/list_address";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", id_member]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    getDetailProduct(headervalue, idproduct) {
+      let $36url = "/api/product/detail";
+      let $36params = new (T.IdentityMapOfStringL$dynamic()).from(["id_product", idproduct]);
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36request = new request.Request.new("GET", $36url, this.client.baseUrl, {parameters: $36params, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request);
+    }
+    postCart(headervalue, atuhheader, idProduk, idDevice, idCity, quantity) {
+      let $36url = "/api/cart/add_cart";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["id_product", idProduk, "id_device", idDevice, "id_city", idCity, "quantity", quantity]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postlogin(headervalue, firebase, iddevice, email, password, cpassword) {
+      let $36url = "/api/member/login";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["firebase", firebase, "id_device", iddevice, "email", email, "password", password, "cpassword", cpassword]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postRegister(headervalue, firebase, iddevice, email, password, cpassword, fullname, phone, gender, refferallink, birthdate) {
+      let $36url = "/api/member/register";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["firebase", firebase, "id_device", iddevice, "email", email, "password", password, "cpassword", cpassword, "full_name", fullname, "phone", phone, "gender", gender, "refferal_link", refferallink, "birth_date", birthdate]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postSearch(headervalue, keyword, idmember, iddevice) {
+      let $36url = "/api/product/search";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["keyword", keyword, "id_member", idmember, "id_device", iddevice]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postCoupon(headervalue, atuhheader, couponCode, idMember) {
+      let $36url = "/api/cart/coupon";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["coupon_code", couponCode, "id_member", idMember]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    changePembayaran(headervalue, idMember, transactioncode, paymentGateway) {
+      let $36url = "/api/payment/status_payment";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember, "transaction_code", transactioncode, "payment_gateway", paymentGateway]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postCheckout(headervalue, atuhheader, idMember, idAddress, deliveryMethod, paymentGateway, emergency, couponCode, note, deliveryprice, grandtotal, idCity, jadwal) {
+      let $36url = "/api/cart/checkout";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["id_member", idMember, "id_address", idAddress, "delivery_method", deliveryMethod, "payment_gateway", paymentGateway, "emergency", emergency, "coupon_code", couponCode, "note", note, "delivery_price", deliveryprice, "grand_total", grandtotal, "id_city", idCity, "jadwal", jadwal]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postCekmutasi(headervalue, atuhheader, transactioncode, amount) {
+      let $36url = "/api/member/payment_cekmutasi";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["transaction_code", transactioncode, "amount", amount]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postcanceltransaksi(headervalue, atuhheader, transactioncode, idMember) {
+      let $36url = "/api/member/delete_history_canceled";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", atuhheader]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["transaction_code", transactioncode, "id_member", idMember]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    PostRegisterChekout(headervalue, firebase, email, password, cpassword, full_name, phone, id_device, profile_pic) {
+      let $36url = "/api/cart/checkout_create_member";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["firebase", firebase, "email", email, "password", password, "cpassword", cpassword, "full_name", full_name, "phone", phone, "id_device", id_device, "profile_pic", profile_pic]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+    postAlamat(headervalue, authheader, id_province, id_city, postal_code, phone, name_acc, address, map, latitude, longitude) {
+      let $36url = "/api/member/add_address";
+      let $36headers = new (T.IdentityMapOfStringL$StringL()).from(["api-key", headervalue, "Authorization", authheader]);
+      let $36body = new (T.IdentityMapOfStringL$dynamic()).from(["id_province", id_province, "id_city", id_city, "postal_code", postal_code, "phone", phone, "name_acc", name_acc, "address", address, "map", map, "latitude", latitude, "longitude", longitude]);
+      let $36request = new request.Request.new("POST", $36url, this.client.baseUrl, {body: $36body, headers: $36headers});
+      return this.client.send(dart.dynamic, dart.dynamic, $36request, {requestConverter: C[0] || CT.C0});
+    }
+  };
+  (network_api_service._$NetworkApiService.new = function(client = null) {
+    this[definitionType] = dart.wrapType(network_api_service.NetworkApiService);
+    network_api_service._$NetworkApiService.__proto__.new.call(this);
+    if (client == null) return;
+    this.client = client;
+  }).prototype = network_api_service._$NetworkApiService.prototype;
+  dart.addTypeTests(network_api_service._$NetworkApiService);
+  dart.addTypeCaches(network_api_service._$NetworkApiService);
+  dart.setMethodSignature(network_api_service._$NetworkApiService, () => ({
+    __proto__: dart.getMethods(network_api_service._$NetworkApiService.__proto__),
+    getBanner: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String)]),
+    getCityHome: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String)]),
+    getpromo: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getrecomended: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getHighlight: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getMaincategory: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getCouponList: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String)]),
+    getMaincategoryProduct: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getFlashsale: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String)]),
+    getHomeCategory2: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getCart: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getDetailTransaction: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getPending: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getAll: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getMember: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getCompleted: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getCancel: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getLastseen: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getSearch: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getRecomemded: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getOngoing: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getAlamat: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    getDetailProduct: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String)]),
+    postCart: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postlogin: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postRegister: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postSearch: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postCoupon: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    changePembayaran: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postCheckout: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postCekmutasi: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postcanceltransaksi: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    PostRegisterChekout: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)]),
+    postAlamat: dart.fnType(dart.legacy(async.Future$(dart.legacy(response.Response))), [dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(core.String)])
+  }));
+  dart.setLibraryUri(network_api_service._$NetworkApiService, I[0]);
+  dart.setFieldSignature(network_api_service._$NetworkApiService, () => ({
+    __proto__: dart.getFields(network_api_service._$NetworkApiService.__proto__),
+    definitionType: dart.finalFieldType(dart.legacy(core.Type))
+  }));
+  dart.trackLibraries("packages/bulanan/Network/network_api_service.dart", {
+    "package:bulanan/Network/network_api_service.dart": network_api_service
+  }, {
+    "package:bulanan/Network/network_api_service.dart": ["network_api_service.chopper.dart"]
+  }, '{"version":3,"sourceRoot":"","sources":["network_api_service.dart","network_api_service.chopper.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/bulanan/Network/network_api_service.dart.lib.js"}');
+  // Exports:
+  return {
+    Network__network_api_service: network_api_service
+  };
+}));
+
+//# sourceMappingURL=network_api_service.dart.lib.js.map

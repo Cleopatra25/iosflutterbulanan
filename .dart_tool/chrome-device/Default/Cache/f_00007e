@@ -1,0 +1,1112 @@
+define(['dart_sdk'], (function load__packages__bulanan__models__ModelDetailProduct_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var ModelDetailProduct = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $_set = dartx._set;
+  var $add = dartx.add;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    MapOfStringL$dynamic: () => (T.MapOfStringL$dynamic = dart.constFn(core.Map$(T.StringL(), dart.dynamic)))(),
+    MapLOfStringL$dynamic: () => (T.MapLOfStringL$dynamic = dart.constFn(dart.legacy(T.MapOfStringL$dynamic())))(),
+    LinkedMapOfStringL$dynamic: () => (T.LinkedMapOfStringL$dynamic = dart.constFn(_js_helper.LinkedMap$(T.StringL(), dart.dynamic)))(),
+    RelatedProductL: () => (T.RelatedProductL = dart.constFn(dart.legacy(ModelDetailProduct.RelatedProduct)))(),
+    JSArrayOfRelatedProductL: () => (T.JSArrayOfRelatedProductL = dart.constFn(_interceptors.JSArray$(T.RelatedProductL())))(),
+    dynamicToNull: () => (T.dynamicToNull = dart.constFn(dart.fnType(core.Null, [dart.dynamic])))(),
+    RelatedProductLToMapLOfStringL$dynamic: () => (T.RelatedProductLToMapLOfStringL$dynamic = dart.constFn(dart.fnType(T.MapLOfStringL$dynamic(), [T.RelatedProductL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var I = ["package:bulanan/models/ModelDetailProduct.dart"];
+  var status$ = dart.privateName(ModelDetailProduct, "ModelDetailProduct.status");
+  var data$ = dart.privateName(ModelDetailProduct, "ModelDetailProduct.data");
+  ModelDetailProduct.ModelDetailProduct = class ModelDetailProduct extends core.Object {
+    get status() {
+      return this[status$];
+    }
+    set status(value) {
+      this[status$] = value;
+    }
+    get data() {
+      return this[data$];
+    }
+    set data(value) {
+      this[data$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("status", this.status);
+      if (this.data != null) {
+        data[$_set]("data", this.data.toJson());
+      }
+      return data;
+    }
+  };
+  (ModelDetailProduct.ModelDetailProduct.new = function(opts) {
+    let status = opts && 'status' in opts ? opts.status : null;
+    let data = opts && 'data' in opts ? opts.data : null;
+    this[status$] = status;
+    this[data$] = data;
+    ;
+  }).prototype = ModelDetailProduct.ModelDetailProduct.prototype;
+  (ModelDetailProduct.ModelDetailProduct.fromJson = function(json) {
+    this[data$] = null;
+    this[status$] = null;
+    this.status = T.boolL().as(json[$_get]("status"));
+    this.data = json[$_get]("data") != null ? new ModelDetailProduct.Data.fromJson(T.MapLOfStringL$dynamic().as(json[$_get]("data"))) : null;
+  }).prototype = ModelDetailProduct.ModelDetailProduct.prototype;
+  dart.addTypeTests(ModelDetailProduct.ModelDetailProduct);
+  dart.addTypeCaches(ModelDetailProduct.ModelDetailProduct);
+  dart.setMethodSignature(ModelDetailProduct.ModelDetailProduct, () => ({
+    __proto__: dart.getMethods(ModelDetailProduct.ModelDetailProduct.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailProduct.ModelDetailProduct, I[0]);
+  dart.setFieldSignature(ModelDetailProduct.ModelDetailProduct, () => ({
+    __proto__: dart.getFields(ModelDetailProduct.ModelDetailProduct.__proto__),
+    status: dart.fieldType(dart.legacy(core.bool)),
+    data: dart.fieldType(dart.legacy(ModelDetailProduct.Data))
+  }));
+  var product$ = dart.privateName(ModelDetailProduct, "Data.product");
+  var relatedProduct$ = dart.privateName(ModelDetailProduct, "Data.relatedProduct");
+  ModelDetailProduct.Data = class Data extends core.Object {
+    get product() {
+      return this[product$];
+    }
+    set product(value) {
+      this[product$] = value;
+    }
+    get relatedProduct() {
+      return this[relatedProduct$];
+    }
+    set relatedProduct(value) {
+      this[relatedProduct$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      if (this.product != null) {
+        data[$_set]("product", this.product.toJson());
+      }
+      if (this.relatedProduct != null) {
+        data[$_set]("related_product", this.relatedProduct[$map](T.MapLOfStringL$dynamic(), dart.fn(v => v.toJson(), T.RelatedProductLToMapLOfStringL$dynamic()))[$toList]());
+      }
+      return data;
+    }
+  };
+  (ModelDetailProduct.Data.new = function(opts) {
+    let product = opts && 'product' in opts ? opts.product : null;
+    let relatedProduct = opts && 'relatedProduct' in opts ? opts.relatedProduct : null;
+    this[product$] = product;
+    this[relatedProduct$] = relatedProduct;
+    ;
+  }).prototype = ModelDetailProduct.Data.prototype;
+  (ModelDetailProduct.Data.fromJson = function(json) {
+    this[relatedProduct$] = null;
+    this[product$] = null;
+    this.product = json[$_get]("product") != null ? new ModelDetailProduct.Product.fromJson(T.MapLOfStringL$dynamic().as(json[$_get]("product"))) : null;
+    if (json[$_get]("related_product") != null) {
+      this.relatedProduct = T.JSArrayOfRelatedProductL().of([]);
+      dart.dsend(json[$_get]("related_product"), 'forEach', [dart.fn(v => {
+          this.relatedProduct[$add](new ModelDetailProduct.RelatedProduct.fromJson(T.MapLOfStringL$dynamic().as(v)));
+        }, T.dynamicToNull())]);
+    }
+  }).prototype = ModelDetailProduct.Data.prototype;
+  dart.addTypeTests(ModelDetailProduct.Data);
+  dart.addTypeCaches(ModelDetailProduct.Data);
+  dart.setMethodSignature(ModelDetailProduct.Data, () => ({
+    __proto__: dart.getMethods(ModelDetailProduct.Data.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailProduct.Data, I[0]);
+  dart.setFieldSignature(ModelDetailProduct.Data, () => ({
+    __proto__: dart.getFields(ModelDetailProduct.Data.__proto__),
+    product: dart.fieldType(dart.legacy(ModelDetailProduct.Product)),
+    relatedProduct: dart.fieldType(dart.legacy(core.List$(dart.legacy(ModelDetailProduct.RelatedProduct))))
+  }));
+  var priceFlashSale$ = dart.privateName(ModelDetailProduct, "Product.priceFlashSale");
+  var idProduct$ = dart.privateName(ModelDetailProduct, "Product.idProduct");
+  var idProductCategory$ = dart.privateName(ModelDetailProduct, "Product.idProductCategory");
+  var idWarehouse$ = dart.privateName(ModelDetailProduct, "Product.idWarehouse");
+  var idFlashSale$ = dart.privateName(ModelDetailProduct, "Product.idFlashSale");
+  var quantityFlashSale$ = dart.privateName(ModelDetailProduct, "Product.quantityFlashSale");
+  var position$ = dart.privateName(ModelDetailProduct, "Product.position");
+  var quantityBuy$ = dart.privateName(ModelDetailProduct, "Product.quantityBuy");
+  var idHighlight$ = dart.privateName(ModelDetailProduct, "Product.idHighlight");
+  var barcode$ = dart.privateName(ModelDetailProduct, "Product.barcode");
+  var unit$ = dart.privateName(ModelDetailProduct, "Product.unit");
+  var description$ = dart.privateName(ModelDetailProduct, "Product.description");
+  var productName$ = dart.privateName(ModelDetailProduct, "Product.productName");
+  var slug$ = dart.privateName(ModelDetailProduct, "Product.slug");
+  var meta$ = dart.privateName(ModelDetailProduct, "Product.meta");
+  var image$ = dart.privateName(ModelDetailProduct, "Product.image");
+  var stock$ = dart.privateName(ModelDetailProduct, "Product.stock");
+  var pricePerUnit$ = dart.privateName(ModelDetailProduct, "Product.pricePerUnit");
+  var pricePromo$ = dart.privateName(ModelDetailProduct, "Product.pricePromo");
+  var priceGold$ = dart.privateName(ModelDetailProduct, "Product.priceGold");
+  var discount$ = dart.privateName(ModelDetailProduct, "Product.discount");
+  var views$ = dart.privateName(ModelDetailProduct, "Product.views");
+  var idTag$ = dart.privateName(ModelDetailProduct, "Product.idTag");
+  var expDate$ = dart.privateName(ModelDetailProduct, "Product.expDate");
+  var expDateBefore$ = dart.privateName(ModelDetailProduct, "Product.expDateBefore");
+  var isPromo$ = dart.privateName(ModelDetailProduct, "Product.isPromo");
+  var isFresh$ = dart.privateName(ModelDetailProduct, "Product.isFresh");
+  var isRecomended$ = dart.privateName(ModelDetailProduct, "Product.isRecomended");
+  var isGetone$ = dart.privateName(ModelDetailProduct, "Product.isGetone");
+  var isPublished$ = dart.privateName(ModelDetailProduct, "Product.isPublished");
+  var isDaily$ = dart.privateName(ModelDetailProduct, "Product.isDaily");
+  var qtyDaily$ = dart.privateName(ModelDetailProduct, "Product.qtyDaily");
+  var qtyPromo$ = dart.privateName(ModelDetailProduct, "Product.qtyPromo");
+  var idTebusMurah$ = dart.privateName(ModelDetailProduct, "Product.idTebusMurah");
+  var hargaTebusMurah$ = dart.privateName(ModelDetailProduct, "Product.hargaTebusMurah");
+  var category$ = dart.privateName(ModelDetailProduct, "Product.category");
+  ModelDetailProduct.Product = class Product extends core.Object {
+    get priceFlashSale() {
+      return this[priceFlashSale$];
+    }
+    set priceFlashSale(value) {
+      this[priceFlashSale$] = value;
+    }
+    get idProduct() {
+      return this[idProduct$];
+    }
+    set idProduct(value) {
+      this[idProduct$] = value;
+    }
+    get idProductCategory() {
+      return this[idProductCategory$];
+    }
+    set idProductCategory(value) {
+      this[idProductCategory$] = value;
+    }
+    get idWarehouse() {
+      return this[idWarehouse$];
+    }
+    set idWarehouse(value) {
+      this[idWarehouse$] = value;
+    }
+    get idFlashSale() {
+      return this[idFlashSale$];
+    }
+    set idFlashSale(value) {
+      this[idFlashSale$] = value;
+    }
+    get quantityFlashSale() {
+      return this[quantityFlashSale$];
+    }
+    set quantityFlashSale(value) {
+      this[quantityFlashSale$] = value;
+    }
+    get position() {
+      return this[position$];
+    }
+    set position(value) {
+      this[position$] = value;
+    }
+    get quantityBuy() {
+      return this[quantityBuy$];
+    }
+    set quantityBuy(value) {
+      this[quantityBuy$] = value;
+    }
+    get idHighlight() {
+      return this[idHighlight$];
+    }
+    set idHighlight(value) {
+      this[idHighlight$] = value;
+    }
+    get barcode() {
+      return this[barcode$];
+    }
+    set barcode(value) {
+      this[barcode$] = value;
+    }
+    get unit() {
+      return this[unit$];
+    }
+    set unit(value) {
+      this[unit$] = value;
+    }
+    get description() {
+      return this[description$];
+    }
+    set description(value) {
+      this[description$] = value;
+    }
+    get productName() {
+      return this[productName$];
+    }
+    set productName(value) {
+      this[productName$] = value;
+    }
+    get slug() {
+      return this[slug$];
+    }
+    set slug(value) {
+      this[slug$] = value;
+    }
+    get meta() {
+      return this[meta$];
+    }
+    set meta(value) {
+      this[meta$] = value;
+    }
+    get image() {
+      return this[image$];
+    }
+    set image(value) {
+      this[image$] = value;
+    }
+    get stock() {
+      return this[stock$];
+    }
+    set stock(value) {
+      this[stock$] = value;
+    }
+    get pricePerUnit() {
+      return this[pricePerUnit$];
+    }
+    set pricePerUnit(value) {
+      this[pricePerUnit$] = value;
+    }
+    get pricePromo() {
+      return this[pricePromo$];
+    }
+    set pricePromo(value) {
+      this[pricePromo$] = value;
+    }
+    get priceGold() {
+      return this[priceGold$];
+    }
+    set priceGold(value) {
+      this[priceGold$] = value;
+    }
+    get discount() {
+      return this[discount$];
+    }
+    set discount(value) {
+      this[discount$] = value;
+    }
+    get views() {
+      return this[views$];
+    }
+    set views(value) {
+      this[views$] = value;
+    }
+    get idTag() {
+      return this[idTag$];
+    }
+    set idTag(value) {
+      this[idTag$] = value;
+    }
+    get expDate() {
+      return this[expDate$];
+    }
+    set expDate(value) {
+      this[expDate$] = value;
+    }
+    get expDateBefore() {
+      return this[expDateBefore$];
+    }
+    set expDateBefore(value) {
+      this[expDateBefore$] = value;
+    }
+    get isPromo() {
+      return this[isPromo$];
+    }
+    set isPromo(value) {
+      this[isPromo$] = value;
+    }
+    get isFresh() {
+      return this[isFresh$];
+    }
+    set isFresh(value) {
+      this[isFresh$] = value;
+    }
+    get isRecomended() {
+      return this[isRecomended$];
+    }
+    set isRecomended(value) {
+      this[isRecomended$] = value;
+    }
+    get isGetone() {
+      return this[isGetone$];
+    }
+    set isGetone(value) {
+      this[isGetone$] = value;
+    }
+    get isPublished() {
+      return this[isPublished$];
+    }
+    set isPublished(value) {
+      this[isPublished$] = value;
+    }
+    get isDaily() {
+      return this[isDaily$];
+    }
+    set isDaily(value) {
+      this[isDaily$] = value;
+    }
+    get qtyDaily() {
+      return this[qtyDaily$];
+    }
+    set qtyDaily(value) {
+      this[qtyDaily$] = value;
+    }
+    get qtyPromo() {
+      return this[qtyPromo$];
+    }
+    set qtyPromo(value) {
+      this[qtyPromo$] = value;
+    }
+    get idTebusMurah() {
+      return this[idTebusMurah$];
+    }
+    set idTebusMurah(value) {
+      this[idTebusMurah$] = value;
+    }
+    get hargaTebusMurah() {
+      return this[hargaTebusMurah$];
+    }
+    set hargaTebusMurah(value) {
+      this[hargaTebusMurah$] = value;
+    }
+    get category() {
+      return this[category$];
+    }
+    set category(value) {
+      this[category$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("price_flash_sale", this.priceFlashSale);
+      data[$_set]("id_product", this.idProduct);
+      data[$_set]("id_product_category", this.idProductCategory);
+      data[$_set]("id_warehouse", this.idWarehouse);
+      data[$_set]("id_flash_sale", this.idFlashSale);
+      data[$_set]("quantity_flash_sale", this.quantityFlashSale);
+      data[$_set]("position", this.position);
+      data[$_set]("quantity_buy", this.quantityBuy);
+      data[$_set]("id_highlight", this.idHighlight);
+      data[$_set]("barcode", this.barcode);
+      data[$_set]("unit", this.unit);
+      data[$_set]("description", this.description);
+      data[$_set]("product_name", this.productName);
+      data[$_set]("slug", this.slug);
+      data[$_set]("meta", this.meta);
+      data[$_set]("image", this.image);
+      data[$_set]("stock", this.stock);
+      data[$_set]("price_per_unit", this.pricePerUnit);
+      data[$_set]("price_promo", this.pricePromo);
+      data[$_set]("price_gold", this.priceGold);
+      data[$_set]("discount", this.discount);
+      data[$_set]("views", this.views);
+      data[$_set]("id_tag", this.idTag);
+      data[$_set]("exp_date", this.expDate);
+      data[$_set]("exp_date_before", this.expDateBefore);
+      data[$_set]("is_promo", this.isPromo);
+      data[$_set]("is_fresh", this.isFresh);
+      data[$_set]("is_recomended", this.isRecomended);
+      data[$_set]("is_getone", this.isGetone);
+      data[$_set]("is_published", this.isPublished);
+      data[$_set]("is_daily", this.isDaily);
+      data[$_set]("qty_daily", this.qtyDaily);
+      data[$_set]("qty_promo", this.qtyPromo);
+      data[$_set]("id_tebus_murah", this.idTebusMurah);
+      data[$_set]("harga_tebus_murah", this.hargaTebusMurah);
+      data[$_set]("category", this.category);
+      return data;
+    }
+  };
+  (ModelDetailProduct.Product.new = function(opts) {
+    let priceFlashSale = opts && 'priceFlashSale' in opts ? opts.priceFlashSale : null;
+    let idProduct = opts && 'idProduct' in opts ? opts.idProduct : null;
+    let idProductCategory = opts && 'idProductCategory' in opts ? opts.idProductCategory : null;
+    let idWarehouse = opts && 'idWarehouse' in opts ? opts.idWarehouse : null;
+    let idFlashSale = opts && 'idFlashSale' in opts ? opts.idFlashSale : null;
+    let quantityFlashSale = opts && 'quantityFlashSale' in opts ? opts.quantityFlashSale : null;
+    let position = opts && 'position' in opts ? opts.position : null;
+    let quantityBuy = opts && 'quantityBuy' in opts ? opts.quantityBuy : null;
+    let idHighlight = opts && 'idHighlight' in opts ? opts.idHighlight : null;
+    let barcode = opts && 'barcode' in opts ? opts.barcode : null;
+    let unit = opts && 'unit' in opts ? opts.unit : null;
+    let description = opts && 'description' in opts ? opts.description : null;
+    let productName = opts && 'productName' in opts ? opts.productName : null;
+    let slug = opts && 'slug' in opts ? opts.slug : null;
+    let meta = opts && 'meta' in opts ? opts.meta : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let stock = opts && 'stock' in opts ? opts.stock : null;
+    let pricePerUnit = opts && 'pricePerUnit' in opts ? opts.pricePerUnit : null;
+    let pricePromo = opts && 'pricePromo' in opts ? opts.pricePromo : null;
+    let priceGold = opts && 'priceGold' in opts ? opts.priceGold : null;
+    let discount = opts && 'discount' in opts ? opts.discount : null;
+    let views = opts && 'views' in opts ? opts.views : null;
+    let idTag = opts && 'idTag' in opts ? opts.idTag : null;
+    let expDate = opts && 'expDate' in opts ? opts.expDate : null;
+    let expDateBefore = opts && 'expDateBefore' in opts ? opts.expDateBefore : null;
+    let isPromo = opts && 'isPromo' in opts ? opts.isPromo : null;
+    let isFresh = opts && 'isFresh' in opts ? opts.isFresh : null;
+    let isRecomended = opts && 'isRecomended' in opts ? opts.isRecomended : null;
+    let isGetone = opts && 'isGetone' in opts ? opts.isGetone : null;
+    let isPublished = opts && 'isPublished' in opts ? opts.isPublished : null;
+    let isDaily = opts && 'isDaily' in opts ? opts.isDaily : null;
+    let qtyDaily = opts && 'qtyDaily' in opts ? opts.qtyDaily : null;
+    let qtyPromo = opts && 'qtyPromo' in opts ? opts.qtyPromo : null;
+    let idTebusMurah = opts && 'idTebusMurah' in opts ? opts.idTebusMurah : null;
+    let hargaTebusMurah = opts && 'hargaTebusMurah' in opts ? opts.hargaTebusMurah : null;
+    let category = opts && 'category' in opts ? opts.category : null;
+    this[priceFlashSale$] = priceFlashSale;
+    this[idProduct$] = idProduct;
+    this[idProductCategory$] = idProductCategory;
+    this[idWarehouse$] = idWarehouse;
+    this[idFlashSale$] = idFlashSale;
+    this[quantityFlashSale$] = quantityFlashSale;
+    this[position$] = position;
+    this[quantityBuy$] = quantityBuy;
+    this[idHighlight$] = idHighlight;
+    this[barcode$] = barcode;
+    this[unit$] = unit;
+    this[description$] = description;
+    this[productName$] = productName;
+    this[slug$] = slug;
+    this[meta$] = meta;
+    this[image$] = image;
+    this[stock$] = stock;
+    this[pricePerUnit$] = pricePerUnit;
+    this[pricePromo$] = pricePromo;
+    this[priceGold$] = priceGold;
+    this[discount$] = discount;
+    this[views$] = views;
+    this[idTag$] = idTag;
+    this[expDate$] = expDate;
+    this[expDateBefore$] = expDateBefore;
+    this[isPromo$] = isPromo;
+    this[isFresh$] = isFresh;
+    this[isRecomended$] = isRecomended;
+    this[isGetone$] = isGetone;
+    this[isPublished$] = isPublished;
+    this[isDaily$] = isDaily;
+    this[qtyDaily$] = qtyDaily;
+    this[qtyPromo$] = qtyPromo;
+    this[idTebusMurah$] = idTebusMurah;
+    this[hargaTebusMurah$] = hargaTebusMurah;
+    this[category$] = category;
+    ;
+  }).prototype = ModelDetailProduct.Product.prototype;
+  (ModelDetailProduct.Product.fromJson = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18, t0$19, t0$20, t0$21, t0$22, t0$23, t0$24, t0$25, t0$26, t0$27, t0$28, t0$29, t0$30, t0$31, t0$32;
+    this[category$] = null;
+    this[hargaTebusMurah$] = null;
+    this[idTebusMurah$] = null;
+    this[qtyPromo$] = null;
+    this[qtyDaily$] = null;
+    this[isDaily$] = null;
+    this[isPublished$] = null;
+    this[isGetone$] = null;
+    this[isRecomended$] = null;
+    this[isFresh$] = null;
+    this[isPromo$] = null;
+    this[expDateBefore$] = null;
+    this[expDate$] = null;
+    this[idTag$] = null;
+    this[views$] = null;
+    this[discount$] = null;
+    this[priceGold$] = null;
+    this[pricePromo$] = null;
+    this[pricePerUnit$] = null;
+    this[stock$] = null;
+    this[image$] = null;
+    this[meta$] = null;
+    this[slug$] = null;
+    this[productName$] = null;
+    this[description$] = null;
+    this[unit$] = null;
+    this[barcode$] = null;
+    this[idHighlight$] = null;
+    this[quantityBuy$] = null;
+    this[position$] = null;
+    this[quantityFlashSale$] = null;
+    this[idFlashSale$] = null;
+    this[idWarehouse$] = null;
+    this[idProductCategory$] = null;
+    this[idProduct$] = null;
+    this[priceFlashSale$] = null;
+    this.priceFlashSale = T.StringL().as((t0 = json[$_get]("price_flash_sale"), t0 == null ? "" : t0));
+    this.idProduct = T.StringL().as((t0$ = json[$_get]("id_product"), t0$ == null ? "" : t0$));
+    this.idProductCategory = T.StringL().as((t0$0 = json[$_get]("id_product_category"), t0$0 == null ? "" : t0$0));
+    this.idWarehouse = T.StringL().as((t0$1 = json[$_get]("id_warehouse"), t0$1 == null ? "" : t0$1));
+    this.idFlashSale = T.StringL().as(json[$_get]("id_flash_sale"));
+    this.quantityFlashSale = T.StringL().as((t0$2 = json[$_get]("quantity_flash_sale"), t0$2 == null ? "" : t0$2));
+    this.position = T.StringL().as((t0$3 = json[$_get]("position"), t0$3 == null ? "" : t0$3));
+    this.quantityBuy = T.StringL().as((t0$4 = json[$_get]("quantity_buy"), t0$4 == null ? "" : t0$4));
+    this.idHighlight = T.StringL().as((t0$5 = json[$_get]("id_highlight"), t0$5 == null ? "" : t0$5));
+    this.barcode = T.StringL().as((t0$6 = json[$_get]("barcode"), t0$6 == null ? "" : t0$6));
+    this.unit = T.StringL().as((t0$7 = json[$_get]("unit"), t0$7 == null ? "" : t0$7));
+    this.description = T.StringL().as((t0$8 = json[$_get]("description"), t0$8 == null ? "" : t0$8));
+    this.productName = T.StringL().as((t0$9 = json[$_get]("product_name"), t0$9 == null ? "" : t0$9));
+    this.slug = T.StringL().as((t0$10 = json[$_get]("slug"), t0$10 == null ? "" : t0$10));
+    this.meta = T.StringL().as((t0$11 = json[$_get]("meta"), t0$11 == null ? "" : t0$11));
+    this.image = T.StringL().as((t0$12 = json[$_get]("image"), t0$12 == null ? "" : t0$12));
+    this.stock = T.StringL().as((t0$13 = json[$_get]("stock"), t0$13 == null ? "" : t0$13));
+    this.pricePerUnit = T.StringL().as((t0$14 = json[$_get]("price_per_unit"), t0$14 == null ? "" : t0$14));
+    this.pricePromo = T.StringL().as((t0$15 = json[$_get]("price_promo"), t0$15 == null ? "" : t0$15));
+    this.priceGold = T.StringL().as((t0$16 = json[$_get]("price_gold"), t0$16 == null ? "" : t0$16));
+    this.discount = T.StringL().as((t0$17 = json[$_get]("discount"), t0$17 == null ? "" : t0$17));
+    this.views = T.StringL().as((t0$18 = json[$_get]("views"), t0$18 == null ? "" : t0$18));
+    this.idTag = T.StringL().as((t0$19 = json[$_get]("id_tag"), t0$19 == null ? "" : t0$19));
+    this.expDate = T.StringL().as((t0$20 = json[$_get]("exp_date"), t0$20 == null ? "" : t0$20));
+    this.expDateBefore = T.StringL().as((t0$21 = json[$_get]("exp_date_before"), t0$21 == null ? "" : t0$21));
+    this.isPromo = T.StringL().as((t0$22 = json[$_get]("is_promo"), t0$22 == null ? "" : t0$22));
+    this.isFresh = T.StringL().as((t0$23 = json[$_get]("is_fresh"), t0$23 == null ? "" : t0$23));
+    this.isRecomended = T.StringL().as((t0$24 = json[$_get]("is_recomended"), t0$24 == null ? "" : t0$24));
+    this.isGetone = T.StringL().as((t0$25 = json[$_get]("is_getone"), t0$25 == null ? "" : t0$25));
+    this.isPublished = T.StringL().as((t0$26 = json[$_get]("is_published"), t0$26 == null ? "" : t0$26));
+    this.isDaily = T.StringL().as((t0$27 = json[$_get]("is_daily"), t0$27 == null ? "" : t0$27));
+    this.qtyDaily = T.StringL().as((t0$28 = json[$_get]("qty_daily"), t0$28 == null ? "" : t0$28));
+    this.qtyPromo = T.StringL().as((t0$29 = json[$_get]("qty_promo"), t0$29 == null ? "" : t0$29));
+    this.idTebusMurah = T.StringL().as((t0$30 = json[$_get]("id_tebus_murah"), t0$30 == null ? "" : t0$30));
+    this.hargaTebusMurah = T.StringL().as((t0$31 = json[$_get]("harga_tebus_murah"), t0$31 == null ? "" : t0$31));
+    this.category = T.StringL().as((t0$32 = json[$_get]("category"), t0$32 == null ? "" : t0$32));
+  }).prototype = ModelDetailProduct.Product.prototype;
+  dart.addTypeTests(ModelDetailProduct.Product);
+  dart.addTypeCaches(ModelDetailProduct.Product);
+  dart.setMethodSignature(ModelDetailProduct.Product, () => ({
+    __proto__: dart.getMethods(ModelDetailProduct.Product.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailProduct.Product, I[0]);
+  dart.setFieldSignature(ModelDetailProduct.Product, () => ({
+    __proto__: dart.getFields(ModelDetailProduct.Product.__proto__),
+    priceFlashSale: dart.fieldType(dart.legacy(core.String)),
+    idProduct: dart.fieldType(dart.legacy(core.String)),
+    idProductCategory: dart.fieldType(dart.legacy(core.String)),
+    idWarehouse: dart.fieldType(dart.legacy(core.String)),
+    idFlashSale: dart.fieldType(dart.legacy(core.String)),
+    quantityFlashSale: dart.fieldType(dart.legacy(core.String)),
+    position: dart.fieldType(dart.legacy(core.String)),
+    quantityBuy: dart.fieldType(dart.legacy(core.String)),
+    idHighlight: dart.fieldType(dart.legacy(core.String)),
+    barcode: dart.fieldType(dart.legacy(core.String)),
+    unit: dart.fieldType(dart.legacy(core.String)),
+    description: dart.fieldType(dart.legacy(core.String)),
+    productName: dart.fieldType(dart.legacy(core.String)),
+    slug: dart.fieldType(dart.legacy(core.String)),
+    meta: dart.fieldType(dart.legacy(core.String)),
+    image: dart.fieldType(dart.legacy(core.String)),
+    stock: dart.fieldType(dart.legacy(core.String)),
+    pricePerUnit: dart.fieldType(dart.legacy(core.String)),
+    pricePromo: dart.fieldType(dart.legacy(core.String)),
+    priceGold: dart.fieldType(dart.legacy(core.String)),
+    discount: dart.fieldType(dart.legacy(core.String)),
+    views: dart.fieldType(dart.legacy(core.String)),
+    idTag: dart.fieldType(dart.legacy(core.String)),
+    expDate: dart.fieldType(dart.legacy(core.String)),
+    expDateBefore: dart.fieldType(dart.legacy(core.String)),
+    isPromo: dart.fieldType(dart.legacy(core.String)),
+    isFresh: dart.fieldType(dart.legacy(core.String)),
+    isRecomended: dart.fieldType(dart.legacy(core.String)),
+    isGetone: dart.fieldType(dart.legacy(core.String)),
+    isPublished: dart.fieldType(dart.legacy(core.String)),
+    isDaily: dart.fieldType(dart.legacy(core.String)),
+    qtyDaily: dart.fieldType(dart.legacy(core.String)),
+    qtyPromo: dart.fieldType(dart.legacy(core.String)),
+    idTebusMurah: dart.fieldType(dart.legacy(core.String)),
+    hargaTebusMurah: dart.fieldType(dart.legacy(core.String)),
+    category: dart.fieldType(dart.legacy(core.String))
+  }));
+  var priceFlashSale$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.priceFlashSale");
+  var idProduct$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idProduct");
+  var idProductCategory$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idProductCategory");
+  var idWarehouse$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idWarehouse");
+  var idFlashSale$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idFlashSale");
+  var quantityFlashSale$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.quantityFlashSale");
+  var position$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.position");
+  var quantityBuy$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.quantityBuy");
+  var idHighlight$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idHighlight");
+  var barcode$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.barcode");
+  var description$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.description");
+  var unit$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.unit");
+  var productName$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.productName");
+  var slug$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.slug");
+  var meta$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.meta");
+  var image$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.image");
+  var stock$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.stock");
+  var pricePerUnit$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.pricePerUnit");
+  var pricePromo$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.pricePromo");
+  var priceGold$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.priceGold");
+  var discount$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.discount");
+  var views$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.views");
+  var idTag$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idTag");
+  var expDate$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.expDate");
+  var expDateBefore$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.expDateBefore");
+  var isPromo$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.isPromo");
+  var isFresh$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.isFresh");
+  var isRecomended$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.isRecomended");
+  var isGetone$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.isGetone");
+  var isPublished$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.isPublished");
+  var isDaily$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.isDaily");
+  var qtyDaily$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.qtyDaily");
+  var qtyPromo$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.qtyPromo");
+  var idTebusMurah$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.idTebusMurah");
+  var hargaTebusMurah$0 = dart.privateName(ModelDetailProduct, "RelatedProduct.hargaTebusMurah");
+  ModelDetailProduct.RelatedProduct = class RelatedProduct extends core.Object {
+    get priceFlashSale() {
+      return this[priceFlashSale$0];
+    }
+    set priceFlashSale(value) {
+      this[priceFlashSale$0] = value;
+    }
+    get idProduct() {
+      return this[idProduct$0];
+    }
+    set idProduct(value) {
+      this[idProduct$0] = value;
+    }
+    get idProductCategory() {
+      return this[idProductCategory$0];
+    }
+    set idProductCategory(value) {
+      this[idProductCategory$0] = value;
+    }
+    get idWarehouse() {
+      return this[idWarehouse$0];
+    }
+    set idWarehouse(value) {
+      this[idWarehouse$0] = value;
+    }
+    get idFlashSale() {
+      return this[idFlashSale$0];
+    }
+    set idFlashSale(value) {
+      this[idFlashSale$0] = value;
+    }
+    get quantityFlashSale() {
+      return this[quantityFlashSale$0];
+    }
+    set quantityFlashSale(value) {
+      this[quantityFlashSale$0] = value;
+    }
+    get position() {
+      return this[position$0];
+    }
+    set position(value) {
+      this[position$0] = value;
+    }
+    get quantityBuy() {
+      return this[quantityBuy$0];
+    }
+    set quantityBuy(value) {
+      this[quantityBuy$0] = value;
+    }
+    get idHighlight() {
+      return this[idHighlight$0];
+    }
+    set idHighlight(value) {
+      this[idHighlight$0] = value;
+    }
+    get barcode() {
+      return this[barcode$0];
+    }
+    set barcode(value) {
+      this[barcode$0] = value;
+    }
+    get description() {
+      return this[description$0];
+    }
+    set description(value) {
+      this[description$0] = value;
+    }
+    get unit() {
+      return this[unit$0];
+    }
+    set unit(value) {
+      this[unit$0] = value;
+    }
+    get productName() {
+      return this[productName$0];
+    }
+    set productName(value) {
+      this[productName$0] = value;
+    }
+    get slug() {
+      return this[slug$0];
+    }
+    set slug(value) {
+      this[slug$0] = value;
+    }
+    get meta() {
+      return this[meta$0];
+    }
+    set meta(value) {
+      this[meta$0] = value;
+    }
+    get image() {
+      return this[image$0];
+    }
+    set image(value) {
+      this[image$0] = value;
+    }
+    get stock() {
+      return this[stock$0];
+    }
+    set stock(value) {
+      this[stock$0] = value;
+    }
+    get pricePerUnit() {
+      return this[pricePerUnit$0];
+    }
+    set pricePerUnit(value) {
+      this[pricePerUnit$0] = value;
+    }
+    get pricePromo() {
+      return this[pricePromo$0];
+    }
+    set pricePromo(value) {
+      this[pricePromo$0] = value;
+    }
+    get priceGold() {
+      return this[priceGold$0];
+    }
+    set priceGold(value) {
+      this[priceGold$0] = value;
+    }
+    get discount() {
+      return this[discount$0];
+    }
+    set discount(value) {
+      this[discount$0] = value;
+    }
+    get views() {
+      return this[views$0];
+    }
+    set views(value) {
+      this[views$0] = value;
+    }
+    get idTag() {
+      return this[idTag$0];
+    }
+    set idTag(value) {
+      this[idTag$0] = value;
+    }
+    get expDate() {
+      return this[expDate$0];
+    }
+    set expDate(value) {
+      this[expDate$0] = value;
+    }
+    get expDateBefore() {
+      return this[expDateBefore$0];
+    }
+    set expDateBefore(value) {
+      this[expDateBefore$0] = value;
+    }
+    get isPromo() {
+      return this[isPromo$0];
+    }
+    set isPromo(value) {
+      this[isPromo$0] = value;
+    }
+    get isFresh() {
+      return this[isFresh$0];
+    }
+    set isFresh(value) {
+      this[isFresh$0] = value;
+    }
+    get isRecomended() {
+      return this[isRecomended$0];
+    }
+    set isRecomended(value) {
+      this[isRecomended$0] = value;
+    }
+    get isGetone() {
+      return this[isGetone$0];
+    }
+    set isGetone(value) {
+      this[isGetone$0] = value;
+    }
+    get isPublished() {
+      return this[isPublished$0];
+    }
+    set isPublished(value) {
+      this[isPublished$0] = value;
+    }
+    get isDaily() {
+      return this[isDaily$0];
+    }
+    set isDaily(value) {
+      this[isDaily$0] = value;
+    }
+    get qtyDaily() {
+      return this[qtyDaily$0];
+    }
+    set qtyDaily(value) {
+      this[qtyDaily$0] = value;
+    }
+    get qtyPromo() {
+      return this[qtyPromo$0];
+    }
+    set qtyPromo(value) {
+      this[qtyPromo$0] = value;
+    }
+    get idTebusMurah() {
+      return this[idTebusMurah$0];
+    }
+    set idTebusMurah(value) {
+      this[idTebusMurah$0] = value;
+    }
+    get hargaTebusMurah() {
+      return this[hargaTebusMurah$0];
+    }
+    set hargaTebusMurah(value) {
+      this[hargaTebusMurah$0] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("price_flash_sale", this.priceFlashSale);
+      data[$_set]("id_product", this.idProduct);
+      data[$_set]("id_product_category", this.idProductCategory);
+      data[$_set]("id_warehouse", this.idWarehouse);
+      data[$_set]("id_flash_sale", this.idFlashSale);
+      data[$_set]("quantity_flash_sale", this.quantityFlashSale);
+      data[$_set]("position", this.position);
+      data[$_set]("quantity_buy", this.quantityBuy);
+      data[$_set]("id_highlight", this.idHighlight);
+      data[$_set]("barcode", this.barcode);
+      data[$_set]("description", this.description);
+      data[$_set]("unit", this.unit);
+      data[$_set]("product_name", this.productName);
+      data[$_set]("slug", this.slug);
+      data[$_set]("meta", this.meta);
+      data[$_set]("image", this.image);
+      data[$_set]("stock", this.stock);
+      data[$_set]("price_per_unit", this.pricePerUnit);
+      data[$_set]("price_promo", this.pricePromo);
+      data[$_set]("price_gold", this.priceGold);
+      data[$_set]("discount", this.discount);
+      data[$_set]("views", this.views);
+      data[$_set]("id_tag", this.idTag);
+      data[$_set]("exp_date", this.expDate);
+      data[$_set]("exp_date_before", this.expDateBefore);
+      data[$_set]("is_promo", this.isPromo);
+      data[$_set]("is_fresh", this.isFresh);
+      data[$_set]("is_recomended", this.isRecomended);
+      data[$_set]("is_getone", this.isGetone);
+      data[$_set]("is_published", this.isPublished);
+      data[$_set]("is_daily", this.isDaily);
+      data[$_set]("qty_daily", this.qtyDaily);
+      data[$_set]("qty_promo", this.qtyPromo);
+      data[$_set]("id_tebus_murah", this.idTebusMurah);
+      data[$_set]("harga_tebus_murah", this.hargaTebusMurah);
+      return data;
+    }
+  };
+  (ModelDetailProduct.RelatedProduct.new = function(opts) {
+    let priceFlashSale = opts && 'priceFlashSale' in opts ? opts.priceFlashSale : null;
+    let idProduct = opts && 'idProduct' in opts ? opts.idProduct : null;
+    let idProductCategory = opts && 'idProductCategory' in opts ? opts.idProductCategory : null;
+    let idWarehouse = opts && 'idWarehouse' in opts ? opts.idWarehouse : null;
+    let idFlashSale = opts && 'idFlashSale' in opts ? opts.idFlashSale : null;
+    let quantityFlashSale = opts && 'quantityFlashSale' in opts ? opts.quantityFlashSale : null;
+    let position = opts && 'position' in opts ? opts.position : null;
+    let quantityBuy = opts && 'quantityBuy' in opts ? opts.quantityBuy : null;
+    let idHighlight = opts && 'idHighlight' in opts ? opts.idHighlight : null;
+    let barcode = opts && 'barcode' in opts ? opts.barcode : null;
+    let description = opts && 'description' in opts ? opts.description : null;
+    let unit = opts && 'unit' in opts ? opts.unit : null;
+    let productName = opts && 'productName' in opts ? opts.productName : null;
+    let slug = opts && 'slug' in opts ? opts.slug : null;
+    let meta = opts && 'meta' in opts ? opts.meta : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let stock = opts && 'stock' in opts ? opts.stock : null;
+    let pricePerUnit = opts && 'pricePerUnit' in opts ? opts.pricePerUnit : null;
+    let pricePromo = opts && 'pricePromo' in opts ? opts.pricePromo : null;
+    let priceGold = opts && 'priceGold' in opts ? opts.priceGold : null;
+    let discount = opts && 'discount' in opts ? opts.discount : null;
+    let views = opts && 'views' in opts ? opts.views : null;
+    let idTag = opts && 'idTag' in opts ? opts.idTag : null;
+    let expDate = opts && 'expDate' in opts ? opts.expDate : null;
+    let expDateBefore = opts && 'expDateBefore' in opts ? opts.expDateBefore : null;
+    let isPromo = opts && 'isPromo' in opts ? opts.isPromo : null;
+    let isFresh = opts && 'isFresh' in opts ? opts.isFresh : null;
+    let isRecomended = opts && 'isRecomended' in opts ? opts.isRecomended : null;
+    let isGetone = opts && 'isGetone' in opts ? opts.isGetone : null;
+    let isPublished = opts && 'isPublished' in opts ? opts.isPublished : null;
+    let isDaily = opts && 'isDaily' in opts ? opts.isDaily : null;
+    let qtyDaily = opts && 'qtyDaily' in opts ? opts.qtyDaily : null;
+    let qtyPromo = opts && 'qtyPromo' in opts ? opts.qtyPromo : null;
+    let idTebusMurah = opts && 'idTebusMurah' in opts ? opts.idTebusMurah : null;
+    let hargaTebusMurah = opts && 'hargaTebusMurah' in opts ? opts.hargaTebusMurah : null;
+    this[priceFlashSale$0] = priceFlashSale;
+    this[idProduct$0] = idProduct;
+    this[idProductCategory$0] = idProductCategory;
+    this[idWarehouse$0] = idWarehouse;
+    this[idFlashSale$0] = idFlashSale;
+    this[quantityFlashSale$0] = quantityFlashSale;
+    this[position$0] = position;
+    this[quantityBuy$0] = quantityBuy;
+    this[idHighlight$0] = idHighlight;
+    this[barcode$0] = barcode;
+    this[description$0] = description;
+    this[unit$0] = unit;
+    this[productName$0] = productName;
+    this[slug$0] = slug;
+    this[meta$0] = meta;
+    this[image$0] = image;
+    this[stock$0] = stock;
+    this[pricePerUnit$0] = pricePerUnit;
+    this[pricePromo$0] = pricePromo;
+    this[priceGold$0] = priceGold;
+    this[discount$0] = discount;
+    this[views$0] = views;
+    this[idTag$0] = idTag;
+    this[expDate$0] = expDate;
+    this[expDateBefore$0] = expDateBefore;
+    this[isPromo$0] = isPromo;
+    this[isFresh$0] = isFresh;
+    this[isRecomended$0] = isRecomended;
+    this[isGetone$0] = isGetone;
+    this[isPublished$0] = isPublished;
+    this[isDaily$0] = isDaily;
+    this[qtyDaily$0] = qtyDaily;
+    this[qtyPromo$0] = qtyPromo;
+    this[idTebusMurah$0] = idTebusMurah;
+    this[hargaTebusMurah$0] = hargaTebusMurah;
+    ;
+  }).prototype = ModelDetailProduct.RelatedProduct.prototype;
+  (ModelDetailProduct.RelatedProduct.fromJson = function(json) {
+    let t0, t0$, t0$0, t0$1, t0$2, t0$3, t0$4, t0$5, t0$6, t0$7, t0$8, t0$9, t0$10, t0$11, t0$12, t0$13, t0$14, t0$15, t0$16, t0$17, t0$18, t0$19, t0$20, t0$21, t0$22, t0$23, t0$24, t0$25, t0$26, t0$27, t0$28, t0$29, t0$30, t0$31, t0$32;
+    this[hargaTebusMurah$0] = null;
+    this[idTebusMurah$0] = null;
+    this[qtyPromo$0] = null;
+    this[qtyDaily$0] = null;
+    this[isDaily$0] = null;
+    this[isPublished$0] = null;
+    this[isGetone$0] = null;
+    this[isRecomended$0] = null;
+    this[isFresh$0] = null;
+    this[isPromo$0] = null;
+    this[expDateBefore$0] = null;
+    this[expDate$0] = null;
+    this[idTag$0] = null;
+    this[views$0] = null;
+    this[discount$0] = null;
+    this[priceGold$0] = null;
+    this[pricePromo$0] = null;
+    this[pricePerUnit$0] = null;
+    this[stock$0] = null;
+    this[image$0] = null;
+    this[meta$0] = null;
+    this[slug$0] = null;
+    this[productName$0] = null;
+    this[unit$0] = null;
+    this[description$0] = null;
+    this[barcode$0] = null;
+    this[idHighlight$0] = null;
+    this[quantityBuy$0] = null;
+    this[position$0] = null;
+    this[quantityFlashSale$0] = null;
+    this[idFlashSale$0] = null;
+    this[idWarehouse$0] = null;
+    this[idProductCategory$0] = null;
+    this[idProduct$0] = null;
+    this[priceFlashSale$0] = null;
+    this.priceFlashSale = T.StringL().as((t0 = json[$_get]("price_flash_sale"), t0 == null ? "" : t0));
+    this.idProduct = T.StringL().as((t0$ = json[$_get]("id_product"), t0$ == null ? "" : t0$));
+    this.idProductCategory = T.StringL().as((t0$0 = json[$_get]("id_product_category"), t0$0 == null ? "" : t0$0));
+    this.idWarehouse = T.StringL().as((t0$1 = json[$_get]("id_warehouse"), t0$1 == null ? "" : t0$1));
+    this.idFlashSale = T.StringL().as((t0$2 = json[$_get]("id_flash_sale"), t0$2 == null ? "" : t0$2));
+    this.quantityFlashSale = T.StringL().as((t0$3 = json[$_get]("quantity_flash_sale"), t0$3 == null ? "" : t0$3));
+    this.position = T.StringL().as((t0$4 = json[$_get]("position"), t0$4 == null ? "" : t0$4));
+    this.quantityBuy = T.StringL().as((t0$5 = json[$_get]("quantity_buy"), t0$5 == null ? "" : t0$5));
+    this.idHighlight = T.StringL().as((t0$6 = json[$_get]("id_highlight"), t0$6 == null ? "" : t0$6));
+    this.barcode = T.StringL().as((t0$7 = json[$_get]("barcode"), t0$7 == null ? "" : t0$7));
+    this.description = T.StringL().as((t0$8 = json[$_get]("description"), t0$8 == null ? "" : t0$8));
+    this.unit = T.StringL().as((t0$9 = json[$_get]("unit"), t0$9 == null ? "" : t0$9));
+    this.productName = T.StringL().as((t0$10 = json[$_get]("product_name"), t0$10 == null ? "" : t0$10));
+    this.slug = T.StringL().as((t0$11 = json[$_get]("slug"), t0$11 == null ? "" : t0$11));
+    this.meta = T.StringL().as((t0$12 = json[$_get]("meta"), t0$12 == null ? "" : t0$12));
+    this.image = T.StringL().as((t0$13 = json[$_get]("image"), t0$13 == null ? "" : t0$13));
+    this.stock = T.StringL().as((t0$14 = json[$_get]("stock"), t0$14 == null ? "" : t0$14));
+    this.pricePerUnit = T.StringL().as((t0$15 = json[$_get]("price_per_unit"), t0$15 == null ? "" : t0$15));
+    this.pricePromo = T.StringL().as((t0$16 = json[$_get]("price_promo"), t0$16 == null ? "" : t0$16));
+    this.priceGold = T.StringL().as((t0$17 = json[$_get]("price_gold"), t0$17 == null ? "" : t0$17));
+    this.discount = T.StringL().as((t0$18 = json[$_get]("discount"), t0$18 == null ? "" : t0$18));
+    this.views = T.StringL().as((t0$19 = json[$_get]("views"), t0$19 == null ? "" : t0$19));
+    this.idTag = T.StringL().as((t0$20 = json[$_get]("id_tag"), t0$20 == null ? "" : t0$20));
+    this.expDate = T.StringL().as((t0$21 = json[$_get]("exp_date"), t0$21 == null ? "" : t0$21));
+    this.expDateBefore = T.StringL().as((t0$22 = json[$_get]("exp_date_before"), t0$22 == null ? "" : t0$22));
+    this.isPromo = T.StringL().as((t0$23 = json[$_get]("is_promo"), t0$23 == null ? "" : t0$23));
+    this.isFresh = T.StringL().as((t0$24 = json[$_get]("is_fresh"), t0$24 == null ? "" : t0$24));
+    this.isRecomended = T.StringL().as((t0$25 = json[$_get]("is_recomended"), t0$25 == null ? "" : t0$25));
+    this.isGetone = T.StringL().as((t0$26 = json[$_get]("is_getone"), t0$26 == null ? "" : t0$26));
+    this.isPublished = T.StringL().as((t0$27 = json[$_get]("is_published"), t0$27 == null ? "" : t0$27));
+    this.isDaily = T.StringL().as((t0$28 = json[$_get]("is_daily"), t0$28 == null ? "" : t0$28));
+    this.qtyDaily = T.StringL().as((t0$29 = json[$_get]("qty_daily"), t0$29 == null ? "" : t0$29));
+    this.qtyPromo = T.StringL().as((t0$30 = json[$_get]("qty_promo"), t0$30 == null ? "" : t0$30));
+    this.idTebusMurah = T.StringL().as((t0$31 = json[$_get]("id_tebus_murah"), t0$31 == null ? "" : t0$31));
+    this.hargaTebusMurah = T.StringL().as((t0$32 = json[$_get]("harga_tebus_murah"), t0$32 == null ? "" : t0$32));
+  }).prototype = ModelDetailProduct.RelatedProduct.prototype;
+  dart.addTypeTests(ModelDetailProduct.RelatedProduct);
+  dart.addTypeCaches(ModelDetailProduct.RelatedProduct);
+  dart.setMethodSignature(ModelDetailProduct.RelatedProduct, () => ({
+    __proto__: dart.getMethods(ModelDetailProduct.RelatedProduct.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelDetailProduct.RelatedProduct, I[0]);
+  dart.setFieldSignature(ModelDetailProduct.RelatedProduct, () => ({
+    __proto__: dart.getFields(ModelDetailProduct.RelatedProduct.__proto__),
+    priceFlashSale: dart.fieldType(dart.legacy(core.String)),
+    idProduct: dart.fieldType(dart.legacy(core.String)),
+    idProductCategory: dart.fieldType(dart.legacy(core.String)),
+    idWarehouse: dart.fieldType(dart.legacy(core.String)),
+    idFlashSale: dart.fieldType(dart.legacy(core.String)),
+    quantityFlashSale: dart.fieldType(dart.legacy(core.String)),
+    position: dart.fieldType(dart.legacy(core.String)),
+    quantityBuy: dart.fieldType(dart.legacy(core.String)),
+    idHighlight: dart.fieldType(dart.legacy(core.String)),
+    barcode: dart.fieldType(dart.legacy(core.String)),
+    description: dart.fieldType(dart.legacy(core.String)),
+    unit: dart.fieldType(dart.legacy(core.String)),
+    productName: dart.fieldType(dart.legacy(core.String)),
+    slug: dart.fieldType(dart.legacy(core.String)),
+    meta: dart.fieldType(dart.legacy(core.String)),
+    image: dart.fieldType(dart.legacy(core.String)),
+    stock: dart.fieldType(dart.legacy(core.String)),
+    pricePerUnit: dart.fieldType(dart.legacy(core.String)),
+    pricePromo: dart.fieldType(dart.legacy(core.String)),
+    priceGold: dart.fieldType(dart.legacy(core.String)),
+    discount: dart.fieldType(dart.legacy(core.String)),
+    views: dart.fieldType(dart.legacy(core.String)),
+    idTag: dart.fieldType(dart.legacy(core.String)),
+    expDate: dart.fieldType(dart.legacy(core.String)),
+    expDateBefore: dart.fieldType(dart.legacy(core.String)),
+    isPromo: dart.fieldType(dart.legacy(core.String)),
+    isFresh: dart.fieldType(dart.legacy(core.String)),
+    isRecomended: dart.fieldType(dart.legacy(core.String)),
+    isGetone: dart.fieldType(dart.legacy(core.String)),
+    isPublished: dart.fieldType(dart.legacy(core.String)),
+    isDaily: dart.fieldType(dart.legacy(core.String)),
+    qtyDaily: dart.fieldType(dart.legacy(core.String)),
+    qtyPromo: dart.fieldType(dart.legacy(core.String)),
+    idTebusMurah: dart.fieldType(dart.legacy(core.String)),
+    hargaTebusMurah: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/bulanan/models/ModelDetailProduct.dart", {
+    "package:bulanan/models/ModelDetailProduct.dart": ModelDetailProduct
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["ModelDetailProduct.dart"],"names":[],"mappings":"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","file":"../../../../../../../../packages/bulanan/models/ModelDetailProduct.dart.lib.js"}');
+  // Exports:
+  return {
+    models__ModelDetailProduct: ModelDetailProduct
+  };
+}));
+
+//# sourceMappingURL=ModelDetailProduct.dart.lib.js.map

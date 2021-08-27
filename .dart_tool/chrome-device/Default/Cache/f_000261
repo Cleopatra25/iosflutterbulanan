@@ -1,0 +1,459 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_inspector.dart', 'packages/flutter/src/widgets/safe_area.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/bulanan/size_config.dart', 'packages/flutter/src/material/card.dart', 'packages/bulanan/constants.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/services/clipboard.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/intl/src/intl/number_parser.dart', 'packages/flutter/src/material/progress_indicator.dart', 'packages/provider/src/provider.dart', 'packages/bulanan/Network/network_api_service.dart'], (function load__packages__bulanan__screens__cekmutasi__components__bodycekmutasi_dart(dart_sdk, packages__flutter__src__widgets__widget_inspector$46dart, packages__flutter__src__widgets__safe_area$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__bulanan__size_config$46dart, packages__flutter__src__material__card$46dart, packages__bulanan__constants$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__services__clipboard$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__alignment$46dart, packages__intl__src__intl__number_parser$46dart, packages__flutter__src__material__progress_indicator$46dart, packages__provider__src__provider$46dart, packages__bulanan__Network__network_api_service$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__widget_inspector;
+  const gesture_detector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__gesture_detector;
+  const text = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__text;
+  const safe_area = packages__flutter__src__widgets__safe_area$46dart.src__widgets__safe_area;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const size_config = packages__bulanan__size_config$46dart.size_config;
+  const card = packages__flutter__src__material__card$46dart.src__material__card;
+  const constants = packages__bulanan__constants$46dart.constants;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const snack_bar = packages__flutter__src__material__icon_button$46dart.src__material__snack_bar;
+  const clipboard = packages__flutter__src__services__clipboard$46dart.src__services__clipboard;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const number_format = packages__intl__src__intl__number_parser$46dart.src__intl__number_format;
+  const progress_indicator = packages__flutter__src__material__progress_indicator$46dart.src__material__progress_indicator;
+  const provider = packages__provider__src__provider$46dart.src__provider;
+  const network_api_service = packages__bulanan__Network__network_api_service$46dart.Network__network_api_service;
+  var bodycekmutasi = Object.create(dart.library);
+  var $addAll = dartx.addAll;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    TimerL: () => (T.TimerL = dart.constFn(dart.legacy(async.Timer)))(),
+    TimerLToNull: () => (T.TimerLToNull = dart.constFn(dart.fnType(core.Null, [T.TimerL()])))(),
+    NetworkApiServiceL: () => (T.NetworkApiServiceL = dart.constFn(dart.legacy(network_api_service.NetworkApiService)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 67,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 19,
+        [_Location_line]: 78,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 19,
+        [_Location_line]: 83,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 36,
+        [_Location_line]: 89,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SnackBar",
+        [_Location_column]: 68,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Align",
+        [_Location_column]: 32,
+        [_Location_line]: 100,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 30,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "GestureDetector",
+        [_Location_column]: 19,
+        [_Location_line]: 86,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 15,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 108,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 113,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 19,
+        [_Location_line]: 125,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 36,
+        [_Location_line]: 131,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SnackBar",
+        [_Location_column]: 68,
+        [_Location_line]: 130,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Align",
+        [_Location_column]: 32,
+        [_Location_line]: 142,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 30,
+        [_Location_line]: 135,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "GestureDetector",
+        [_Location_column]: 19,
+        [_Location_line]: 128,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 15,
+        [_Location_line]: 116,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 157,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 19,
+        [_Location_line]: 166,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 15,
+        [_Location_line]: 160,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 173,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CircularProgressIndicator",
+        [_Location_column]: 26,
+        [_Location_line]: 178,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Center",
+        [_Location_column]: 17,
+        [_Location_line]: 177,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 18,
+        [_Location_line]: 61,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 16,
+        [_Location_line]: 56,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Card",
+        [_Location_column]: 14,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 16,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SafeArea",
+        [_Location_column]: 12,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/cekmutasi/components/bodycekmutasi.dart"
+      });
+    }
+  }, false);
+  var C = Array(30).fill(void 0);
+  var I = ["package:bulanan/screens/cekmutasi/components/bodycekmutasi.dart"];
+  var invoice$ = dart.privateName(bodycekmutasi, "BodyCekmutasi.invoice");
+  var totaltransaksi$ = dart.privateName(bodycekmutasi, "BodyCekmutasi.totaltransaksi");
+  var auth$ = dart.privateName(bodycekmutasi, "BodyCekmutasi.auth");
+  var times$ = dart.privateName(bodycekmutasi, "BodyCekmutasi.times");
+  bodycekmutasi.BodyCekmutasi = class BodyCekmutasi extends framework.StatefulWidget {
+    get invoice() {
+      return this[invoice$];
+    }
+    set invoice(value) {
+      super.invoice = value;
+    }
+    get totaltransaksi() {
+      return this[totaltransaksi$];
+    }
+    set totaltransaksi(value) {
+      super.totaltransaksi = value;
+    }
+    get auth() {
+      return this[auth$];
+    }
+    set auth(value) {
+      super.auth = value;
+    }
+    get times() {
+      return this[times$];
+    }
+    set times(value) {
+      super.times = value;
+    }
+    createState() {
+      return new bodycekmutasi._BodyCekmutasiState.new();
+    }
+  };
+  (bodycekmutasi.BodyCekmutasi.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let invoice = opts && 'invoice' in opts ? opts.invoice : null;
+    let totaltransaksi = opts && 'totaltransaksi' in opts ? opts.totaltransaksi : null;
+    let auth = opts && 'auth' in opts ? opts.auth : null;
+    let times = opts && 'times' in opts ? opts.times : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[invoice$] = invoice;
+    this[totaltransaksi$] = totaltransaksi;
+    this[auth$] = auth;
+    this[times$] = times;
+    bodycekmutasi.BodyCekmutasi.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = bodycekmutasi.BodyCekmutasi.prototype;
+  dart.addTypeTests(bodycekmutasi.BodyCekmutasi);
+  dart.addTypeCaches(bodycekmutasi.BodyCekmutasi);
+  dart.setMethodSignature(bodycekmutasi.BodyCekmutasi, () => ({
+    __proto__: dart.getMethods(bodycekmutasi.BodyCekmutasi.__proto__),
+    createState: dart.fnType(dart.legacy(bodycekmutasi._BodyCekmutasiState), [])
+  }));
+  dart.setLibraryUri(bodycekmutasi.BodyCekmutasi, I[0]);
+  dart.setFieldSignature(bodycekmutasi.BodyCekmutasi, () => ({
+    __proto__: dart.getFields(bodycekmutasi.BodyCekmutasi.__proto__),
+    invoice: dart.finalFieldType(dart.legacy(core.String)),
+    totaltransaksi: dart.finalFieldType(dart.legacy(core.String)),
+    auth: dart.finalFieldType(dart.legacy(core.String)),
+    times: dart.finalFieldType(dart.legacy(async.Timer))
+  }));
+  var _timer = dart.privateName(bodycekmutasi, "_timer");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  bodycekmutasi._BodyCekmutasiState = class _BodyCekmutasiState extends framework.State$(dart.legacy(bodycekmutasi.BodyCekmutasi)) {
+    initState() {
+      super.initState();
+      this.starttimer();
+    }
+    dispose() {
+      this[_timer].cancel();
+      super.dispose();
+    }
+    build(context) {
+      return new safe_area.SafeArea.new({child: new container.Container.new({height: 1 / 0, width: 1 / 0, padding: new edge_insets.EdgeInsets.all(size_config.getProportionateScreenWidth(20.0)), child: new card.Card.new({child: new container.Container.new({height: 1 / 0, width: 1 / 0, margin: new edge_insets.EdgeInsets.all(size_config.getProportionateScreenWidth(10.0)), padding: new edge_insets.EdgeInsets.all(size_config.getProportionateScreenWidth(10.0)), child: new basic.Column.new({children: (() => {
+                  let t0 = T.JSArrayOfWidgetL().of([constants.buildtextSize("Hai Pesanan Kamu Hampir selesai", colors.Colors.black87, size_config.getProportionateScreenWidth(15.0)), constants.buildtextSize("Bayar pesanan kamu sekarang", colors.Colors.black54, size_config.getProportionateScreenWidth(11.0)), new basic.SizedBox.new({height: 22.0, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([constants.buildimagescustom("assets/images/bcapng.png", size_config.getProportionateScreenWidth(40.0), size_config.getProportionateScreenWidth(30.0)), new basic.SizedBox.new({width: 12.0, $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), constants.buildtextSize("0953910303", constants.kPrimaryColors, size_config.getProportionateScreenWidth(20.0)), new basic.SizedBox.new({width: 22.0, $creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+                            scaffold.ScaffoldMessenger.of(context).showSnackBar(new snack_bar.SnackBar.new({content: new text.Text.new("disalin ke clipboard", {$creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}));
+                            clipboard.Clipboard.setData(new clipboard.ClipboardData.new({text: "0953910303"}));
+                          }, T.VoidToNull()), child: new container.Container.new({width: size_config.getProportionateScreenWidth(60.0), height: size_config.getProportionateScreenWidth(30.0), decoration: new box_decoration.BoxDecoration.new({color: constants.kPrimaryColor, borderRadius: new border_radius.BorderRadius.circular(size_config.getProportionateScreenWidth(3.0))}), child: new basic.Align.new({alignment: alignment.Alignment.center, child: constants.buildtextSize("Copy", constants.kTextWhite, size_config.getProportionateScreenHeight(11.0)), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7})]), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), new basic.SizedBox.new({height: 12.0, $creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), constants.buildtextSize("Total Pembayaran", colors.Colors.black87, size_config.getProportionateScreenWidth(12.0)), new basic.SizedBox.new({height: 12.0, $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([constants.buildtextSize(number_format.NumberFormat.currency({locale: "id", name: "Rp "}).format(core.int.parse(this.widget.totaltransaksi)), colors.Colors.black87, size_config.getProportionateScreenWidth(15.0)), new basic.SizedBox.new({width: 10.0, $creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+                            scaffold.ScaffoldMessenger.of(context).showSnackBar(new snack_bar.SnackBar.new({content: new text.Text.new("disalin ke clipboard", {$creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13}));
+                            clipboard.Clipboard.setData(new clipboard.ClipboardData.new({text: "0953910303"}));
+                          }, T.VoidToNull()), child: new container.Container.new({width: size_config.getProportionateScreenWidth(60.0), height: size_config.getProportionateScreenWidth(30.0), decoration: new box_decoration.BoxDecoration.new({color: constants.kPrimaryColor, borderRadius: new border_radius.BorderRadius.circular(size_config.getProportionateScreenWidth(3.0))}), child: new basic.Align.new({alignment: alignment.Alignment.center, child: constants.buildtextSize("Copy", constants.kTextWhite, size_config.getProportionateScreenHeight(11.0)), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), $creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16})]), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), new basic.SizedBox.new({height: 12.0, $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), constants.buildtextSizecenter("Silahkan transfer sesuai nilai total yang tercantum untuk memudahkan verifikasi.\n Sistem akan memverifikasi pembayaran selama 5 - 10 menit setelah melakukan transfer", colors.Colors.black87, size_config.getProportionateScreenWidth(11.0)), new basic.SizedBox.new({height: 22.0, $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), new basic.Row.new({crossAxisAlignment: flex.CrossAxisAlignment.center, mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([constants.buildtextSize("Status Pembayaran", colors.Colors.black87, size_config.getProportionateScreenWidth(12.0)), new basic.SizedBox.new({width: 10.0, $creationLocationd_0dea112b090073317d4: C[20] || CT.C20}), constants.buildtextSize(this.status, constants.kPrimaryColor, size_config.getProportionateScreenWidth(12.0))]), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), new basic.SizedBox.new({height: 22.0, $creationLocationd_0dea112b090073317d4: C[22] || CT.C22})]);
+                  if (dart.test(this.isloading)) t0[$addAll](T.JSArrayOfWidgetL().of([new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24})]));
+                  return t0;
+                })(), $creationLocationd_0dea112b090073317d4: C[25] || CT.C25}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), $creationLocationd_0dea112b090073317d4: C[29] || CT.C29});
+    }
+    starttimer() {
+      this[_timer] = async.Timer.periodic(new core.Duration.new({seconds: 1}), dart.fn(callback => {
+        this.registerAccount();
+      }, T.TimerLToNull()));
+    }
+    registerAccount() {
+      return async.async(dart.void, (function* registerAccount() {
+        let response = (yield provider.Provider.of(T.NetworkApiServiceL(), this.context, {listen: false}).postCekmutasi("sembako168", this.widget.auth, this.widget.invoice, this.widget.totaltransaksi));
+        core.print(response.body);
+        if (dart.equals(dart.dsend(response.body, '_get', ["status"]), true)) {
+          this.setState(dart.fn(() => {
+            this.isloading = false;
+            this.status = T.StringL().as(dart.dsend(response.body, '_get', ["message"]));
+          }, T.VoidToNull()));
+          this[_timer].cancel();
+        }
+      }).bind(this));
+    }
+  };
+  (bodycekmutasi._BodyCekmutasiState.new = function() {
+    this[_timer] = null;
+    this.isloading = true;
+    this.status = "pending";
+    bodycekmutasi._BodyCekmutasiState.__proto__.new.call(this);
+    ;
+  }).prototype = bodycekmutasi._BodyCekmutasiState.prototype;
+  dart.addTypeTests(bodycekmutasi._BodyCekmutasiState);
+  dart.addTypeCaches(bodycekmutasi._BodyCekmutasiState);
+  dart.setMethodSignature(bodycekmutasi._BodyCekmutasiState, () => ({
+    __proto__: dart.getMethods(bodycekmutasi._BodyCekmutasiState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    starttimer: dart.fnType(dart.void, []),
+    registerAccount: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(bodycekmutasi._BodyCekmutasiState, I[0]);
+  dart.setFieldSignature(bodycekmutasi._BodyCekmutasiState, () => ({
+    __proto__: dart.getFields(bodycekmutasi._BodyCekmutasiState.__proto__),
+    [_timer]: dart.fieldType(dart.legacy(async.Timer)),
+    isloading: dart.fieldType(dart.legacy(core.bool)),
+    status: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/bulanan/screens/cekmutasi/components/bodycekmutasi.dart", {
+    "package:bulanan/screens/cekmutasi/components/bodycekmutasi.dart": bodycekmutasi
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["bodycekmutasi.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAce;;;;;;IACA;;;;;;IACA;;;;;;IACD;;;;;;;AAUyB;IAAqB;;;QAPpD;QACC;QACA;QACA;QACA;;IAHA;IACA;IACA;IACA;AACF,+DAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;AAYD,MAAX;AACM,MAAZ;IACF;;AAIiB,MAAf,AAAO;AACQ,MAAT;IACR;UAG0B;AACxB,YAAO,oCACI,mEAGW,+BAAI,wCAA4B,eAC7C,0BACE,kEAGc,+BAAI,wCAA4B,iBAC/B,+BAAI,wCAA4B,eAC7C,gCACK;oDACR,wBAAc,mCAA0C,uBACpD,wCAA4B,QAChC,wBAAc,+BAAsC,uBAChD,wCAA4B,QAChC,gCACU,+DAEV,uCACyC,mDACF,yCAC3B,yBACR,4BACI,4BACA,wCAA4B,OAC5B,wCAA4B,QAChC,+BACS,+DAET,wBAAc,cAAc,0BACxB,wCAA4B,QAChC,+BACS,+DAET,iDACW;AAGH,4BAFgB,AAAY,8BAAT,OAAO,eAAe,qCAChC,kBAAK;AAEoC,4BAA1C,4BAAQ,uCAAoB;qDAEjC,oCACE,wCAA4B,eAC3B,wCAA4B,mBACxB,6CACD,uCACoB,wCACvB,wCAA4B,gBAC7B,gCACgB,mCACd,wBAAc,QAAQ,sBACzB,yCAA6B,8OAK7C,gCACU,+DAEV,wBAAc,oBAA2B,uBACrC,wCAA4B,QAChC,gCACU,iEAEV,uCACyC,mDACF,yCAC3B,yBACR,wBACiB,AACR,6CADyB,YAAY,eAC1B,eAAM,AAAO,8BACtB,uBACP,wCAA4B,QAChC,+BACS,iEAET,iDACW;AAGH,4BAFgB,AAAY,8BAAT,OAAO,eAAe,qCAChC,kBAAK;AAEoC,4BAA1C,4BAAQ,uCAAoB;qDAEjC,oCACE,wCAA4B,eAC3B,wCAA4B,mBACxB,6CACD,uCACoB,wCACvB,wCAA4B,gBAC7B,gCACgB,mCACd,wBAAc,QAAQ,sBACzB,yCAA6B,sPAK7C,gCACU,iEAEV,8BACI,0KACO,uBACP,wCAA4B,QAChC,gCACU,iEAEV,uCACyC,mDACF,yCAC3B,yBACR,wBAAc,qBAA4B,uBACtC,wCAA4B,QAChC,+BACS,iEAET,wBACI,aAAQ,yBAAe,wCAA4B,qEAG3D,gCACU;AAEV,gCAAI,iBAAc,qCAChB,6BACS;;;IAQvB;;AAKI,MAFF,eAAe,qBAAS,gCAAkB,KAAI,QAAC;AAC5B,QAAjB;;IAEJ;;AAEoB;AAIZ,wBAAW,MAAe,AAE3B,6CAFiD,uBACtC,sBAER,cAAc,AAAO,kBAAM,AAAO,qBAAS,AAAO;AAEtC,QAApB,WAAM,AAAS,QAAD;AAEd,YAA4B,YAAX,WAAb,AAAS,QAAD,gBAAM,YAAa;AAI3B,UAHF,cAAS;AACU,YAAjB,iBAAY;AACqB,0BAAjC,eAAsB,WAAb,AAAS,QAAD,gBAAM;;AAEV,UAAf,AAAO;;MAMX;;;;IAxLM;IACD,iBAAY;IACV,cAAS;;;EAuLlB","file":"../../../../../../../../../../packages/bulanan/screens/cekmutasi/components/bodycekmutasi.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__cekmutasi__components__bodycekmutasi: bodycekmutasi
+  };
+}));
+
+//# sourceMappingURL=bodycekmutasi.dart.lib.js.map

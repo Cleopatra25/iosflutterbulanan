@@ -1,0 +1,303 @@
+define(['dart_sdk', 'packages/flutter_cache_manager/src/cache_object.dart', 'packages/sqflite/src/factory_impl.dart', 'packages/path/src/path_set.dart', 'packages/flutter_cache_manager/src/file_info.dart'], (function load__packages__flutter_cache_manager__src__cache_store_dart(dart_sdk, packages__flutter_cache_manager__src__cache_object$46dart, packages__sqflite__src__factory_impl$46dart, packages__path__src__path_set$46dart, packages__flutter_cache_manager__src__file_info$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const async = dart_sdk.async;
+  const io = dart_sdk.io;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const cache_object = packages__flutter_cache_manager__src__cache_object$46dart.src__cache_object;
+  const sqflite = packages__sqflite__src__factory_impl$46dart.sqflite;
+  const path$ = packages__path__src__path_set$46dart.path;
+  const file_info = packages__flutter_cache_manager__src__file_info$46dart.src__file_info;
+  var cache_store = Object.create(dart.library);
+  var $_set = dartx._set;
+  var $containsKey = dartx.containsKey;
+  var $_get = dartx._get;
+  var $forEach = dartx.forEach;
+  var $contains = dartx.contains;
+  var $add = dartx.add;
+  var $remove = dartx.remove;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    CacheObjectL: () => (T.CacheObjectL = dart.constFn(dart.legacy(cache_object.CacheObject)))(),
+    FutureOfCacheObjectL: () => (T.FutureOfCacheObjectL = dart.constFn(async.Future$(T.CacheObjectL())))(),
+    FutureLOfCacheObjectL: () => (T.FutureLOfCacheObjectL = dart.constFn(dart.legacy(T.FutureOfCacheObjectL())))(),
+    LinkedMapOfStringL$FutureLOfCacheObjectL: () => (T.LinkedMapOfStringL$FutureLOfCacheObjectL = dart.constFn(_js_helper.LinkedMap$(T.StringL(), T.FutureLOfCacheObjectL())))(),
+    LinkedMapOfStringL$CacheObjectL: () => (T.LinkedMapOfStringL$CacheObjectL = dart.constFn(_js_helper.LinkedMap$(T.StringL(), T.CacheObjectL())))(),
+    StringLToStringL: () => (T.StringLToStringL = dart.constFn(dart.fnType(T.StringL(), [T.StringL()])))(),
+    CacheObjectProviderL: () => (T.CacheObjectProviderL = dart.constFn(dart.legacy(cache_object.CacheObjectProvider)))(),
+    FileInfoL: () => (T.FileInfoL = dart.constFn(dart.legacy(file_info.FileInfo)))(),
+    CompleterOfCacheObjectL: () => (T.CompleterOfCacheObjectL = dart.constFn(async.Completer$(T.CacheObjectL())))(),
+    FutureOfNull: () => (T.FutureOfNull = dart.constFn(async.Future$(core.Null)))(),
+    FutureLOfNull: () => (T.FutureLOfNull = dart.constFn(dart.legacy(T.FutureOfNull())))(),
+    CacheObjectLToFutureLOfNull: () => (T.CacheObjectLToFutureLOfNull = dart.constFn(dart.fnType(T.FutureLOfNull(), [T.CacheObjectL()])))(),
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    JSArrayOfintL: () => (T.JSArrayOfintL = dart.constFn(_interceptors.JSArray$(T.intL())))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 10000000
+      });
+    }
+  }, false);
+  var C = [void 0];
+  var I = ["package:flutter_cache_manager/src/cache_store.dart"];
+  var filePath = dart.privateName(cache_store, "CacheStore.filePath");
+  var storeKey$ = dart.privateName(cache_store, "CacheStore.storeKey");
+  var lastCleanupRun = dart.privateName(cache_store, "CacheStore.lastCleanupRun");
+  var _futureCache = dart.privateName(cache_store, "_futureCache");
+  var _memCache = dart.privateName(cache_store, "_memCache");
+  var _filePath = dart.privateName(cache_store, "_filePath");
+  var _cacheObjectProvider = dart.privateName(cache_store, "_cacheObjectProvider");
+  var _scheduledCleanup = dart.privateName(cache_store, "_scheduledCleanup");
+  var _capacity$ = dart.privateName(cache_store, "_capacity");
+  var _maxAge$ = dart.privateName(cache_store, "_maxAge");
+  var _getObjectProvider = dart.privateName(cache_store, "_getObjectProvider");
+  var _updateCacheDataInDatabase = dart.privateName(cache_store, "_updateCacheDataInDatabase");
+  var _getCacheDataFromDatabase = dart.privateName(cache_store, "_getCacheDataFromDatabase");
+  var _fileExists = dart.privateName(cache_store, "_fileExists");
+  var _scheduleCleanup = dart.privateName(cache_store, "_scheduleCleanup");
+  var _cleanupCache = dart.privateName(cache_store, "_cleanupCache");
+  var _removeCachedFile = dart.privateName(cache_store, "_removeCachedFile");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  cache_store.CacheStore = class CacheStore extends core.Object {
+    get filePath() {
+      return this[filePath];
+    }
+    set filePath(value) {
+      this[filePath] = value;
+    }
+    get storeKey() {
+      return this[storeKey$];
+    }
+    set storeKey(value) {
+      this[storeKey$] = value;
+    }
+    get lastCleanupRun() {
+      return this[lastCleanupRun];
+    }
+    set lastCleanupRun(value) {
+      this[lastCleanupRun] = value;
+    }
+    [_getObjectProvider]() {
+      return async.async(T.CacheObjectProviderL(), (function* _getObjectProvider() {
+        let databasesPath = (yield sqflite.getDatabasesPath());
+        let path = path$.join(databasesPath, dart.str(this.storeKey) + ".db");
+        try {
+          yield io.Directory.new(databasesPath).create({recursive: true});
+        } catch (e) {
+          let _ = dart.getThrown(e);
+        }
+        let provider = new cache_object.CacheObjectProvider.new(path);
+        yield provider.open();
+        return provider;
+      }).bind(this));
+    }
+    getFile(url) {
+      return async.async(T.FileInfoL(), (function* getFile() {
+        let cacheObject = (yield this.retrieveCacheData(url));
+        if (cacheObject == null || cacheObject.relativePath == null) {
+          return null;
+        }
+        let path = path$.join(yield this.filePath, cacheObject.relativePath);
+        return new file_info.FileInfo.new(io.File.new(path), file_info.FileSource.Cache, cacheObject.validTill, url);
+      }).bind(this));
+    }
+    putFile(cacheObject) {
+      return async.async(dart.dynamic, (function* putFile() {
+        this[_memCache][$_set](cacheObject.url, cacheObject);
+        yield this[_updateCacheDataInDatabase](cacheObject);
+      }).bind(this));
+    }
+    retrieveCacheData(url) {
+      if (dart.test(this[_memCache][$containsKey](url))) {
+        return T.FutureOfCacheObjectL().value(this[_memCache][$_get](url));
+      }
+      if (!dart.test(this[_futureCache][$containsKey](url))) {
+        let completer = T.CompleterOfCacheObjectL().new();
+        this[_getCacheDataFromDatabase](url).then(core.Null, dart.fn(cacheObject => async.async(core.Null, (function*() {
+          if (cacheObject != null && !dart.test(yield this[_fileExists](cacheObject))) {
+            let provider = (yield this[_cacheObjectProvider]);
+            provider.delete(cacheObject.id);
+            cacheObject = null;
+          }
+          completer.complete(cacheObject);
+          this[_memCache][$_set](url, cacheObject);
+          this[_futureCache][$_set](url, null);
+        }).bind(this)), T.CacheObjectLToFutureLOfNull()));
+        this[_futureCache][$_set](url, completer.future);
+      }
+      return this[_futureCache][$_get](url);
+    }
+    getFileFromMemory(url) {
+      if (this[_memCache][$_get](url) == null || this[_filePath] == null) {
+        return null;
+      }
+      let cacheObject = this[_memCache][$_get](url);
+      let path = path$.join(this[_filePath], cacheObject.relativePath);
+      return new file_info.FileInfo.new(io.File.new(path), file_info.FileSource.Cache, cacheObject.validTill, url);
+    }
+    [_fileExists](cacheObject) {
+      return async.async(T.boolL(), (function* _fileExists() {
+        let t1;
+        if ((t1 = cacheObject, t1 == null ? null : t1.relativePath) == null) {
+          return false;
+        }
+        return io.File.new(path$.join(yield this.filePath, cacheObject.relativePath)).exists();
+      }).bind(this));
+    }
+    [_getCacheDataFromDatabase](url) {
+      return async.async(T.CacheObjectL(), (function* _getCacheDataFromDatabase() {
+        let provider = (yield this[_cacheObjectProvider]);
+        let data = (yield provider.get(url));
+        if (dart.test(yield this[_fileExists](data))) {
+          this[_updateCacheDataInDatabase](data);
+        }
+        this[_scheduleCleanup]();
+        return data;
+      }).bind(this));
+    }
+    [_scheduleCleanup]() {
+      if (this[_scheduledCleanup] != null) {
+        return;
+      }
+      this[_scheduledCleanup] = async.Timer.new(cache_store.CacheStore.cleanupRunMinInterval, dart.fn(() => {
+        this[_scheduledCleanup] = null;
+        this[_cleanupCache]();
+      }, T.VoidToNull()));
+    }
+    [_updateCacheDataInDatabase](cacheObject) {
+      return async.async(dart.dynamic, (function* _updateCacheDataInDatabase() {
+        let provider = (yield this[_cacheObjectProvider]);
+        let data = (yield provider.updateOrInsert(cacheObject));
+        return data;
+      }).bind(this));
+    }
+    [_cleanupCache]() {
+      return async.async(dart.void, (function* _cleanupCache() {
+        let provider = (yield this[_cacheObjectProvider]);
+        let overCapacity = (yield provider.getObjectsOverCapacity(this[_capacity$]));
+        let oldObjects = (yield provider.getOldObjects(this[_maxAge$]));
+        let toRemove = T.JSArrayOfintL().of([]);
+        overCapacity[$forEach](dart.fn(cacheObject => async.async(core.Null, (function*() {
+          this[_removeCachedFile](cacheObject, toRemove);
+        }).bind(this)), T.CacheObjectLToFutureLOfNull()));
+        oldObjects[$forEach](dart.fn(cacheObject => async.async(core.Null, (function*() {
+          this[_removeCachedFile](cacheObject, toRemove);
+        }).bind(this)), T.CacheObjectLToFutureLOfNull()));
+        yield provider.deleteAll(toRemove);
+      }).bind(this));
+    }
+    emptyCache() {
+      return async.async(dart.dynamic, (function* emptyCache() {
+        let provider = (yield this[_cacheObjectProvider]);
+        let toRemove = T.JSArrayOfintL().of([]);
+        let allObjects = (yield provider.getAllObjects());
+        allObjects[$forEach](dart.fn(cacheObject => async.async(core.Null, (function*() {
+          this[_removeCachedFile](cacheObject, toRemove);
+        }).bind(this)), T.CacheObjectLToFutureLOfNull()));
+        yield provider.deleteAll(toRemove);
+      }).bind(this));
+    }
+    removeCachedFile(cacheObject) {
+      return async.async(dart.dynamic, (function* removeCachedFile() {
+        let provider = (yield this[_cacheObjectProvider]);
+        let toRemove = T.JSArrayOfintL().of([]);
+        this[_removeCachedFile](cacheObject, toRemove);
+        yield provider.deleteAll(toRemove);
+      }).bind(this));
+    }
+    [_removeCachedFile](cacheObject, toRemove) {
+      return async.async(dart.dynamic, (function* _removeCachedFile() {
+        if (!dart.test(toRemove[$contains](cacheObject.id))) {
+          toRemove[$add](cacheObject.id);
+          if (dart.test(this[_memCache][$containsKey](cacheObject.url))) this[_memCache][$remove](cacheObject.url);
+          if (dart.test(this[_futureCache][$containsKey](cacheObject.url))) this[_futureCache][$remove](cacheObject.url);
+        }
+        let file = io.File.new(path$.join(yield this.filePath, cacheObject.relativePath));
+        if (dart.test(yield file.exists())) {
+          file.delete();
+        }
+      }).bind(this));
+    }
+    dispose() {
+      return async.async(dart.void, (function* dispose() {
+        let provider = (yield this[_cacheObjectProvider]);
+        yield provider.close();
+      }).bind(this));
+    }
+  };
+  (cache_store.CacheStore.new = function(basePath, storeKey, _capacity, _maxAge) {
+    this[_futureCache] = new (T.LinkedMapOfStringL$FutureLOfCacheObjectL()).new();
+    this[_memCache] = new (T.LinkedMapOfStringL$CacheObjectL()).new();
+    this[filePath] = null;
+    this[_filePath] = null;
+    this[_cacheObjectProvider] = null;
+    this[lastCleanupRun] = new core.DateTime.now();
+    this[_scheduledCleanup] = null;
+    this[storeKey$] = storeKey;
+    this[_capacity$] = _capacity;
+    this[_maxAge$] = _maxAge;
+    this.filePath = basePath;
+    basePath.then(T.StringL(), dart.fn(p => this[_filePath] = p, T.StringLToStringL()));
+    this[_cacheObjectProvider] = this[_getObjectProvider]();
+  }).prototype = cache_store.CacheStore.prototype;
+  dart.addTypeTests(cache_store.CacheStore);
+  dart.addTypeCaches(cache_store.CacheStore);
+  dart.setMethodSignature(cache_store.CacheStore, () => ({
+    __proto__: dart.getMethods(cache_store.CacheStore.__proto__),
+    [_getObjectProvider]: dart.fnType(dart.legacy(async.Future$(dart.legacy(cache_object.CacheObjectProvider))), []),
+    getFile: dart.fnType(dart.legacy(async.Future$(dart.legacy(file_info.FileInfo))), [dart.legacy(core.String)]),
+    putFile: dart.fnType(dart.dynamic, [dart.legacy(cache_object.CacheObject)]),
+    retrieveCacheData: dart.fnType(dart.legacy(async.Future$(dart.legacy(cache_object.CacheObject))), [dart.legacy(core.String)]),
+    getFileFromMemory: dart.fnType(dart.legacy(file_info.FileInfo), [dart.legacy(core.String)]),
+    [_fileExists]: dart.fnType(dart.legacy(async.Future$(dart.legacy(core.bool))), [dart.legacy(cache_object.CacheObject)]),
+    [_getCacheDataFromDatabase]: dart.fnType(dart.legacy(async.Future$(dart.legacy(cache_object.CacheObject))), [dart.legacy(core.String)]),
+    [_scheduleCleanup]: dart.fnType(dart.void, []),
+    [_updateCacheDataInDatabase]: dart.fnType(dart.legacy(async.Future), [dart.legacy(cache_object.CacheObject)]),
+    [_cleanupCache]: dart.fnType(dart.legacy(async.Future$(dart.void)), []),
+    emptyCache: dart.fnType(dart.dynamic, []),
+    removeCachedFile: dart.fnType(dart.dynamic, [dart.legacy(cache_object.CacheObject)]),
+    [_removeCachedFile]: dart.fnType(dart.dynamic, [dart.legacy(cache_object.CacheObject), dart.legacy(core.List$(dart.legacy(core.int)))]),
+    dispose: dart.fnType(dart.legacy(async.Future$(dart.void)), [])
+  }));
+  dart.setLibraryUri(cache_store.CacheStore, I[0]);
+  dart.setFieldSignature(cache_store.CacheStore, () => ({
+    __proto__: dart.getFields(cache_store.CacheStore.__proto__),
+    [_futureCache]: dart.fieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(async.Future$(dart.legacy(cache_object.CacheObject)))))),
+    [_memCache]: dart.fieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(cache_object.CacheObject)))),
+    filePath: dart.fieldType(dart.legacy(async.Future$(dart.legacy(core.String)))),
+    [_filePath]: dart.fieldType(dart.legacy(core.String)),
+    [_cacheObjectProvider]: dart.fieldType(dart.legacy(async.Future$(dart.legacy(cache_object.CacheObjectProvider)))),
+    storeKey: dart.fieldType(dart.legacy(core.String)),
+    [_capacity$]: dart.finalFieldType(dart.legacy(core.int)),
+    [_maxAge$]: dart.finalFieldType(dart.legacy(core.Duration)),
+    lastCleanupRun: dart.fieldType(dart.legacy(core.DateTime)),
+    [_scheduledCleanup]: dart.fieldType(dart.legacy(async.Timer))
+  }));
+  dart.defineLazy(cache_store.CacheStore, {
+    /*cache_store.CacheStore.cleanupRunMinInterval*/get cleanupRunMinInterval() {
+      return C[0] || CT.C0;
+    }
+  }, true);
+  dart.trackLibraries("packages/flutter_cache_manager/src/cache_store.dart", {
+    "package:flutter_cache_manager/src/cache_store.dart": cache_store
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["cache_store.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../../packages/flutter_cache_manager/src/cache_store.dart.lib.js"}');
+  // Exports:
+  return {
+    src__cache_store: cache_store
+  };
+}));
+
+//# sourceMappingURL=cache_store.dart.lib.js.map

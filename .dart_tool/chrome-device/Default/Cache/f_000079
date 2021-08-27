@@ -1,0 +1,328 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_inspector.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/bulanan/size_config.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/bulanan/constants.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/provider/src/provider.dart', 'packages/bulanan/Network/network_api_service.dart', 'packages/flutter/src/material/icon_button.dart'], (function load__packages__bulanan__screens__search__components__childlastseen_dart(dart_sdk, packages__flutter__src__widgets__widget_inspector$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__bulanan__size_config$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__bulanan__constants$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__painting__box_border$46dart, packages__provider__src__provider$46dart, packages__bulanan__Network__network_api_service$46dart, packages__flutter__src__material__icon_button$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__framework;
+  const gesture_detector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__gesture_detector;
+  const container = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__text;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const size_config = packages__bulanan__size_config$46dart.size_config;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const constants = packages__bulanan__constants$46dart.constants;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const provider = packages__provider__src__provider$46dart.src__provider;
+  const network_api_service = packages__bulanan__Network__network_api_service$46dart.Network__network_api_service;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const snack_bar = packages__flutter__src__material__icon_button$46dart.src__material__snack_bar;
+  var childlastseen = Object.create(dart.library);
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    NetworkApiServiceL: () => (T.NetworkApiServiceL = dart.constFn(dart.legacy(network_api_service.NetworkApiService)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 17,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 20,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 18,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "GestureDetector",
+        [_Location_column]: 14,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "GestureDetector",
+        [_Location_column]: 22,
+        [_Location_line]: 76,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 13,
+        [_Location_line]: 74,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "GestureDetector",
+        [_Location_column]: 22,
+        [_Location_line]: 85,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 13,
+        [_Location_line]: 83,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "GestureDetector",
+        [_Location_column]: 22,
+        [_Location_line]: 98,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 13,
+        [_Location_line]: 96,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 16,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 14,
+        [_Location_line]: 67,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 20,
+        [_Location_line]: 147,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SnackBar",
+        [_Location_column]: 52,
+        [_Location_line]: 146,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/screens/search/components/childlastseen.dart"
+      });
+    }
+  }, false);
+  var C = Array(14).fill(void 0);
+  var I = ["package:bulanan/screens/search/components/childlastseen.dart"];
+  var quantitys$ = dart.privateName(childlastseen, "Childlastseen.quantitys");
+  var idProduk$ = dart.privateName(childlastseen, "Childlastseen.idProduk");
+  var position$ = dart.privateName(childlastseen, "Childlastseen.position");
+  var authHeaders$ = dart.privateName(childlastseen, "Childlastseen.authHeaders");
+  var idDevices$ = dart.privateName(childlastseen, "Childlastseen.idDevices");
+  var idCitys$ = dart.privateName(childlastseen, "Childlastseen.idCitys");
+  var updatecarts$ = dart.privateName(childlastseen, "Childlastseen.updatecarts");
+  childlastseen.Childlastseen = class Childlastseen extends framework.StatefulWidget {
+    get quantitys() {
+      return this[quantitys$];
+    }
+    set quantitys(value) {
+      this[quantitys$] = value;
+    }
+    get idProduk() {
+      return this[idProduk$];
+    }
+    set idProduk(value) {
+      super.idProduk = value;
+    }
+    get position() {
+      return this[position$];
+    }
+    set position(value) {
+      super.position = value;
+    }
+    get authHeaders() {
+      return this[authHeaders$];
+    }
+    set authHeaders(value) {
+      super.authHeaders = value;
+    }
+    get idDevices() {
+      return this[idDevices$];
+    }
+    set idDevices(value) {
+      super.idDevices = value;
+    }
+    get idCitys() {
+      return this[idCitys$];
+    }
+    set idCitys(value) {
+      super.idCitys = value;
+    }
+    get updatecarts() {
+      return this[updatecarts$];
+    }
+    set updatecarts(value) {
+      super.updatecarts = value;
+    }
+    createState() {
+      return new childlastseen._ChildlastseenState.new();
+    }
+  };
+  (childlastseen.Childlastseen.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let quantitys = opts && 'quantitys' in opts ? opts.quantitys : null;
+    let idProduk = opts && 'idProduk' in opts ? opts.idProduk : null;
+    let position = opts && 'position' in opts ? opts.position : null;
+    let authHeaders = opts && 'authHeaders' in opts ? opts.authHeaders : null;
+    let idDevices = opts && 'idDevices' in opts ? opts.idDevices : null;
+    let idCitys = opts && 'idCitys' in opts ? opts.idCitys : null;
+    let updatecarts = opts && 'updatecarts' in opts ? opts.updatecarts : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[quantitys$] = quantitys;
+    this[idProduk$] = idProduk;
+    this[position$] = position;
+    this[authHeaders$] = authHeaders;
+    this[idDevices$] = idDevices;
+    this[idCitys$] = idCitys;
+    this[updatecarts$] = updatecarts;
+    childlastseen.Childlastseen.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = childlastseen.Childlastseen.prototype;
+  dart.addTypeTests(childlastseen.Childlastseen);
+  dart.addTypeCaches(childlastseen.Childlastseen);
+  dart.setMethodSignature(childlastseen.Childlastseen, () => ({
+    __proto__: dart.getMethods(childlastseen.Childlastseen.__proto__),
+    createState: dart.fnType(dart.legacy(childlastseen._ChildlastseenState), [])
+  }));
+  dart.setLibraryUri(childlastseen.Childlastseen, I[0]);
+  dart.setFieldSignature(childlastseen.Childlastseen, () => ({
+    __proto__: dart.getFields(childlastseen.Childlastseen.__proto__),
+    quantitys: dart.fieldType(dart.legacy(core.int)),
+    idProduk: dart.finalFieldType(dart.legacy(core.String)),
+    position: dart.finalFieldType(dart.legacy(core.int)),
+    authHeaders: dart.finalFieldType(dart.legacy(core.String)),
+    idDevices: dart.finalFieldType(dart.legacy(core.String)),
+    idCitys: dart.finalFieldType(dart.legacy(core.String)),
+    updatecarts: dart.finalFieldType(dart.legacy(core.Function))
+  }));
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  childlastseen._ChildlastseenState = class _ChildlastseenState extends framework.State$(dart.legacy(childlastseen.Childlastseen)) {
+    build(context) {
+      let quants = T.intL().as(this.widget.quantitys != null ? this.widget.quantitys : "null");
+      if (quants == null || quants === 0) {
+        return new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+            this.addCart(this.widget.idProduk, quants, this.widget.position, "1");
+          }, T.VoidToNull()), child: new container.Container.new({padding: new edge_insets.EdgeInsets.all(5.0), margin: new edge_insets.EdgeInsets.all(8.0), width: 1 / 0, height: size_config.getProportionateScreenHeight(30.0), decoration: new box_decoration.BoxDecoration.new({color: constants.kTextWhite, borderRadius: new border_radius.BorderRadius.circular(size_config.getProportionateScreenWidth(7.0)), border: box_border.Border.all({color: constants.kPrimaryColor, width: size_config.getProportionateScreenWidth(1.0)})}), child: new basic.Row.new({children: T.JSArrayOfWidgetL().of([new container.Container.new({margin: new edge_insets.EdgeInsets.only({right: size_config.getProportionateScreenWidth(15.0)}), child: constants.buildimages("assets/images/cart_primary.png"), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), constants.buildtextbold("Tambah", constants.kPrimaryColor)]), $creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), $creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3});
+      } else {
+        return new container.Container.new({padding: new edge_insets.EdgeInsets.all(5.0), margin: new edge_insets.EdgeInsets.all(6.0), width: 1 / 0, height: size_config.getProportionateScreenHeight(48.0), child: new basic.Row.new({children: T.JSArrayOfWidgetL().of([new container.Container.new({margin: new edge_insets.EdgeInsets.only({right: size_config.getProportionateScreenHeight(5.0)}), child: new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+                    this.addCart(this.widget.idProduk, quants, this.widget.position, "4");
+                  }, T.VoidToNull()), child: constants.buildimages("assets/images/delete.png"), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), $creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), new container.Container.new({margin: new edge_insets.EdgeInsets.only({right: size_config.getProportionateScreenHeight(5.0)}), child: new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+                    this.addCart(this.widget.idProduk, quants, this.widget.position, "3");
+                  }, T.VoidToNull()), child: constants.buildimages("assets/images/min.png"), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), constants.buildtextbold(dart.toString(this.widget.quantitys), constants.kPrimaryColor), new container.Container.new({margin: new edge_insets.EdgeInsets.only({right: size_config.getProportionateScreenHeight(5.0)}), child: new gesture_detector.GestureDetector.new({onTap: dart.fn(() => {
+                    this.addCart(this.widget.idProduk, quants, this.widget.position, "2");
+                  }, T.VoidToNull()), child: constants.buildimagescustom("assets/images/plush.png", size_config.getProportionateScreenHeight(40.0), size_config.getProportionateScreenWidth(40.0)), $creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), $creationLocationd_0dea112b090073317d4: C[9] || CT.C9})]), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), $creationLocationd_0dea112b090073317d4: C[11] || CT.C11});
+      }
+    }
+    addCart(idProduct, quantity, position, status) {
+      return async.async(dart.void, (function* addCart() {
+        let quantityPost = null;
+        if (status === "1") {
+          quantityPost = 1;
+        } else if (status === "2") {
+          quantityPost = dart.notNull(quantity) + 1;
+        } else if (status === "3") {
+          quantityPost = dart.notNull(quantity) - 1;
+        } else if (status === "4") {
+          quantityPost = 0;
+        }
+        let response = (yield provider.Provider.of(T.NetworkApiServiceL(), this.context, {listen: false}).postCart("sembako168", this.widget.authHeaders, idProduct, this.widget.idDevices, this.widget.idCitys, dart.toString(quantityPost)));
+        core.print(response.body);
+        if (dart.test(response.isSuccessful)) {
+          if (dart.equals(dart.dsend(response.body, '_get', ["status"]), true)) {
+            dart.dsend(this.widget, 'updatecarts', []);
+            this.setState(dart.fn(() => {
+              this.widget.quantitys = quantityPost;
+            }, T.VoidToNull()));
+          } else {
+            scaffold.ScaffoldMessenger.of(this.context).showSnackBar(new snack_bar.SnackBar.new({content: new text.Text.new(core.String.as(dart.dsend(response.body, '_get', ["message"])), {$creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[13] || CT.C13}));
+          }
+        }
+      }).bind(this));
+    }
+  };
+  (childlastseen._ChildlastseenState.new = function() {
+    childlastseen._ChildlastseenState.__proto__.new.call(this);
+    ;
+  }).prototype = childlastseen._ChildlastseenState.prototype;
+  dart.addTypeTests(childlastseen._ChildlastseenState);
+  dart.addTypeCaches(childlastseen._ChildlastseenState);
+  dart.setMethodSignature(childlastseen._ChildlastseenState, () => ({
+    __proto__: dart.getMethods(childlastseen._ChildlastseenState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    addCart: dart.fnType(dart.legacy(async.Future$(dart.void)), [dart.legacy(core.String), dart.legacy(core.int), dart.legacy(core.int), dart.legacy(core.String)])
+  }));
+  dart.setLibraryUri(childlastseen._ChildlastseenState, I[0]);
+  dart.trackLibraries("packages/bulanan/screens/search/components/childlastseen.dart", {
+    "package:bulanan/screens/search/components/childlastseen.dart": childlastseen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["childlastseen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAUM;;;;;;IACS;;;;;;IACH;;;;;;IACG;;;;;;IACA;;;;;;IACA;;;;;;IACE;;;;;;;AAasB;IAAqB;;;QAXpD;QACC;QACA;QACA;QACA;QACA;QACA;QACA;;IANA;IACA;IACA;IACA;IACA;IACA;IACA;AACF,+DAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;;;;;UAQM;AACpB,+BAAS,AAAO,AAAU,gCAAU,AAAO,wBAAY;AAE3D,UAAI,AAAO,MAAD,YAAY,AAAO,MAAD,KAAI;AAC9B,cAAO,kDACI;AACiD,YAAtD,aAAQ,AAAO,sBAAU,MAAM,EAAE,AAAO,sBAAU;qCAE7C,sCACe,+BAAI,cACL,+BAAI,4BAEf,yCAA6B,mBACzB,6CACD,oCAEU,wCAAS,wCAA4B,eACvC,8BACJ,gCACA,wCAA4B,iBACpC,6BACK,yBACR,qCAEiB,wCAAY,wCAA4B,gBAChD,sBAAY,4FAErB,wBAAc,UAAU;;AAKlC,cAAO,uCACe,+BAAI,cACL,+BAAI,4BAEf,yCAA6B,cAC9B,6BACK,yBACR,qCACqB,wCAAY,yCAA6B,eACrD,iDACE;AACiD,oBAAtD,aAAQ,AAAO,sBAAU,MAAM,EAAE,AAAO,sBAAU;6CAE7C,sBAAY,+IAGvB,qCACqB,wCAAY,yCAA6B,eACrD,iDACE;AACiD,oBAAtD,aAAQ,AAAO,sBAAU,MAAM,EAAE,AAAO,sBAAU;6CAE7C,sBAAY,4IAGvB,wBACmB,cAAjB,AAAO,wBACP,0BAEF,qCACqB,wCAAY,yCAA6B,eACrD,iDACE;AACiD,oBAAtD,aAAQ,AAAO,sBAAU,MAAM,EAAE,AAAO,sBAAU;6CAE7C,4BACH,2BACA,yCAA6B,OAC7B,wCAA4B;;IAO9C;YAGW,WAAe,UAAc,UAAiB;AADrC;AAEd;AAEJ,YAAI,AAAO,MAAD,KAAI;AACI,UAAhB,eAAe;cACV,KAAI,AAAO,MAAD,KAAI;AACQ,UAA3B,eAAwB,aAAT,QAAQ,IAAG;cACrB,KAAI,AAAO,MAAD,KAAI;AACQ,UAA3B,eAAwB,aAAT,QAAQ,IAAG;cACrB,KAAI,AAAO,MAAD,KAAI;AACH,UAAhB,eAAe;;AAGX,wBACF,MAAe,AAA8C,6CAAxB,uBAAiB,iBAClD,cACA,AAAO,yBACP,SAAS,EACT,AAAO,uBACP,AAAO,qBACM,cAAb,YAAY;AAEA,QAApB,WAAM,AAAS,QAAD;AAEd,sBAAI,AAAS,QAAD;AACV,cAA4B,YAAX,WAAb,AAAS,QAAD,gBAAM,YAAa;AACT,YAAF,WAAlB;AAGE,YAFF,cAAS;AACwB,cAA/B,AAAO,wBAAY,YAAY;;;AAK/B,YAFgB,AAAY,8BAAT,2BAAsB,qCAChC,iCAAkB,WAAb,AAAS,QAAD,gBAAM;;;MAIpC;;;;;;EACF","file":"../../../../../../../../../../packages/bulanan/screens/search/components/childlastseen.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__search__components__childlastseen: childlastseen
+  };
+}));
+
+//# sourceMappingURL=childlastseen.dart.lib.js.map

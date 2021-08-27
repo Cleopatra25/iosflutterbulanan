@@ -1,0 +1,1736 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_inspector.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/painting/placeholder_span.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/widgets/implicit_animations.dart', 'packages/flutter/src/animation/curves.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/flutter/src/widgets/animated_cross_fade.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/borders.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/rendering/layer.dart', 'packages/flutter/src/material/material_state.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/widgets/animated_size.dart', 'packages/flutter/src/foundation/debug.dart', 'packages/flutter/src/rendering/custom_paint.dart', 'packages/flutter/src/painting/colors.dart'], (function load__packages__flutter__src__material__stepper_dart(dart_sdk, packages__flutter__src__widgets__widget_inspector$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__painting__placeholder_span$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__widgets__implicit_animations$46dart, packages__flutter__src__animation__curves$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__alignment$46dart, packages__flutter__src__widgets__animated_cross_fade$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__borders$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__rendering__layer$46dart, packages__flutter__src__material__material_state$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__widgets__animated_size$46dart, packages__flutter__src__foundation__debug$46dart, packages__flutter__src__rendering__custom_paint$46dart, packages__flutter__src__painting__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const _internal = dart_sdk._internal;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__framework;
+  const scroll_physics = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__scroll_physics;
+  const container = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__text;
+  const basic = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__basic;
+  const scrollable = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__scrollable;
+  const ticker_provider = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__ticker_provider;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const material_localizations = packages__flutter__src__material__icon_button$46dart.src__material__material_localizations;
+  const text_button = packages__flutter__src__material__icon_button$46dart.src__material__text_button;
+  const button_style = packages__flutter__src__material__icon_button$46dart.src__material__button_style;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const material = packages__flutter__src__material__icon_button$46dart.src__material__material;
+  const debug = packages__flutter__src__material__icon_button$46dart.src__material__debug;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const text_style = packages__flutter__src__painting__placeholder_span$46dart.src__painting__text_style;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const implicit_animations = packages__flutter__src__widgets__implicit_animations$46dart.src__widgets__implicit_animations;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const animated_cross_fade = packages__flutter__src__widgets__animated_cross_fade$46dart.src__widgets__animated_cross_fade;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const borders = packages__flutter__src__painting__borders$46dart.src__painting__borders;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  const material_state = packages__flutter__src__material__material_state$46dart.src__material__material_state;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const animated_size = packages__flutter__src__widgets__animated_size$46dart.src__widgets__animated_size;
+  const assertions = packages__flutter__src__foundation__debug$46dart.src__foundation__assertions;
+  const custom_paint = packages__flutter__src__rendering__custom_paint$46dart.src__rendering__custom_paint;
+  const colors$ = packages__flutter__src__painting__colors$46dart.src__painting__colors;
+  var stepper = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $_set = dartx._set;
+  var $add = dartx.add;
+  var $addAll = dartx.addAll;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    StepStateL: () => (T.StepStateL = dart.constFn(dart.legacy(stepper.StepState)))(),
+    StepperTypeL: () => (T.StepperTypeL = dart.constFn(dart.legacy(stepper.StepperType)))(),
+    IdentityMapOfint$StepState: () => (T.IdentityMapOfint$StepState = dart.constFn(_js_helper.IdentityMap$(core.int, stepper.StepState)))(),
+    StateOfStatefulWidget: () => (T.StateOfStatefulWidget = dart.constFn(framework.State$(framework.StatefulWidget)))(),
+    GlobalKeyOfStateOfStatefulWidget: () => (T.GlobalKeyOfStateOfStatefulWidget = dart.constFn(framework.GlobalKey$(T.StateOfStatefulWidget())))(),
+    ListOfGlobalKeyOfStateOfStatefulWidget: () => (T.ListOfGlobalKeyOfStateOfStatefulWidget = dart.constFn(core.List$(T.GlobalKeyOfStateOfStatefulWidget())))(),
+    intToGlobalKeyOfStateOfStatefulWidget: () => (T.intToGlobalKeyOfStateOfStatefulWidget = dart.constFn(dart.fnType(T.GlobalKeyOfStateOfStatefulWidget(), [core.int])))(),
+    ColorN: () => (T.ColorN = dart.constFn(dart.nullable(ui.Color)))(),
+    SetOfMaterialState: () => (T.SetOfMaterialState = dart.constFn(core.Set$(material_state.MaterialState)))(),
+    SetOfMaterialStateToColorN: () => (T.SetOfMaterialStateToColorN = dart.constFn(dart.fnType(T.ColorN(), [T.SetOfMaterialState()])))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    VoidTobool: () => (T.VoidTobool = dart.constFn(dart.fnType(core.bool, [])))(),
+    JSArrayOfOffset: () => (T.JSArrayOfOffset = dart.constFn(_interceptors.JSArray$(ui.Offset)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    ColorL: () => (T.ColorL = dart.constFn(dart.legacy(ui.Color)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: stepper.StepState.prototype,
+        [_name$]: "StepState.indexed",
+        index: 0
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: stepper.StepState.prototype,
+        [_name$]: "StepState.editing",
+        index: 1
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: stepper.StepState.prototype,
+        [_name$]: "StepState.complete",
+        index: 2
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: stepper.StepState.prototype,
+        [_name$]: "StepState.disabled",
+        index: 3
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: stepper.StepState.prototype,
+        [_name$]: "StepState.error",
+        index: 4
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[0] || CT.C0, C[1] || CT.C1, C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], T.StepStateL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: stepper.StepperType.prototype,
+        [_name$]: "StepperType.vertical",
+        index: 0
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: stepper.StepperType.prototype,
+        [_name$]: "StepperType.horizontal",
+        index: 1
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T.StepperTypeL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 12,
+        [_Location_line]: 333,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 16,
+        [_Location_line]: 347,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Icon",
+        [_Location_column]: 16,
+        [_Location_line]: 352,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Icon",
+        [_Location_column]: 16,
+        [_Location_line]: 358,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 22,
+        [_Location_line]: 364,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967295.0
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_overflow]: null,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_leadingDistribution]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: null,
+        [TextStyle_fontSize]: 12,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[16] || CT.C16,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: text.Text.prototype,
+        [Widget__location]: C[14] || CT.C14,
+        [Widget_key]: null,
+        [Text_textHeightBehavior]: null,
+        [Text_textWidthBasis]: null,
+        [Text_semanticsLabel]: null,
+        [Text_maxLines]: null,
+        [Text_textScaleFactor]: null,
+        [Text_overflow]: null,
+        [Text_softWrap]: null,
+        [Text_locale]: null,
+        [Text_textDirection]: null,
+        [Text_textAlign]: null,
+        [Text_strutStyle]: null,
+        [Text_style]: C[15] || CT.C15,
+        [Text_textSpan]: null,
+        [Text_data]: "!"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 8,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 8,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Center",
+        [_Location_column]: 16,
+        [_Location_line]: 389,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AnimatedContainer",
+        [_Location_column]: 14,
+        [_Location_line]: 382,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 12,
+        [_Location_line]: 378,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: alignment.Alignment.prototype,
+        [Alignment_y]: 0.8,
+        [Alignment_x]: 0
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Align",
+        [_Location_column]: 20,
+        [_Location_line]: 409,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CustomPaint",
+        [_Location_column]: 18,
+        [_Location_line]: 405,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 16,
+        [_Location_line]: 402,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Center",
+        [_Location_column]: 14,
+        [_Location_line]: 401,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 12,
+        [_Location_line]: 397,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: curves.Cubic.prototype,
+        [Cubic_d]: 1,
+        [Cubic_c]: 0.2,
+        [Cubic_b]: 0,
+        [Cubic_a]: 0.4
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: curves.Interval.prototype,
+        [Interval_curve]: C[28] || CT.C28,
+        [Interval_end]: 0.6,
+        [Interval_begin]: 0
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: curves.Interval.prototype,
+        [Interval_curve]: C[28] || CT.C28,
+        [Interval_end]: 1,
+        [Interval_begin]: 0.4
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AnimatedCrossFade",
+        [_Location_column]: 14,
+        [_Location_line]: 421,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: ui.Brightness.prototype,
+        [_name]: "Brightness.light",
+        index: 1
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: ui.Brightness.prototype,
+        [_name]: "Brightness.dark",
+        index: 0
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: borders.BorderStyle.prototype,
+        [_name$0]: "BorderStyle.none",
+        index: 0
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278190080.0
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: borders.BorderSide.prototype,
+        [BorderSide_style]: C[35] || CT.C35,
+        [BorderSide_width]: 0,
+        [BorderSide_color]: C[36] || CT.C36
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: ui.Radius.prototype,
+        [Radius_y]: 2,
+        [Radius_x]: 2
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: border_radius.BorderRadius.prototype,
+        [BorderRadius_bottomRight]: C[38] || CT.C38,
+        [BorderRadius_bottomLeft]: C[38] || CT.C38,
+        [BorderRadius_topRight]: C[38] || CT.C38,
+        [BorderRadius_topLeft]: C[38] || CT.C38
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: rounded_rectangle_border.RoundedRectangleBorder.prototype,
+        [OutlinedBorder_side]: C[34] || CT.C34,
+        [RoundedRectangleBorder_borderRadius]: C[37] || CT.C37
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 16,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 16
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 16,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: box.BoxConstraints.prototype,
+        [BoxConstraints_maxHeight]: 48,
+        [BoxConstraints_minHeight]: 48,
+        [BoxConstraints_maxWidth]: 1 / 0,
+        [BoxConstraints_minWidth]: 0
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 22,
+        [_Location_line]: 480,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "TextButton",
+        [_Location_column]: 13,
+        [_Location_line]: 468,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: edge_insets.EdgeInsetsDirectional.prototype,
+        [EdgeInsetsDirectional_bottom]: 0,
+        [EdgeInsetsDirectional_end]: 0,
+        [EdgeInsetsDirectional_top]: 0,
+        [EdgeInsetsDirectional_start]: 8
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Text",
+        [_Location_column]: 24,
+        [_Location_line]: 491,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "TextButton",
+        [_Location_column]: 22,
+        [_Location_line]: 484,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 13,
+        [_Location_line]: 482,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 16,
+        [_Location_line]: 463,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "ConstrainedBox",
+        [_Location_column]: 14,
+        [_Location_line]: 461,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 12,
+        [_Location_line]: 459,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AnimatedDefaultTextStyle",
+        [_Location_column]: 9,
+        [_Location_line]: 547,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 0,
+        [EdgeInsets_top]: 2,
+        [EdgeInsets_left]: 0
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AnimatedDefaultTextStyle",
+        [_Location_column]: 20,
+        [_Location_line]: 556,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 11,
+        [_Location_line]: 554,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 12,
+        [_Location_line]: 543,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 24,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 24
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 11,
+        [_Location_line]: 572,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: edge_insets.EdgeInsetsDirectional.prototype,
+        [EdgeInsetsDirectional_bottom]: 0,
+        [EdgeInsetsDirectional_end]: 0,
+        [EdgeInsetsDirectional_top]: 0,
+        [EdgeInsetsDirectional_start]: 12
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 20,
+        [_Location_line]: 582,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Expanded",
+        [_Location_column]: 11,
+        [_Location_line]: 581,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 14,
+        [_Location_line]: 570,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 12,
+        [_Location_line]: 568,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C63() {
+      return C[63] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 24,
+        [_Location_line]: 604,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 22,
+        [_Location_line]: 602,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Center",
+        [_Location_column]: 20,
+        [_Location_line]: 601,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C66() {
+      return C[66] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 18,
+        [_Location_line]: 599,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "PositionedDirectional",
+        [_Location_column]: 9,
+        [_Location_line]: 595,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 23,
+        [_Location_line]: 612,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: edge_insets.EdgeInsetsDirectional.prototype,
+        [EdgeInsetsDirectional_bottom]: 24,
+        [EdgeInsetsDirectional_end]: 24,
+        [EdgeInsetsDirectional_top]: 0,
+        [EdgeInsetsDirectional_start]: 60
+      });
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 20,
+        [_Location_line]: 619,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C71() {
+      return C[71] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 24,
+        [_Location_line]: 613,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AnimatedCrossFade",
+        [_Location_column]: 9,
+        [_Location_line]: 611,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Stack",
+        [_Location_column]: 12,
+        [_Location_line]: 593,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C74() {
+      return C[74] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "InkWell",
+        [_Location_column]: 15,
+        [_Location_line]: 645,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 11,
+        [_Location_line]: 642,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "ListView",
+        [_Location_column]: 12,
+        [_Location_line]: 637,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C77() {
+      return C[77] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Center",
+        [_Location_column]: 24,
+        [_Location_line]: 679,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SizedBox",
+        [_Location_column]: 15,
+        [_Location_line]: 677,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 15,
+        [_Location_line]: 683,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C80() {
+      return C[80] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 18,
+        [_Location_line]: 675,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "InkResponse",
+        [_Location_column]: 9,
+        [_Location_line]: 670,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 0,
+        [EdgeInsets_right]: 8,
+        [EdgeInsets_top]: 0,
+        [EdgeInsets_left]: 8
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 20,
+        [_Location_line]: 692,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Expanded",
+        [_Location_column]: 11,
+        [_Location_line]: 691,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Row",
+        [_Location_column]: 20,
+        [_Location_line]: 707,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C86() {
+      return C[86] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Container",
+        [_Location_column]: 18,
+        [_Location_line]: 705,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C87() {
+      return C[87] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Material",
+        [_Location_column]: 9,
+        [_Location_line]: 703,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C88() {
+      return C[88] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 24,
+        [EdgeInsets_right]: 24,
+        [EdgeInsets_top]: 24,
+        [EdgeInsets_left]: 24
+      });
+    },
+    get C89() {
+      return C[89] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AnimatedSize",
+        [_Location_column]: 15,
+        [_Location_line]: 717,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C90() {
+      return C[90] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "ListView",
+        [_Location_column]: 18,
+        [_Location_line]: 713,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C91() {
+      return C[91] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Expanded",
+        [_Location_column]: 9,
+        [_Location_line]: 712,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C92() {
+      return C[92] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Column",
+        [_Location_column]: 12,
+        [_Location_line]: 701,
+        [_Location_file]: "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart"
+      });
+    },
+    get C95() {
+      return C[95] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294962158.0
+      });
+    },
+    get C96() {
+      return C[96] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294954450.0
+      });
+    },
+    get C97() {
+      return C[97] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293892762.0
+      });
+    },
+    get C98() {
+      return C[98] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293227379.0
+      });
+    },
+    get C99() {
+      return C[99] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293874512.0
+      });
+    },
+    get C100() {
+      return C[100] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294198070.0
+      });
+    },
+    get C101() {
+      return C[101] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4293212469.0
+      });
+    },
+    get C102() {
+      return C[102] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4292030255.0
+      });
+    },
+    get C103() {
+      return C[103] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4291176488.0
+      });
+    },
+    get C104() {
+      return C[104] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4290190364.0
+      });
+    },
+    get C94() {
+      return C[94] = dart.constMap(T.intL(), T.ColorL(), [50, C[95] || CT.C95, 100, C[96] || CT.C96, 200, C[97] || CT.C97, 300, C[98] || CT.C98, 400, C[99] || CT.C99, 500, C[100] || CT.C100, 600, C[101] || CT.C101, 700, C[102] || CT.C102, 800, C[103] || CT.C103, 900, C[104] || CT.C104]);
+    },
+    get C93() {
+      return C[93] = dart.const({
+        __proto__: colors.MaterialColor.prototype,
+        [Color_value]: 4294198070.0,
+        [ColorSwatch__swatch]: C[94] || CT.C94
+      });
+    },
+    get C105() {
+      return C[105] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 3707764736.0
+      });
+    },
+    get C106() {
+      return C[106] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1627389952
+      });
+    },
+    get C107() {
+      return C[107] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 1660944383
+      });
+    }
+  }, false);
+  var C = Array(108).fill(void 0);
+  var I = [
+    "file:///C:/Users/patra/Documents/flutter/packages/flutter/lib/src/material/stepper.dart",
+    "package:flutter/src/material/stepper.dart"
+  ];
+  var _name$ = dart.privateName(stepper, "_name");
+  stepper.StepState = class StepState extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (stepper.StepState.new = function(index, _name) {
+    if (index == null) dart.nullFailed(I[0], 31, 6, "index");
+    if (_name == null) dart.nullFailed(I[0], 31, 6, "_name");
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = stepper.StepState.prototype;
+  dart.addTypeTests(stepper.StepState);
+  dart.addTypeCaches(stepper.StepState);
+  stepper.StepState[dart.implements] = () => [core.Enum];
+  dart.setLibraryUri(stepper.StepState, I[1]);
+  dart.setFieldSignature(stepper.StepState, () => ({
+    __proto__: dart.getFields(stepper.StepState.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(stepper.StepState, ['toString']);
+  stepper.StepState.indexed = C[0] || CT.C0;
+  stepper.StepState.editing = C[1] || CT.C1;
+  stepper.StepState.complete = C[2] || CT.C2;
+  stepper.StepState.disabled = C[3] || CT.C3;
+  stepper.StepState.error = C[4] || CT.C4;
+  stepper.StepState.values = C[5] || CT.C5;
+  stepper.StepperType = class StepperType extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (stepper.StepperType.new = function(index, _name) {
+    if (index == null) dart.nullFailed(I[0], 50, 6, "index");
+    if (_name == null) dart.nullFailed(I[0], 50, 6, "_name");
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = stepper.StepperType.prototype;
+  dart.addTypeTests(stepper.StepperType);
+  dart.addTypeCaches(stepper.StepperType);
+  stepper.StepperType[dart.implements] = () => [core.Enum];
+  dart.setLibraryUri(stepper.StepperType, I[1]);
+  dart.setFieldSignature(stepper.StepperType, () => ({
+    __proto__: dart.getFields(stepper.StepperType.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(stepper.StepperType, ['toString']);
+  stepper.StepperType.vertical = C[6] || CT.C6;
+  stepper.StepperType.horizontal = C[7] || CT.C7;
+  stepper.StepperType.values = C[8] || CT.C8;
+  var title$ = dart.privateName(stepper, "Step.title");
+  var subtitle$ = dart.privateName(stepper, "Step.subtitle");
+  var content$ = dart.privateName(stepper, "Step.content");
+  var state$ = dart.privateName(stepper, "Step.state");
+  var isActive$ = dart.privateName(stepper, "Step.isActive");
+  stepper.Step = class Step extends core.Object {
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      super.title = value;
+    }
+    get subtitle() {
+      return this[subtitle$];
+    }
+    set subtitle(value) {
+      super.subtitle = value;
+    }
+    get content() {
+      return this[content$];
+    }
+    set content(value) {
+      super.content = value;
+    }
+    get state() {
+      return this[state$];
+    }
+    set state(value) {
+      super.state = value;
+    }
+    get isActive() {
+      return this[isActive$];
+    }
+    set isActive(value) {
+      super.isActive = value;
+    }
+  };
+  (stepper.Step.new = function(opts) {
+    let title = opts && 'title' in opts ? opts.title : null;
+    if (title == null) dart.nullFailed(I[0], 85, 19, "title");
+    let subtitle = opts && 'subtitle' in opts ? opts.subtitle : null;
+    let content = opts && 'content' in opts ? opts.content : null;
+    if (content == null) dart.nullFailed(I[0], 87, 19, "content");
+    let state = opts && 'state' in opts ? opts.state : C[0] || CT.C0;
+    if (state == null) dart.nullFailed(I[0], 88, 10, "state");
+    let isActive = opts && 'isActive' in opts ? opts.isActive : false;
+    if (isActive == null) dart.nullFailed(I[0], 89, 10, "isActive");
+    this[title$] = title;
+    this[subtitle$] = subtitle;
+    this[content$] = content;
+    this[state$] = state;
+    this[isActive$] = isActive;
+    if (!(title != null)) dart.assertFailed(null, I[0], 90, 15, "title != null");
+    if (!(content != null)) dart.assertFailed(null, I[0], 91, 15, "content != null");
+    if (!(state != null)) dart.assertFailed(null, I[0], 92, 15, "state != null");
+    ;
+  }).prototype = stepper.Step.prototype;
+  dart.addTypeTests(stepper.Step);
+  dart.addTypeCaches(stepper.Step);
+  dart.setLibraryUri(stepper.Step, I[1]);
+  dart.setFieldSignature(stepper.Step, () => ({
+    __proto__: dart.getFields(stepper.Step.__proto__),
+    title: dart.finalFieldType(framework.Widget),
+    subtitle: dart.finalFieldType(dart.nullable(framework.Widget)),
+    content: dart.finalFieldType(framework.Widget),
+    state: dart.finalFieldType(stepper.StepState),
+    isActive: dart.finalFieldType(core.bool)
+  }));
+  var steps$ = dart.privateName(stepper, "Stepper.steps");
+  var physics$ = dart.privateName(stepper, "Stepper.physics");
+  var type$ = dart.privateName(stepper, "Stepper.type");
+  var currentStep$ = dart.privateName(stepper, "Stepper.currentStep");
+  var onStepTapped$ = dart.privateName(stepper, "Stepper.onStepTapped");
+  var onStepContinue$ = dart.privateName(stepper, "Stepper.onStepContinue");
+  var onStepCancel$ = dart.privateName(stepper, "Stepper.onStepCancel");
+  var controlsBuilder$ = dart.privateName(stepper, "Stepper.controlsBuilder");
+  var elevation$ = dart.privateName(stepper, "Stepper.elevation");
+  stepper.Stepper = class Stepper extends framework.StatefulWidget {
+    get steps() {
+      return this[steps$];
+    }
+    set steps(value) {
+      super.steps = value;
+    }
+    get physics() {
+      return this[physics$];
+    }
+    set physics(value) {
+      super.physics = value;
+    }
+    get type() {
+      return this[type$];
+    }
+    set type(value) {
+      super.type = value;
+    }
+    get currentStep() {
+      return this[currentStep$];
+    }
+    set currentStep(value) {
+      super.currentStep = value;
+    }
+    get onStepTapped() {
+      return this[onStepTapped$];
+    }
+    set onStepTapped(value) {
+      super.onStepTapped = value;
+    }
+    get onStepContinue() {
+      return this[onStepContinue$];
+    }
+    set onStepContinue(value) {
+      super.onStepContinue = value;
+    }
+    get onStepCancel() {
+      return this[onStepCancel$];
+    }
+    set onStepCancel(value) {
+      super.onStepCancel = value;
+    }
+    get controlsBuilder() {
+      return this[controlsBuilder$];
+    }
+    set controlsBuilder(value) {
+      super.controlsBuilder = value;
+    }
+    get elevation() {
+      return this[elevation$];
+    }
+    set elevation(value) {
+      super.elevation = value;
+    }
+    createState() {
+      return new stepper._StepperState.new();
+    }
+  };
+  (stepper.Stepper.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let steps = opts && 'steps' in opts ? opts.steps : null;
+    if (steps == null) dart.nullFailed(I[0], 180, 19, "steps");
+    let physics = opts && 'physics' in opts ? opts.physics : null;
+    let type = opts && 'type' in opts ? opts.type : C[6] || CT.C6;
+    if (type == null) dart.nullFailed(I[0], 182, 10, "type");
+    let currentStep = opts && 'currentStep' in opts ? opts.currentStep : 0;
+    if (currentStep == null) dart.nullFailed(I[0], 183, 10, "currentStep");
+    let onStepTapped = opts && 'onStepTapped' in opts ? opts.onStepTapped : null;
+    let onStepContinue = opts && 'onStepContinue' in opts ? opts.onStepContinue : null;
+    let onStepCancel = opts && 'onStepCancel' in opts ? opts.onStepCancel : null;
+    let controlsBuilder = opts && 'controlsBuilder' in opts ? opts.controlsBuilder : null;
+    let elevation = opts && 'elevation' in opts ? opts.elevation : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[steps$] = steps;
+    this[physics$] = physics;
+    this[type$] = type;
+    this[currentStep$] = currentStep;
+    this[onStepTapped$] = onStepTapped;
+    this[onStepContinue$] = onStepContinue;
+    this[onStepCancel$] = onStepCancel;
+    this[controlsBuilder$] = controlsBuilder;
+    this[elevation$] = elevation;
+    if (!(steps != null)) dart.assertFailed(null, I[0], 189, 15, "steps != null");
+    if (!(type != null)) dart.assertFailed(null, I[0], 190, 15, "type != null");
+    if (!(currentStep != null)) dart.assertFailed(null, I[0], 191, 15, "currentStep != null");
+    if (!(0 <= dart.notNull(currentStep) && dart.notNull(currentStep) < dart.notNull(steps[$length]))) dart.assertFailed(null, I[0], 192, 15, "0 <= currentStep && currentStep < steps.length");
+    stepper.Stepper.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = stepper.Stepper.prototype;
+  dart.addTypeTests(stepper.Stepper);
+  dart.addTypeCaches(stepper.Stepper);
+  dart.setMethodSignature(stepper.Stepper, () => ({
+    __proto__: dart.getMethods(stepper.Stepper.__proto__),
+    createState: dart.fnType(framework.State$(stepper.Stepper), [])
+  }));
+  dart.setLibraryUri(stepper.Stepper, I[1]);
+  dart.setFieldSignature(stepper.Stepper, () => ({
+    __proto__: dart.getFields(stepper.Stepper.__proto__),
+    steps: dart.finalFieldType(core.List$(stepper.Step)),
+    physics: dart.finalFieldType(dart.nullable(scroll_physics.ScrollPhysics)),
+    type: dart.finalFieldType(stepper.StepperType),
+    currentStep: dart.finalFieldType(core.int),
+    onStepTapped: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [core.int]))),
+    onStepContinue: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, []))),
+    onStepCancel: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, []))),
+    controlsBuilder: dart.finalFieldType(dart.nullable(dart.fnType(framework.Widget, [framework.BuildContext], {onStepCancel: dart.nullable(dart.fnType(dart.void, [])), onStepContinue: dart.nullable(dart.fnType(dart.void, []))}, {}))),
+    elevation: dart.finalFieldType(dart.nullable(core.double))
+  }));
+  var ___StepperState__keys = dart.privateName(stepper, "_#_StepperState#_keys");
+  var ___StepperState__keys_isSet = dart.privateName(stepper, "_#_StepperState#_keys#isSet");
+  var _oldStates = dart.privateName(stepper, "_oldStates");
+  var _keys = dart.privateName(stepper, "_keys");
+  var _isFirst = dart.privateName(stepper, "_isFirst");
+  var _isLast = dart.privateName(stepper, "_isLast");
+  var _isCurrent = dart.privateName(stepper, "_isCurrent");
+  var _isDark = dart.privateName(stepper, "_isDark");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var _buildLine = dart.privateName(stepper, "_buildLine");
+  var Widget__location = dart.privateName(framework, "Widget._location");
+  var Widget_key = dart.privateName(framework, "Widget.key");
+  var Text_textHeightBehavior = dart.privateName(text, "Text.textHeightBehavior");
+  var Text_textWidthBasis = dart.privateName(text, "Text.textWidthBasis");
+  var Text_semanticsLabel = dart.privateName(text, "Text.semanticsLabel");
+  var Text_maxLines = dart.privateName(text, "Text.maxLines");
+  var Text_textScaleFactor = dart.privateName(text, "Text.textScaleFactor");
+  var Text_overflow = dart.privateName(text, "Text.overflow");
+  var Text_softWrap = dart.privateName(text, "Text.softWrap");
+  var Text_locale = dart.privateName(text, "Text.locale");
+  var Text_textDirection = dart.privateName(text, "Text.textDirection");
+  var Text_textAlign = dart.privateName(text, "Text.textAlign");
+  var Text_strutStyle = dart.privateName(text, "Text.strutStyle");
+  var TextStyle_overflow = dart.privateName(text_style, "TextStyle.overflow");
+  var TextStyle_fontFeatures = dart.privateName(text_style, "TextStyle.fontFeatures");
+  var TextStyle_shadows = dart.privateName(text_style, "TextStyle.shadows");
+  var TextStyle_debugLabel = dart.privateName(text_style, "TextStyle.debugLabel");
+  var TextStyle_decorationThickness = dart.privateName(text_style, "TextStyle.decorationThickness");
+  var TextStyle_decorationStyle = dart.privateName(text_style, "TextStyle.decorationStyle");
+  var TextStyle_decorationColor = dart.privateName(text_style, "TextStyle.decorationColor");
+  var TextStyle_decoration = dart.privateName(text_style, "TextStyle.decoration");
+  var TextStyle_background = dart.privateName(text_style, "TextStyle.background");
+  var TextStyle_foreground = dart.privateName(text_style, "TextStyle.foreground");
+  var TextStyle_locale = dart.privateName(text_style, "TextStyle.locale");
+  var TextStyle_leadingDistribution = dart.privateName(text_style, "TextStyle.leadingDistribution");
+  var TextStyle_height = dart.privateName(text_style, "TextStyle.height");
+  var TextStyle_textBaseline = dart.privateName(text_style, "TextStyle.textBaseline");
+  var TextStyle_wordSpacing = dart.privateName(text_style, "TextStyle.wordSpacing");
+  var TextStyle_letterSpacing = dart.privateName(text_style, "TextStyle.letterSpacing");
+  var TextStyle_fontStyle = dart.privateName(text_style, "TextStyle.fontStyle");
+  var TextStyle_fontWeight = dart.privateName(text_style, "TextStyle.fontWeight");
+  var TextStyle_fontSize = dart.privateName(text_style, "TextStyle.fontSize");
+  var TextStyle__package = dart.privateName(text_style, "TextStyle._package");
+  var TextStyle__fontFamilyFallback = dart.privateName(text_style, "TextStyle._fontFamilyFallback");
+  var TextStyle_fontFamily = dart.privateName(text_style, "TextStyle.fontFamily");
+  var TextStyle_backgroundColor = dart.privateName(text_style, "TextStyle.backgroundColor");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var TextStyle_color = dart.privateName(text_style, "TextStyle.color");
+  var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
+  var Text_style = dart.privateName(text, "Text.style");
+  var Text_textSpan = dart.privateName(text, "Text.textSpan");
+  var Text_data = dart.privateName(text, "Text.data");
+  var _buildCircleChild = dart.privateName(stepper, "_buildCircleChild");
+  var _circleColor = dart.privateName(stepper, "_circleColor");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  var _buildCircle = dart.privateName(stepper, "_buildCircle");
+  var Alignment_y = dart.privateName(alignment, "Alignment.y");
+  var Alignment_x = dart.privateName(alignment, "Alignment.x");
+  var _buildTriangle = dart.privateName(stepper, "_buildTriangle");
+  var Cubic_d = dart.privateName(curves, "Cubic.d");
+  var Cubic_c = dart.privateName(curves, "Cubic.c");
+  var Cubic_b = dart.privateName(curves, "Cubic.b");
+  var Cubic_a = dart.privateName(curves, "Cubic.a");
+  var Interval_curve = dart.privateName(curves, "Interval.curve");
+  var Interval_end = dart.privateName(curves, "Interval.end");
+  var Interval_begin = dart.privateName(curves, "Interval.begin");
+  var _buildIcon = dart.privateName(stepper, "_buildIcon");
+  var _name = dart.privateName(ui, "_name");
+  var _name$0 = dart.privateName(borders, "_name");
+  var BorderSide_style = dart.privateName(borders, "BorderSide.style");
+  var BorderSide_width = dart.privateName(borders, "BorderSide.width");
+  var BorderSide_color = dart.privateName(borders, "BorderSide.color");
+  var OutlinedBorder_side = dart.privateName(borders, "OutlinedBorder.side");
+  var Radius_y = dart.privateName(ui, "Radius.y");
+  var Radius_x = dart.privateName(ui, "Radius.x");
+  var BorderRadius_bottomRight = dart.privateName(border_radius, "BorderRadius.bottomRight");
+  var BorderRadius_bottomLeft = dart.privateName(border_radius, "BorderRadius.bottomLeft");
+  var BorderRadius_topRight = dart.privateName(border_radius, "BorderRadius.topRight");
+  var BorderRadius_topLeft = dart.privateName(border_radius, "BorderRadius.topLeft");
+  var RoundedRectangleBorder_borderRadius = dart.privateName(rounded_rectangle_border, "RoundedRectangleBorder.borderRadius");
+  var BoxConstraints_maxHeight = dart.privateName(box, "BoxConstraints.maxHeight");
+  var BoxConstraints_minHeight = dart.privateName(box, "BoxConstraints.minHeight");
+  var BoxConstraints_maxWidth = dart.privateName(box, "BoxConstraints.maxWidth");
+  var BoxConstraints_minWidth = dart.privateName(box, "BoxConstraints.minWidth");
+  var EdgeInsetsDirectional_bottom = dart.privateName(edge_insets, "EdgeInsetsDirectional.bottom");
+  var EdgeInsetsDirectional_end = dart.privateName(edge_insets, "EdgeInsetsDirectional.end");
+  var EdgeInsetsDirectional_top = dart.privateName(edge_insets, "EdgeInsetsDirectional.top");
+  var EdgeInsetsDirectional_start = dart.privateName(edge_insets, "EdgeInsetsDirectional.start");
+  var _buildVerticalControls = dart.privateName(stepper, "_buildVerticalControls");
+  var _titleStyle = dart.privateName(stepper, "_titleStyle");
+  var _subtitleStyle = dart.privateName(stepper, "_subtitleStyle");
+  var _buildHeaderText = dart.privateName(stepper, "_buildHeaderText");
+  var _buildVerticalHeader = dart.privateName(stepper, "_buildVerticalHeader");
+  var _buildVerticalBody = dart.privateName(stepper, "_buildVerticalBody");
+  var _buildVertical = dart.privateName(stepper, "_buildVertical");
+  var _buildHorizontal = dart.privateName(stepper, "_buildHorizontal");
+  const State_TickerProviderStateMixin$36 = class State_TickerProviderStateMixin extends framework.State$(stepper.Stepper) {};
+  (State_TickerProviderStateMixin$36.new = function() {
+    ticker_provider.TickerProviderStateMixin$(stepper.Stepper)[dart.mixinNew].call(this);
+    State_TickerProviderStateMixin$36.__proto__.new.call(this);
+  }).prototype = State_TickerProviderStateMixin$36.prototype;
+  dart.applyMixin(State_TickerProviderStateMixin$36, ticker_provider.TickerProviderStateMixin$(stepper.Stepper));
+  stepper._StepperState = class _StepperState extends State_TickerProviderStateMixin$36 {
+    get [_keys]() {
+      let t0;
+      return dart.test(this[___StepperState__keys_isSet]) ? (t0 = this[___StepperState__keys], t0) : dart.throw(new _internal.LateError.fieldNI("_keys"));
+    }
+    set [_keys](t0) {
+      if (t0 == null) dart.nullFailed(I[0], 292, 24, "null");
+      this[___StepperState__keys_isSet] = true;
+      this[___StepperState__keys] = t0;
+    }
+    initState() {
+      super.initState();
+      this[_keys] = T.ListOfGlobalKeyOfStateOfStatefulWidget().generate(this.widget.steps[$length], dart.fn(i => {
+        if (i == null) dart.nullFailed(I[0], 300, 12, "i");
+        return T.GlobalKeyOfStateOfStatefulWidget().new();
+      }, T.intToGlobalKeyOfStateOfStatefulWidget()));
+      for (let i = 0; i < dart.notNull(this.widget.steps[$length]); i = i + 1)
+        this[_oldStates][$_set](i, this.widget.steps[$_get](i).state);
+    }
+    didUpdateWidget(oldWidget) {
+      stepper.Stepper.as(oldWidget);
+      if (oldWidget == null) dart.nullFailed(I[0], 308, 32, "oldWidget");
+      super.didUpdateWidget(oldWidget);
+      if (!(this.widget.steps[$length] == oldWidget.steps[$length])) dart.assertFailed(null, I[0], 310, 12, "widget.steps.length == oldWidget.steps.length");
+      for (let i = 0; i < dart.notNull(oldWidget.steps[$length]); i = i + 1)
+        this[_oldStates][$_set](i, oldWidget.steps[$_get](i).state);
+    }
+    [_isFirst](index) {
+      if (index == null) dart.nullFailed(I[0], 316, 21, "index");
+      return index === 0;
+    }
+    [_isLast](index) {
+      if (index == null) dart.nullFailed(I[0], 320, 20, "index");
+      return dart.notNull(this.widget.steps[$length]) - 1 === index;
+    }
+    [_isCurrent](index) {
+      if (index == null) dart.nullFailed(I[0], 324, 23, "index");
+      return this.widget.currentStep == index;
+    }
+    [_isDark]() {
+      return theme.Theme.of(this.context).brightness == ui.Brightness.dark;
+    }
+    [_buildLine](visible) {
+      if (visible == null) dart.nullFailed(I[0], 332, 26, "visible");
+      return new container.Container.new({width: dart.test(visible) ? 1.0 : 0.0, height: 16.0, color: colors.Colors.grey.shade400, $creationLocationd_0dea112b090073317d4: C[9] || CT.C9});
+    }
+    [_buildCircleChild](index, oldState) {
+      if (index == null) dart.nullFailed(I[0], 340, 32, "index");
+      if (oldState == null) dart.nullFailed(I[0], 340, 44, "oldState");
+      let state = dart.test(oldState) ? dart.nullCheck(this[_oldStates][$_get](index)) : this.widget.steps[$_get](index).state;
+      let isDarkActive = dart.test(this[_isDark]()) && dart.test(this.widget.steps[$_get](index).isActive);
+      if (!(state != null)) dart.assertFailed(null, I[0], 343, 12, "state != null");
+      switch (state) {
+        case C[0] || CT.C0:
+        case C[3] || CT.C3:
+        {
+          return new text.Text.new(dart.str(dart.notNull(index) + 1), {style: isDarkActive ? stepper._kStepStyle.copyWith({color: colors.Colors.black87}) : stepper._kStepStyle, $creationLocationd_0dea112b090073317d4: C[10] || CT.C10});
+        }
+        case C[1] || CT.C1:
+        {
+          return new icon.Icon.new(icons.Icons.edit, {color: isDarkActive ? stepper._kCircleActiveDark : stepper._kCircleActiveLight, size: 18.0, $creationLocationd_0dea112b090073317d4: C[11] || CT.C11});
+        }
+        case C[2] || CT.C2:
+        {
+          return new icon.Icon.new(icons.Icons.check, {color: isDarkActive ? stepper._kCircleActiveDark : stepper._kCircleActiveLight, size: 18.0, $creationLocationd_0dea112b090073317d4: C[12] || CT.C12});
+        }
+        case C[4] || CT.C4:
+        {
+          return C[13] || CT.C13;
+        }
+        default:
+        {
+          dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+        }
+      }
+    }
+    [_circleColor](index) {
+      if (index == null) dart.nullFailed(I[0], 368, 26, "index");
+      let colorScheme = theme.Theme.of(this.context).colorScheme;
+      if (!dart.test(this[_isDark]())) {
+        return dart.test(this.widget.steps[$_get](index).isActive) ? colorScheme.primary : colorScheme.onSurface.withOpacity(0.38);
+      } else {
+        return dart.test(this.widget.steps[$_get](index).isActive) ? colorScheme.secondary : colorScheme.background;
+      }
+    }
+    [_buildCircle](index, oldState) {
+      if (index == null) dart.nullFailed(I[0], 377, 27, "index");
+      if (oldState == null) dart.nullFailed(I[0], 377, 39, "oldState");
+      return new container.Container.new({margin: C[17] || CT.C17, width: 24, height: 24, child: new implicit_animations.AnimatedContainer.new({curve: curves.Curves.fastOutSlowIn, duration: theme.kThemeAnimationDuration, decoration: new box_decoration.BoxDecoration.new({color: this[_circleColor](index), shape: box_border.BoxShape.circle}), child: new basic.Center.new({child: this[_buildCircleChild](index, dart.test(oldState) && this.widget.steps[$_get](index).state == stepper.StepState.error), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20});
+    }
+    [_buildTriangle](index, oldState) {
+      if (index == null) dart.nullFailed(I[0], 396, 29, "index");
+      if (oldState == null) dart.nullFailed(I[0], 396, 41, "oldState");
+      return new container.Container.new({margin: C[17] || CT.C17, width: 24, height: 24, child: new basic.Center.new({child: new basic.SizedBox.new({width: 24, height: 20.7846, child: new basic.CustomPaint.new({painter: new stepper._TrianglePainter.new({color: dart.test(this[_isDark]()) ? stepper._kErrorDark : stepper._kErrorLight}), child: new basic.Align.new({alignment: C[21] || CT.C21, child: this[_buildCircleChild](index, dart.test(oldState) && this.widget.steps[$_get](index).state != stepper.StepState.error), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[25] || CT.C25}), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26});
+    }
+    [_buildIcon](index) {
+      if (index == null) dart.nullFailed(I[0], 419, 25, "index");
+      if (this.widget.steps[$_get](index).state != this[_oldStates][$_get](index)) {
+        return new animated_cross_fade.AnimatedCrossFade.new({firstChild: this[_buildCircle](index, true), secondChild: this[_buildTriangle](index, true), firstCurve: C[27] || CT.C27, secondCurve: C[29] || CT.C29, sizeCurve: curves.Curves.fastOutSlowIn, crossFadeState: this.widget.steps[$_get](index).state == stepper.StepState.error ? animated_cross_fade.CrossFadeState.showSecond : animated_cross_fade.CrossFadeState.showFirst, duration: theme.kThemeAnimationDuration, $creationLocationd_0dea112b090073317d4: C[30] || CT.C30});
+      } else {
+        if (this.widget.steps[$_get](index).state != stepper.StepState.error)
+          return this[_buildCircle](index, false);
+        else
+          return this[_buildTriangle](index, false);
+      }
+    }
+    [_buildVerticalControls]() {
+      if (this.widget.controlsBuilder != null) return dart.nullCheck(this.widget.controlsBuilder)(this.context, {onStepContinue: this.widget.onStepContinue, onStepCancel: this.widget.onStepCancel});
+      let cancelColor = null;
+      switch (theme.Theme.of(this.context).brightness) {
+        case C[31] || CT.C31:
+        {
+          cancelColor = colors.Colors.black54;
+          break;
+        }
+        case C[32] || CT.C32:
+        {
+          cancelColor = colors.Colors.white70;
+          break;
+        }
+        default:
+        {
+          dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+        }
+      }
+      let themeData = theme.Theme.of(this.context);
+      let colorScheme = themeData.colorScheme;
+      let localizations = material_localizations.MaterialLocalizations.of(this.context);
+      let buttonShape = C[33] || CT.C33;
+      let buttonPadding = C[39] || CT.C39;
+      return new container.Container.new({margin: C[40] || CT.C40, child: new basic.ConstrainedBox.new({constraints: C[41] || CT.C41, child: new basic.Row.new({children: T.JSArrayOfWidget().of([new text_button.TextButton.new({onPressed: this.widget.onStepContinue, style: new button_style.ButtonStyle.new({foregroundColor: material_state.MaterialStateProperty.resolveWith(T.ColorN(), dart.fn(states => {
+                    if (states == null) dart.nullFailed(I[0], 471, 96, "states");
+                    return dart.test(states.contains(material_state.MaterialState.disabled)) ? null : dart.test(this[_isDark]()) ? colorScheme.onSurface : colorScheme.onPrimary;
+                  }, T.SetOfMaterialStateToColorN())), backgroundColor: material_state.MaterialStateProperty.resolveWith(T.ColorN(), dart.fn(states => {
+                    if (states == null) dart.nullFailed(I[0], 474, 96, "states");
+                    return dart.test(this[_isDark]()) || dart.test(states.contains(material_state.MaterialState.disabled)) ? null : colorScheme.primary;
+                  }, T.SetOfMaterialStateToColorN())), padding: material_state.MaterialStateProperty.all(edge_insets.EdgeInsetsGeometry, buttonPadding), shape: material_state.MaterialStateProperty.all(borders.OutlinedBorder, buttonShape)}), child: new text.Text.new(localizations.continueButtonLabel, {$creationLocationd_0dea112b090073317d4: C[42] || CT.C42}), $creationLocationd_0dea112b090073317d4: C[43] || CT.C43}), new container.Container.new({margin: C[44] || CT.C44, child: new text_button.TextButton.new({onPressed: this.widget.onStepCancel, style: text_button.TextButton.styleFrom({primary: cancelColor, padding: buttonPadding, shape: buttonShape}), child: new text.Text.new(localizations.cancelButtonLabel, {$creationLocationd_0dea112b090073317d4: C[45] || CT.C45}), $creationLocationd_0dea112b090073317d4: C[46] || CT.C46}), $creationLocationd_0dea112b090073317d4: C[47] || CT.C47})]), $creationLocationd_0dea112b090073317d4: C[48] || CT.C48}), $creationLocationd_0dea112b090073317d4: C[49] || CT.C49}), $creationLocationd_0dea112b090073317d4: C[50] || CT.C50});
+    }
+    [_titleStyle](index) {
+      if (index == null) dart.nullFailed(I[0], 500, 29, "index");
+      let themeData = theme.Theme.of(this.context);
+      let textTheme = themeData.textTheme;
+      if (!(this.widget.steps[$_get](index).state != null)) dart.assertFailed(null, I[0], 504, 12, "widget.steps[index].state != null");
+      switch (this.widget.steps[$_get](index).state) {
+        case C[0] || CT.C0:
+        case C[1] || CT.C1:
+        case C[2] || CT.C2:
+        {
+          return dart.nullCheck(textTheme.bodyText1);
+        }
+        case C[3] || CT.C3:
+        {
+          return dart.nullCheck(textTheme.bodyText1).copyWith({color: dart.test(this[_isDark]()) ? stepper._kDisabledDark : stepper._kDisabledLight});
+        }
+        case C[4] || CT.C4:
+        {
+          return dart.nullCheck(textTheme.bodyText1).copyWith({color: dart.test(this[_isDark]()) ? stepper._kErrorDark : stepper._kErrorLight});
+        }
+        default:
+        {
+          dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+        }
+      }
+    }
+    [_subtitleStyle](index) {
+      if (index == null) dart.nullFailed(I[0], 521, 32, "index");
+      let themeData = theme.Theme.of(this.context);
+      let textTheme = themeData.textTheme;
+      if (!(this.widget.steps[$_get](index).state != null)) dart.assertFailed(null, I[0], 525, 12, "widget.steps[index].state != null");
+      switch (this.widget.steps[$_get](index).state) {
+        case C[0] || CT.C0:
+        case C[1] || CT.C1:
+        case C[2] || CT.C2:
+        {
+          return dart.nullCheck(textTheme.caption);
+        }
+        case C[3] || CT.C3:
+        {
+          return dart.nullCheck(textTheme.caption).copyWith({color: dart.test(this[_isDark]()) ? stepper._kDisabledDark : stepper._kDisabledLight});
+        }
+        case C[4] || CT.C4:
+        {
+          return dart.nullCheck(textTheme.caption).copyWith({color: dart.test(this[_isDark]()) ? stepper._kErrorDark : stepper._kErrorLight});
+        }
+        default:
+        {
+          dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+        }
+      }
+    }
+    [_buildHeaderText](index) {
+      if (index == null) dart.nullFailed(I[0], 542, 31, "index");
+      return new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, mainAxisSize: flex.MainAxisSize.min, children: (() => {
+          let t1 = T.JSArrayOfWidget().of([new implicit_animations.AnimatedDefaultTextStyle.new({style: this[_titleStyle](index), duration: theme.kThemeAnimationDuration, curve: curves.Curves.fastOutSlowIn, child: this.widget.steps[$_get](index).title, $creationLocationd_0dea112b090073317d4: C[51] || CT.C51})]);
+          if (this.widget.steps[$_get](index).subtitle != null) t1[$add](new container.Container.new({margin: C[52] || CT.C52, child: new implicit_animations.AnimatedDefaultTextStyle.new({style: this[_subtitleStyle](index), duration: theme.kThemeAnimationDuration, curve: curves.Curves.fastOutSlowIn, child: dart.nullCheck(this.widget.steps[$_get](index).subtitle), $creationLocationd_0dea112b090073317d4: C[53] || CT.C53}), $creationLocationd_0dea112b090073317d4: C[54] || CT.C54}));
+          return t1;
+        })(), $creationLocationd_0dea112b090073317d4: C[55] || CT.C55});
+    }
+    [_buildVerticalHeader](index) {
+      if (index == null) dart.nullFailed(I[0], 567, 35, "index");
+      return new container.Container.new({margin: C[56] || CT.C56, child: new basic.Row.new({children: T.JSArrayOfWidget().of([new basic.Column.new({children: T.JSArrayOfWidget().of([this[_buildLine](!dart.test(this[_isFirst](index))), this[_buildIcon](index), this[_buildLine](!dart.test(this[_isLast](index)))]), $creationLocationd_0dea112b090073317d4: C[57] || CT.C57}), new basic.Expanded.new({child: new container.Container.new({margin: C[58] || CT.C58, child: this[_buildHeaderText](index), $creationLocationd_0dea112b090073317d4: C[59] || CT.C59}), $creationLocationd_0dea112b090073317d4: C[60] || CT.C60})]), $creationLocationd_0dea112b090073317d4: C[61] || CT.C61}), $creationLocationd_0dea112b090073317d4: C[62] || CT.C62});
+    }
+    [_buildVerticalBody](index) {
+      if (index == null) dart.nullFailed(I[0], 592, 33, "index");
+      return new basic.Stack.new({children: T.JSArrayOfWidget().of([new basic.PositionedDirectional.new({start: 24.0, top: 0.0, bottom: 0.0, child: new basic.SizedBox.new({width: 24.0, child: new basic.Center.new({child: new basic.SizedBox.new({width: dart.test(this[_isLast](index)) ? 0.0 : 1.0, child: new container.Container.new({color: colors.Colors.grey.shade400, $creationLocationd_0dea112b090073317d4: C[63] || CT.C63}), $creationLocationd_0dea112b090073317d4: C[64] || CT.C64}), $creationLocationd_0dea112b090073317d4: C[65] || CT.C65}), $creationLocationd_0dea112b090073317d4: C[66] || CT.C66}), $creationLocationd_0dea112b090073317d4: C[67] || CT.C67}), new animated_cross_fade.AnimatedCrossFade.new({firstChild: new container.Container.new({height: 0.0, $creationLocationd_0dea112b090073317d4: C[68] || CT.C68}), secondChild: new container.Container.new({margin: C[69] || CT.C69, child: new basic.Column.new({children: T.JSArrayOfWidget().of([this.widget.steps[$_get](index).content, this[_buildVerticalControls]()]), $creationLocationd_0dea112b090073317d4: C[70] || CT.C70}), $creationLocationd_0dea112b090073317d4: C[71] || CT.C71}), firstCurve: C[27] || CT.C27, secondCurve: C[29] || CT.C29, sizeCurve: curves.Curves.fastOutSlowIn, crossFadeState: dart.test(this[_isCurrent](index)) ? animated_cross_fade.CrossFadeState.showSecond : animated_cross_fade.CrossFadeState.showFirst, duration: theme.kThemeAnimationDuration, $creationLocationd_0dea112b090073317d4: C[72] || CT.C72})]), $creationLocationd_0dea112b090073317d4: C[73] || CT.C73});
+    }
+    [_buildVertical]() {
+      return new scroll_view.ListView.new({shrinkWrap: true, physics: this.widget.physics, children: (() => {
+          let t2 = T.JSArrayOfWidget().of([]);
+          for (let i = 0; i < dart.notNull(this.widget.steps[$length]); i = i + 1)
+            t2[$add](new basic.Column.new({key: this[_keys][$_get](i), children: T.JSArrayOfWidget().of([new ink_well.InkWell.new({onTap: this.widget.steps[$_get](i).state != stepper.StepState.disabled ? dart.fn(() => {
+                    let t3;
+                    scrollable.Scrollable.ensureVisible(dart.nullCheck(this[_keys][$_get](i).currentContext), {curve: curves.Curves.fastOutSlowIn, duration: theme.kThemeAnimationDuration});
+                    t3 = this.widget.onStepTapped;
+                    t3 == null ? null : t3(i);
+                  }, T.VoidTovoid()) : null, canRequestFocus: this.widget.steps[$_get](i).state != stepper.StepState.disabled, child: this[_buildVerticalHeader](i), $creationLocationd_0dea112b090073317d4: C[74] || CT.C74}), this[_buildVerticalBody](i)]), $creationLocationd_0dea112b090073317d4: C[75] || CT.C75}));
+          return t2;
+        })(), $creationLocationd_0dea112b090073317d4: C[76] || CT.C76});
+    }
+    [_buildHorizontal]() {
+      let t5;
+      let children = (() => {
+        let t3 = T.JSArrayOfWidget().of([]);
+        for (let i = 0; i < dart.notNull(this.widget.steps[$length]); i = i + 1)
+          t3[$addAll]((() => {
+            let t4 = T.JSArrayOfWidget().of([new ink_well.InkResponse.new({onTap: this.widget.steps[$_get](i).state != stepper.StepState.disabled ? dart.fn(() => {
+                  let t5;
+                  t5 = this.widget.onStepTapped;
+                  t5 == null ? null : t5(i);
+                }, T.VoidTovoid()) : null, canRequestFocus: this.widget.steps[$_get](i).state != stepper.StepState.disabled, child: new basic.Row.new({children: T.JSArrayOfWidget().of([new basic.SizedBox.new({height: 72.0, child: new basic.Center.new({child: this[_buildIcon](i), $creationLocationd_0dea112b090073317d4: C[77] || CT.C77}), $creationLocationd_0dea112b090073317d4: C[78] || CT.C78}), new container.Container.new({margin: C[58] || CT.C58, child: this[_buildHeaderText](i), $creationLocationd_0dea112b090073317d4: C[79] || CT.C79})]), $creationLocationd_0dea112b090073317d4: C[80] || CT.C80}), $creationLocationd_0dea112b090073317d4: C[81] || CT.C81})]);
+            if (!dart.test(this[_isLast](i))) t4[$add](new basic.Expanded.new({child: new container.Container.new({margin: C[82] || CT.C82, height: 1.0, color: colors.Colors.grey.shade400, $creationLocationd_0dea112b090073317d4: C[83] || CT.C83}), $creationLocationd_0dea112b090073317d4: C[84] || CT.C84}));
+            return t4;
+          })());
+        return t3;
+      })();
+      return new basic.Column.new({children: T.JSArrayOfWidget().of([new material.Material.new({elevation: (t5 = this.widget.elevation, t5 == null ? 2.0 : t5), child: new container.Container.new({margin: C[56] || CT.C56, child: new basic.Row.new({children: children, $creationLocationd_0dea112b090073317d4: C[85] || CT.C85}), $creationLocationd_0dea112b090073317d4: C[86] || CT.C86}), $creationLocationd_0dea112b090073317d4: C[87] || CT.C87}), new basic.Expanded.new({child: new scroll_view.ListView.new({physics: this.widget.physics, padding: C[88] || CT.C88, children: T.JSArrayOfWidget().of([new animated_size.AnimatedSize.new({curve: curves.Curves.fastOutSlowIn, duration: theme.kThemeAnimationDuration, child: this.widget.steps[$_get](this.widget.currentStep).content, $creationLocationd_0dea112b090073317d4: C[89] || CT.C89}), this[_buildVerticalControls]()]), $creationLocationd_0dea112b090073317d4: C[90] || CT.C90}), $creationLocationd_0dea112b090073317d4: C[91] || CT.C91})]), $creationLocationd_0dea112b090073317d4: C[92] || CT.C92});
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 731, 29, "context");
+      if (!dart.test(debug.debugCheckHasMaterial(context))) dart.assertFailed(null, I[0], 732, 12, "debugCheckHasMaterial(context)");
+      if (!dart.test(debug.debugCheckHasMaterialLocalizations(context))) dart.assertFailed(null, I[0], 733, 12, "debugCheckHasMaterialLocalizations(context)");
+      if (!dart.test(dart.fn(() => {
+        if (context.findAncestorWidgetOfExactType(stepper.Stepper) != null) dart.throw(assertions.FlutterError.new("Steppers must not be nested.\n" + "The material specification advises that one should avoid embedding " + "steppers within steppers. " + "https://material.io/archive/guidelines/components/steppers.html#steppers-usage"));
+        return true;
+      }, T.VoidTobool())())) dart.assertFailed(null, I[0], 734, 12, "() {\r\n      if (context.findAncestorWidgetOfExactType<Stepper>() != null)\r\n        throw FlutterError(\r\n          'Steppers must not be nested.\\n'\r\n          'The material specification advises that one should avoid embedding '\r\n          'steppers within steppers. '\r\n          'https://material.io/archive/guidelines/components/steppers.html#steppers-usage',\r\n        );\r\n      return true;\r\n    }()");
+      if (!(this.widget.type != null)) dart.assertFailed(null, I[0], 744, 12, "widget.type != null");
+      switch (this.widget.type) {
+        case C[6] || CT.C6:
+        {
+          return this[_buildVertical]();
+        }
+        case C[7] || CT.C7:
+        {
+          return this[_buildHorizontal]();
+        }
+        default:
+        {
+          dart.throw(new _internal.ReachabilityError.new("`null` encountered as case in a switch expression with a non-nullable enum type."));
+        }
+      }
+    }
+  };
+  (stepper._StepperState.new = function() {
+    this[___StepperState__keys] = null;
+    this[___StepperState__keys_isSet] = false;
+    this[_oldStates] = new (T.IdentityMapOfint$StepState()).new();
+    stepper._StepperState.__proto__.new.call(this);
+    ;
+  }).prototype = stepper._StepperState.prototype;
+  dart.addTypeTests(stepper._StepperState);
+  dart.addTypeCaches(stepper._StepperState);
+  dart.setMethodSignature(stepper._StepperState, () => ({
+    __proto__: dart.getMethods(stepper._StepperState.__proto__),
+    [_isFirst]: dart.fnType(core.bool, [core.int]),
+    [_isLast]: dart.fnType(core.bool, [core.int]),
+    [_isCurrent]: dart.fnType(core.bool, [core.int]),
+    [_isDark]: dart.fnType(core.bool, []),
+    [_buildLine]: dart.fnType(framework.Widget, [core.bool]),
+    [_buildCircleChild]: dart.fnType(framework.Widget, [core.int, core.bool]),
+    [_circleColor]: dart.fnType(ui.Color, [core.int]),
+    [_buildCircle]: dart.fnType(framework.Widget, [core.int, core.bool]),
+    [_buildTriangle]: dart.fnType(framework.Widget, [core.int, core.bool]),
+    [_buildIcon]: dart.fnType(framework.Widget, [core.int]),
+    [_buildVerticalControls]: dart.fnType(framework.Widget, []),
+    [_titleStyle]: dart.fnType(text_style.TextStyle, [core.int]),
+    [_subtitleStyle]: dart.fnType(text_style.TextStyle, [core.int]),
+    [_buildHeaderText]: dart.fnType(framework.Widget, [core.int]),
+    [_buildVerticalHeader]: dart.fnType(framework.Widget, [core.int]),
+    [_buildVerticalBody]: dart.fnType(framework.Widget, [core.int]),
+    [_buildVertical]: dart.fnType(framework.Widget, []),
+    [_buildHorizontal]: dart.fnType(framework.Widget, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(stepper._StepperState, () => ({
+    __proto__: dart.getGetters(stepper._StepperState.__proto__),
+    [_keys]: core.List$(framework.GlobalKey$(framework.State$(framework.StatefulWidget)))
+  }));
+  dart.setSetterSignature(stepper._StepperState, () => ({
+    __proto__: dart.getSetters(stepper._StepperState.__proto__),
+    [_keys]: core.List$(framework.GlobalKey$(framework.State$(framework.StatefulWidget)))
+  }));
+  dart.setLibraryUri(stepper._StepperState, I[1]);
+  dart.setFieldSignature(stepper._StepperState, () => ({
+    __proto__: dart.getFields(stepper._StepperState.__proto__),
+    [___StepperState__keys]: dart.fieldType(dart.nullable(core.List$(framework.GlobalKey$(framework.State$(framework.StatefulWidget))))),
+    [___StepperState__keys_isSet]: dart.fieldType(core.bool),
+    [_oldStates]: dart.finalFieldType(core.Map$(core.int, stepper.StepState))
+  }));
+  stepper._TrianglePainter = class _TrianglePainter extends custom_paint.CustomPainter {
+    hitTest(point) {
+      if (point == null) dart.nullFailed(I[0], 764, 23, "point");
+      return true;
+    }
+    shouldRepaint(oldPainter) {
+      stepper._TrianglePainter.as(oldPainter);
+      if (oldPainter == null) dart.nullFailed(I[0], 767, 39, "oldPainter");
+      return !dart.equals(oldPainter.color, this.color);
+    }
+    paint(canvas, size) {
+      let t5, t5$;
+      if (canvas == null) dart.nullFailed(I[0], 772, 21, "canvas");
+      if (size == null) dart.nullFailed(I[0], 772, 34, "size");
+      let base = size.width;
+      let halfBase = dart.notNull(size.width) / 2.0;
+      let height = size.height;
+      let points = T.JSArrayOfOffset().of([new ui.Offset.new(0.0, height), new ui.Offset.new(base, height), new ui.Offset.new(halfBase, 0.0)]);
+      canvas.drawPath((t5 = ui.Path.new(), (() => {
+        t5.addPolygon(points, true);
+        return t5;
+      })()), (t5$ = ui.Paint.new(), (() => {
+        t5$.color = this.color;
+        return t5$;
+      })()));
+    }
+  };
+  (stepper._TrianglePainter.new = function(opts) {
+    let color = opts && 'color' in opts ? opts.color : null;
+    if (color == null) dart.nullFailed(I[0], 758, 19, "color");
+    this.color = color;
+    stepper._TrianglePainter.__proto__.new.call(this);
+    ;
+  }).prototype = stepper._TrianglePainter.prototype;
+  dart.addTypeTests(stepper._TrianglePainter);
+  dart.addTypeCaches(stepper._TrianglePainter);
+  dart.setMethodSignature(stepper._TrianglePainter, () => ({
+    __proto__: dart.getMethods(stepper._TrianglePainter.__proto__),
+    hitTest: dart.fnType(core.bool, [ui.Offset]),
+    shouldRepaint: dart.fnType(core.bool, [dart.nullable(core.Object)]),
+    paint: dart.fnType(dart.void, [ui.Canvas, ui.Size])
+  }));
+  dart.setLibraryUri(stepper._TrianglePainter, I[1]);
+  dart.setFieldSignature(stepper._TrianglePainter, () => ({
+    __proto__: dart.getFields(stepper._TrianglePainter.__proto__),
+    color: dart.finalFieldType(ui.Color)
+  }));
+  var ColorSwatch__swatch = dart.privateName(colors$, "ColorSwatch._swatch");
+  dart.defineLazy(stepper, {
+    /*stepper._kStepStyle*/get _kStepStyle() {
+      return C[15] || CT.C15;
+    },
+    /*stepper._kErrorLight*/get _kErrorLight() {
+      return C[93] || CT.C93;
+    },
+    /*stepper._kErrorDark*/get _kErrorDark() {
+      return colors.Colors.red.shade400;
+    },
+    /*stepper._kCircleActiveLight*/get _kCircleActiveLight() {
+      return C[16] || CT.C16;
+    },
+    /*stepper._kCircleActiveDark*/get _kCircleActiveDark() {
+      return C[105] || CT.C105;
+    },
+    /*stepper._kDisabledLight*/get _kDisabledLight() {
+      return C[106] || CT.C106;
+    },
+    /*stepper._kDisabledDark*/get _kDisabledDark() {
+      return C[107] || CT.C107;
+    },
+    /*stepper._kStepSize*/get _kStepSize() {
+      return 24;
+    },
+    /*stepper._kTriangleHeight*/get _kTriangleHeight() {
+      return 20.7846;
+    }
+  }, false);
+  dart.trackLibraries("packages/flutter/src/material/stepper.dart", {
+    "package:flutter/src/material/stepper.dart": stepper
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["stepper.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../packages/flutter/src/material/stepper.dart.lib.js"}');
+  // Exports:
+  return {
+    src__material__stepper: stepper
+  };
+}));
+
+//# sourceMappingURL=stepper.dart.lib.js.map

@@ -1,0 +1,72 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome
+
+## exception
+
+RPCError: getIsolate: (-32603) getIsolate: Invalid argument (isolateId): Unrecognized isolate id. (Supported isolate: 9777): "8555"
+#0      ChromeProxyService._getIsolate (package:dwds/src/services/chrome_proxy_service.dart:531:5)
+#1      ChromeProxyService.getIsolate (package:dwds/src/services/chrome_proxy_service.dart:538:12)
+<asynchronous suspension>
+#2      VmServerConnection._delegateRequest (package:vm_service/src/vm_service.dart:1366:22)
+<asynchronous suspension>
+
+
+```
+#0      new _OutstandingRequest (package:vm_service/src/vm_service.dart:1626:45)
+#1      VmService._call (package:vm_service/src/vm_service.dart:2107:21)
+#2      VmService.getIsolate (package:vm_service/src/vm_service.dart:1863:7)
+#3      FlutterVmService.getIsolateOrNull (package:flutter_tools/src/vmservice.dart:902:20)
+#4      FlutterVmService.findExtensionIsolate (package:flutter_tools/src/vmservice.dart:868:50)
+<asynchronous suspension>
+#5      FlutterResidentDevtoolsHandler._waitForExtensionsForDevice (package:flutter_tools/src/resident_devtools_handler.dart:171:7)
+<asynchronous suspension>
+#6      Future.wait.<anonymous closure> (dart:async/future.dart)
+<asynchronous suspension>
+#7      FlutterResidentDevtoolsHandler._devicesWithExtensions (package:flutter_tools/src/resident_devtools_handler.dart:161:41)
+<asynchronous suspension>
+#8      FlutterResidentDevtoolsHandler.hotRestart (package:flutter_tools/src/resident_devtools_handler.dart:238:54)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, 2.4.0-4.2.pre, on Microsoft Windows [Version 10.0.19042.1165], locale en-US)
+    • Flutter version 2.4.0-4.2.pre at C:\Users\patra\Documents\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision f18b9281c2 (4 weeks ago), 2021-07-22 14:08:30 -0700
+    • Engine revision 844c29f42a
+    • Dart version 2.14.0 (build 2.14.0-301.2.beta)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\patra\AppData\Local\Android\sdk
+    • Platform android-30, build-tools 30.0.3
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.8+10-b944.6842174)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Android Studio (version 4.2.0)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.8+10-b944.6842174)
+
+[✓] VS Code (version 1.59.1)
+    • VS Code at C:\Users\patra\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.25.0
+
+[✓] Connected device (2 available)
+    • Chrome (web) • chrome • web-javascript • Google Chrome 92.0.4515.159
+    • Edge (web)   • edge   • web-javascript • Microsoft Edge 92.0.902.73
+
+! Doctor found issues in 1 category.
+```

@@ -1,0 +1,356 @@
+define(['dart_sdk', 'packages/bulanan/screens/splash/splash_screen.dart', 'packages/flutter/src/widgets/widget_inspector.dart', 'packages/bulanan/screens/welcome/welcome.dart', 'packages/bulanan/screens/home/components/home_header.dart', 'packages/bulanan/screens/complete_profile/complete_profile_screen.dart', 'packages/bulanan/screens/otp/otp_screen.dart'], (function load__packages__bulanan__routes_dart(dart_sdk, packages__bulanan__screens__splash__splash_screen$46dart, packages__flutter__src__widgets__widget_inspector$46dart, packages__bulanan__screens__welcome__welcome$46dart, packages__bulanan__screens__home__components__home_header$46dart, packages__bulanan__screens__complete_profile__complete_profile_screen$46dart, packages__bulanan__screens__otp__otp_screen$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const splash_screen = packages__bulanan__screens__splash__splash_screen$46dart.screens__splash__splash_screen;
+  const widget_inspector = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_inspector$46dart.src__widgets__framework;
+  const welcome = packages__bulanan__screens__welcome__welcome$46dart.screens__welcome__welcome;
+  const sign_in_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__sign_in__sign_in_screen;
+  const forgot_password_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__forgot_password__forgot_password_screen;
+  const login_success_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__login_success__login_success_screen;
+  const sign_up_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__sign_up__sign_up_screen;
+  const home_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__home__home_screen;
+  const details_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__details__details_screen;
+  const cart_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__cart__cart_screen;
+  const profile_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__profile__profile_screen;
+  const categorymain = packages__bulanan__screens__home__components__home_header$46dart.screens__CategoryMain__categorymain;
+  const checkout_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__checkout__checkout_screen;
+  const alamatscreen = packages__bulanan__screens__home__components__home_header$46dart.screens__alamat__alamatscreen;
+  const addalamatscreen = packages__bulanan__screens__home__components__home_header$46dart.screens__addalamat__addalamatscreen;
+  const jadwal_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__jadwal__jadwal_screen;
+  const coupon_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__coupon__coupon_screen;
+  const webview_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__webview__webview_screen;
+  const cekmutasi_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__cekmutasi__cekmutasi_screen;
+  const history_sreen = packages__bulanan__screens__home__components__home_header$46dart.screens__historytransaksi__history_sreen;
+  const notification = packages__bulanan__screens__home__components__home_header$46dart.screens__notification__notification;
+  const detailhostory_sceen = packages__bulanan__screens__home__components__home_header$46dart.screens__detailhistory__detailhostory_sceen;
+  const searchscreen = packages__bulanan__screens__home__components__home_header$46dart.screens__search__searchscreen;
+  const searchresult_screen = packages__bulanan__screens__home__components__home_header$46dart.screens__searchresult__searchresult_screen;
+  const webscreennormal = packages__bulanan__screens__home__components__home_header$46dart.screens__webscreennormal__webscreennormal;
+  const complete_profile_screen = packages__bulanan__screens__complete_profile__complete_profile_screen$46dart.screens__complete_profile__complete_profile_screen;
+  const otp_screen = packages__bulanan__screens__otp__otp_screen$46dart.screens__otp__otp_screen;
+  var routes = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    SplashScreenL: () => (T.SplashScreenL = dart.constFn(dart.legacy(splash_screen.SplashScreen)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    BuildContextLToSplashScreenL: () => (T.BuildContextLToSplashScreenL = dart.constFn(dart.fnType(T.SplashScreenL(), [T.BuildContextL()])))(),
+    WelcomeL: () => (T.WelcomeL = dart.constFn(dart.legacy(welcome.Welcome)))(),
+    BuildContextLToWelcomeL: () => (T.BuildContextLToWelcomeL = dart.constFn(dart.fnType(T.WelcomeL(), [T.BuildContextL()])))(),
+    SignInScreenL: () => (T.SignInScreenL = dart.constFn(dart.legacy(sign_in_screen.SignInScreen)))(),
+    BuildContextLToSignInScreenL: () => (T.BuildContextLToSignInScreenL = dart.constFn(dart.fnType(T.SignInScreenL(), [T.BuildContextL()])))(),
+    ForgotPasswordScreenL: () => (T.ForgotPasswordScreenL = dart.constFn(dart.legacy(forgot_password_screen.ForgotPasswordScreen)))(),
+    BuildContextLToForgotPasswordScreenL: () => (T.BuildContextLToForgotPasswordScreenL = dart.constFn(dart.fnType(T.ForgotPasswordScreenL(), [T.BuildContextL()])))(),
+    LoginSuccessScreenL: () => (T.LoginSuccessScreenL = dart.constFn(dart.legacy(login_success_screen.LoginSuccessScreen)))(),
+    BuildContextLToLoginSuccessScreenL: () => (T.BuildContextLToLoginSuccessScreenL = dart.constFn(dart.fnType(T.LoginSuccessScreenL(), [T.BuildContextL()])))(),
+    SignUpScreenL: () => (T.SignUpScreenL = dart.constFn(dart.legacy(sign_up_screen.SignUpScreen)))(),
+    BuildContextLToSignUpScreenL: () => (T.BuildContextLToSignUpScreenL = dart.constFn(dart.fnType(T.SignUpScreenL(), [T.BuildContextL()])))(),
+    CompleteProfileScreenL: () => (T.CompleteProfileScreenL = dart.constFn(dart.legacy(complete_profile_screen.CompleteProfileScreen)))(),
+    BuildContextLToCompleteProfileScreenL: () => (T.BuildContextLToCompleteProfileScreenL = dart.constFn(dart.fnType(T.CompleteProfileScreenL(), [T.BuildContextL()])))(),
+    OtpScreenL: () => (T.OtpScreenL = dart.constFn(dart.legacy(otp_screen.OtpScreen)))(),
+    BuildContextLToOtpScreenL: () => (T.BuildContextLToOtpScreenL = dart.constFn(dart.fnType(T.OtpScreenL(), [T.BuildContextL()])))(),
+    HomeScreenL: () => (T.HomeScreenL = dart.constFn(dart.legacy(home_screen.HomeScreen)))(),
+    BuildContextLToHomeScreenL: () => (T.BuildContextLToHomeScreenL = dart.constFn(dart.fnType(T.HomeScreenL(), [T.BuildContextL()])))(),
+    DetailsScreenL: () => (T.DetailsScreenL = dart.constFn(dart.legacy(details_screen.DetailsScreen)))(),
+    BuildContextLToDetailsScreenL: () => (T.BuildContextLToDetailsScreenL = dart.constFn(dart.fnType(T.DetailsScreenL(), [T.BuildContextL()])))(),
+    CartScreenL: () => (T.CartScreenL = dart.constFn(dart.legacy(cart_screen.CartScreen)))(),
+    BuildContextLToCartScreenL: () => (T.BuildContextLToCartScreenL = dart.constFn(dart.fnType(T.CartScreenL(), [T.BuildContextL()])))(),
+    ProfileScreenL: () => (T.ProfileScreenL = dart.constFn(dart.legacy(profile_screen.ProfileScreen)))(),
+    BuildContextLToProfileScreenL: () => (T.BuildContextLToProfileScreenL = dart.constFn(dart.fnType(T.ProfileScreenL(), [T.BuildContextL()])))(),
+    CategorymainScreenL: () => (T.CategorymainScreenL = dart.constFn(dart.legacy(categorymain.CategorymainScreen)))(),
+    BuildContextLToCategorymainScreenL: () => (T.BuildContextLToCategorymainScreenL = dart.constFn(dart.fnType(T.CategorymainScreenL(), [T.BuildContextL()])))(),
+    CheckoutScreenL: () => (T.CheckoutScreenL = dart.constFn(dart.legacy(checkout_screen.CheckoutScreen)))(),
+    BuildContextLToCheckoutScreenL: () => (T.BuildContextLToCheckoutScreenL = dart.constFn(dart.fnType(T.CheckoutScreenL(), [T.BuildContextL()])))(),
+    AlamatScreenL: () => (T.AlamatScreenL = dart.constFn(dart.legacy(alamatscreen.AlamatScreen)))(),
+    BuildContextLToAlamatScreenL: () => (T.BuildContextLToAlamatScreenL = dart.constFn(dart.fnType(T.AlamatScreenL(), [T.BuildContextL()])))(),
+    AddAlamatScreenL: () => (T.AddAlamatScreenL = dart.constFn(dart.legacy(addalamatscreen.AddAlamatScreen)))(),
+    BuildContextLToAddAlamatScreenL: () => (T.BuildContextLToAddAlamatScreenL = dart.constFn(dart.fnType(T.AddAlamatScreenL(), [T.BuildContextL()])))(),
+    JadwalScreenL: () => (T.JadwalScreenL = dart.constFn(dart.legacy(jadwal_screen.JadwalScreen)))(),
+    BuildContextLToJadwalScreenL: () => (T.BuildContextLToJadwalScreenL = dart.constFn(dart.fnType(T.JadwalScreenL(), [T.BuildContextL()])))(),
+    CouponScreenL: () => (T.CouponScreenL = dart.constFn(dart.legacy(coupon_screen.CouponScreen)))(),
+    BuildContextLToCouponScreenL: () => (T.BuildContextLToCouponScreenL = dart.constFn(dart.fnType(T.CouponScreenL(), [T.BuildContextL()])))(),
+    WebviewScreenL: () => (T.WebviewScreenL = dart.constFn(dart.legacy(webview_screen.WebviewScreen)))(),
+    BuildContextLToWebviewScreenL: () => (T.BuildContextLToWebviewScreenL = dart.constFn(dart.fnType(T.WebviewScreenL(), [T.BuildContextL()])))(),
+    CekmutasiL: () => (T.CekmutasiL = dart.constFn(dart.legacy(cekmutasi_screen.Cekmutasi)))(),
+    BuildContextLToCekmutasiL: () => (T.BuildContextLToCekmutasiL = dart.constFn(dart.fnType(T.CekmutasiL(), [T.BuildContextL()])))(),
+    HistoryTransaksiL: () => (T.HistoryTransaksiL = dart.constFn(dart.legacy(history_sreen.HistoryTransaksi)))(),
+    BuildContextLToHistoryTransaksiL: () => (T.BuildContextLToHistoryTransaksiL = dart.constFn(dart.fnType(T.HistoryTransaksiL(), [T.BuildContextL()])))(),
+    NotifikasiL: () => (T.NotifikasiL = dart.constFn(dart.legacy(notification.Notifikasi)))(),
+    BuildContextLToNotifikasiL: () => (T.BuildContextLToNotifikasiL = dart.constFn(dart.fnType(T.NotifikasiL(), [T.BuildContextL()])))(),
+    DetailHistoryScreenL: () => (T.DetailHistoryScreenL = dart.constFn(dart.legacy(detailhostory_sceen.DetailHistoryScreen)))(),
+    BuildContextLToDetailHistoryScreenL: () => (T.BuildContextLToDetailHistoryScreenL = dart.constFn(dart.fnType(T.DetailHistoryScreenL(), [T.BuildContextL()])))(),
+    SearchScreenL: () => (T.SearchScreenL = dart.constFn(dart.legacy(searchscreen.SearchScreen)))(),
+    BuildContextLToSearchScreenL: () => (T.BuildContextLToSearchScreenL = dart.constFn(dart.fnType(T.SearchScreenL(), [T.BuildContextL()])))(),
+    SearchResultScreenL: () => (T.SearchResultScreenL = dart.constFn(dart.legacy(searchresult_screen.SearchResultScreen)))(),
+    BuildContextLToSearchResultScreenL: () => (T.BuildContextLToSearchResultScreenL = dart.constFn(dart.fnType(T.SearchResultScreenL(), [T.BuildContextL()])))(),
+    WebScreenL: () => (T.WebScreenL = dart.constFn(dart.legacy(webscreennormal.WebScreen)))(),
+    BuildContextLToWebScreenL: () => (T.BuildContextLToWebScreenL = dart.constFn(dart.fnType(T.WebScreenL(), [T.BuildContextL()])))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    BuildContextLToWidgetL: () => (T.BuildContextLToWidgetL = dart.constFn(dart.fnType(T.WidgetL(), [T.BuildContextL()])))(),
+    BuildContextLToLWidgetL: () => (T.BuildContextLToLWidgetL = dart.constFn(dart.legacy(T.BuildContextLToWidgetL())))(),
+    IdentityMapOfStringL$BuildContextLToLWidgetL: () => (T.IdentityMapOfStringL$BuildContextLToLWidgetL = dart.constFn(_js_helper.IdentityMap$(T.StringL(), T.BuildContextLToLWidgetL())))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SplashScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Welcome",
+        [_Location_column]: 35,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SignInScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 34,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "ForgotPasswordScreen",
+        [_Location_column]: 48,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "LoginSuccessScreen",
+        [_Location_column]: 46,
+        [_Location_line]: 36,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SignUpScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 37,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CompleteProfileScreen",
+        [_Location_column]: 49,
+        [_Location_line]: 38,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "OtpScreen",
+        [_Location_column]: 37,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "HomeScreen",
+        [_Location_column]: 38,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "DetailsScreen",
+        [_Location_column]: 41,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CartScreen",
+        [_Location_column]: 38,
+        [_Location_line]: 42,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "ProfileScreen",
+        [_Location_column]: 41,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CategorymainScreen",
+        [_Location_column]: 46,
+        [_Location_line]: 44,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CheckoutScreen",
+        [_Location_column]: 42,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AlamatScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "AddAlamatScreen",
+        [_Location_column]: 43,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "JadwalScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 48,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "CouponScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "WebviewScreen",
+        [_Location_column]: 41,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Cekmutasi",
+        [_Location_column]: 37,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "HistoryTransaksi",
+        [_Location_column]: 44,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "Notifikasi",
+        [_Location_column]: 38,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "DetailHistoryScreen",
+        [_Location_column]: 47,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SearchScreen",
+        [_Location_column]: 40,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "SearchResultScreen",
+        [_Location_column]: 46,
+        [_Location_line]: 56,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_name]: "WebScreen",
+        [_Location_column]: 37,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Users/patra/Documents/Mobile%20Project/Flutter/bulanan/lib/routes.dart"
+      });
+    }
+  }, false);
+  var C = Array(26).fill(void 0);
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  dart.defineLazy(routes, {
+    /*routes.routes*/get routes() {
+      return new (T.IdentityMapOfStringL$BuildContextLToLWidgetL()).from([splash_screen.SplashScreen.routeName, dart.fn(context => new splash_screen.SplashScreen.new({$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), T.BuildContextLToSplashScreenL()), welcome.Welcome.routeName, dart.fn(context => new welcome.Welcome.new({$creationLocationd_0dea112b090073317d4: C[1] || CT.C1}), T.BuildContextLToWelcomeL()), sign_in_screen.SignInScreen.routeName, dart.fn(context => new sign_in_screen.SignInScreen.new({$creationLocationd_0dea112b090073317d4: C[2] || CT.C2}), T.BuildContextLToSignInScreenL()), forgot_password_screen.ForgotPasswordScreen.routeName, dart.fn(context => new forgot_password_screen.ForgotPasswordScreen.new({$creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), T.BuildContextLToForgotPasswordScreenL()), login_success_screen.LoginSuccessScreen.routeName, dart.fn(context => new login_success_screen.LoginSuccessScreen.new({$creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), T.BuildContextLToLoginSuccessScreenL()), sign_up_screen.SignUpScreen.routeName, dart.fn(context => new sign_up_screen.SignUpScreen.new({$creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), T.BuildContextLToSignUpScreenL()), complete_profile_screen.CompleteProfileScreen.routeName, dart.fn(context => new complete_profile_screen.CompleteProfileScreen.new({$creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), T.BuildContextLToCompleteProfileScreenL()), otp_screen.OtpScreen.routeName, dart.fn(context => new otp_screen.OtpScreen.new({$creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), T.BuildContextLToOtpScreenL()), home_screen.HomeScreen.routeName, dart.fn(context => new home_screen.HomeScreen.new({$creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), T.BuildContextLToHomeScreenL()), details_screen.DetailsScreen.routeName, dart.fn(context => new details_screen.DetailsScreen.new({$creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), T.BuildContextLToDetailsScreenL()), cart_screen.CartScreen.routeName, dart.fn(context => new cart_screen.CartScreen.new({$creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), T.BuildContextLToCartScreenL()), profile_screen.ProfileScreen.routeName, dart.fn(context => new profile_screen.ProfileScreen.new({$creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), T.BuildContextLToProfileScreenL()), categorymain.CategorymainScreen.routeName, dart.fn(context => new categorymain.CategorymainScreen.new({$creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), T.BuildContextLToCategorymainScreenL()), checkout_screen.CheckoutScreen.routeName, dart.fn(context => new checkout_screen.CheckoutScreen.new({$creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), T.BuildContextLToCheckoutScreenL()), alamatscreen.AlamatScreen.routeName, dart.fn(context => new alamatscreen.AlamatScreen.new({$creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), T.BuildContextLToAlamatScreenL()), addalamatscreen.AddAlamatScreen.routeName, dart.fn(context => new addalamatscreen.AddAlamatScreen.new({$creationLocationd_0dea112b090073317d4: C[15] || CT.C15}), T.BuildContextLToAddAlamatScreenL()), jadwal_screen.JadwalScreen.routeName, dart.fn(context => new jadwal_screen.JadwalScreen.new({$creationLocationd_0dea112b090073317d4: C[16] || CT.C16}), T.BuildContextLToJadwalScreenL()), coupon_screen.CouponScreen.routeName, dart.fn(context => new coupon_screen.CouponScreen.new({$creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), T.BuildContextLToCouponScreenL()), webview_screen.WebviewScreen.routeName, dart.fn(context => new webview_screen.WebviewScreen.new({$creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), T.BuildContextLToWebviewScreenL()), cekmutasi_screen.Cekmutasi.routeName, dart.fn(context => new cekmutasi_screen.Cekmutasi.new({$creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), T.BuildContextLToCekmutasiL()), history_sreen.HistoryTransaksi.routeName, dart.fn(context => new history_sreen.HistoryTransaksi.new({$creationLocationd_0dea112b090073317d4: C[20] || CT.C20}), T.BuildContextLToHistoryTransaksiL()), notification.Notifikasi.routeName, dart.fn(context => new notification.Notifikasi.new({$creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), T.BuildContextLToNotifikasiL()), detailhostory_sceen.DetailHistoryScreen.routeName, dart.fn(context => new detailhostory_sceen.DetailHistoryScreen.new({$creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), T.BuildContextLToDetailHistoryScreenL()), searchscreen.SearchScreen.routeName, dart.fn(context => new searchscreen.SearchScreen.new({$creationLocationd_0dea112b090073317d4: C[23] || CT.C23}), T.BuildContextLToSearchScreenL()), searchresult_screen.SearchResultScreen.routeName, dart.fn(context => new searchresult_screen.SearchResultScreen.new({$creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), T.BuildContextLToSearchResultScreenL()), webscreennormal.WebScreen.routeName, dart.fn(context => new webscreennormal.WebScreen.new({$creationLocationd_0dea112b090073317d4: C[25] || CT.C25}), T.BuildContextLToWebScreenL())]);
+    }
+  }, true);
+  dart.trackLibraries("packages/bulanan/routes.dart", {
+    "package:bulanan/routes.dart": routes
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["routes.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;MA8BiC,aAAM;YAAG,8DAC3B,sCAAW,QAAC,WAAY,gIAC7B,2BAAW,QAAC,WAAY,gHACnB,uCAAW,QAAC,WAAY,iIAChB,uDAAW,QAAC,WAAY,yJAC1B,mDAAW,QAAC,WAAY,mJAC9B,uCAAW,QAAC,WAAY,iIACf,yDAAW,QAAC,WAAY,4JACpC,gCAAW,QAAC,WAAY,uHACvB,kCAAW,QAAC,WAAY,0HACrB,wCAAW,QAAC,WAAY,mIAC3B,kCAAW,QAAC,WAAY,4HACrB,wCAAW,QAAC,WAAY,qIACnB,2CAAW,QAAC,WAAY,6IAC5B,0CAAW,QAAC,WAAY,wIAC1B,qCAAW,QAAC,WAAY,iIACrB,2CAAW,QAAC,WAAY,0IAC3B,sCAAW,QAAC,WAAY,kIACxB,sCAAW,QAAC,WAAY,kIACvB,wCAAW,QAAC,WAAY,qIAC5B,sCAAW,QAAC,WAAY,+HACjB,0CAAW,QAAC,WAAY,0IAC9B,mCAAW,QAAC,WAAY,6HACf,mDAAW,QAAC,WAAY,sJAC/B,qCAAW,QAAC,WAAY,iIAClB,kDAAW,QAAC,WAAY,oJACjC,qCAAW,QAAC,WAAY","file":"../../../../../../../packages/bulanan/routes.dart.lib.js"}');
+  // Exports:
+  return {
+    routes: routes
+  };
+}));
+
+//# sourceMappingURL=routes.dart.lib.js.map

@@ -1,0 +1,572 @@
+define(['dart_sdk'], (function load__packages__bulanan__models__ModelCategory_dart(dart_sdk) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const _js_helper = dart_sdk._js_helper;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  var ModelCategory = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $add = dartx.add;
+  var $_set = dartx._set;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    DataL: () => (T.DataL = dart.constFn(dart.legacy(ModelCategory.Data)))(),
+    JSArrayOfDataL: () => (T.JSArrayOfDataL = dart.constFn(_interceptors.JSArray$(T.DataL())))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    MapOfStringL$dynamic: () => (T.MapOfStringL$dynamic = dart.constFn(core.Map$(T.StringL(), dart.dynamic)))(),
+    MapLOfStringL$dynamic: () => (T.MapLOfStringL$dynamic = dart.constFn(dart.legacy(T.MapOfStringL$dynamic())))(),
+    dynamicToNull: () => (T.dynamicToNull = dart.constFn(dart.fnType(core.Null, [dart.dynamic])))(),
+    LinkedMapOfStringL$dynamic: () => (T.LinkedMapOfStringL$dynamic = dart.constFn(_js_helper.LinkedMap$(T.StringL(), dart.dynamic)))(),
+    DataLToMapLOfStringL$dynamic: () => (T.DataLToMapLOfStringL$dynamic = dart.constFn(dart.fnType(T.MapLOfStringL$dynamic(), [T.DataL()])))(),
+    SubL: () => (T.SubL = dart.constFn(dart.legacy(ModelCategory.Sub)))(),
+    JSArrayOfSubL: () => (T.JSArrayOfSubL = dart.constFn(_interceptors.JSArray$(T.SubL())))(),
+    SubLToMapLOfStringL$dynamic: () => (T.SubLToMapLOfStringL$dynamic = dart.constFn(dart.fnType(T.MapLOfStringL$dynamic(), [T.SubL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var I = ["package:bulanan/models/ModelCategory.dart"];
+  var status$ = dart.privateName(ModelCategory, "ModelCategory.status");
+  var data$ = dart.privateName(ModelCategory, "ModelCategory.data");
+  ModelCategory.ModelCategory = class ModelCategory extends core.Object {
+    get status() {
+      return this[status$];
+    }
+    set status(value) {
+      this[status$] = value;
+    }
+    get data() {
+      return this[data$];
+    }
+    set data(value) {
+      this[data$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("status", this.status);
+      if (this.data != null) {
+        data[$_set]("data", this.data[$map](T.MapLOfStringL$dynamic(), dart.fn(v => v.toJson(), T.DataLToMapLOfStringL$dynamic()))[$toList]());
+      }
+      return data;
+    }
+  };
+  (ModelCategory.ModelCategory.new = function(opts) {
+    let status = opts && 'status' in opts ? opts.status : null;
+    let data = opts && 'data' in opts ? opts.data : null;
+    this[status$] = status;
+    this[data$] = data;
+    ;
+  }).prototype = ModelCategory.ModelCategory.prototype;
+  (ModelCategory.ModelCategory.fromJson = function(json) {
+    this[data$] = null;
+    this[status$] = null;
+    this.status = T.boolL().as(json[$_get]("status"));
+    if (json[$_get]("data") != null) {
+      this.data = T.JSArrayOfDataL().of([]);
+      dart.dsend(json[$_get]("data"), 'forEach', [dart.fn(v => {
+          this.data[$add](new ModelCategory.Data.fromJson(T.MapLOfStringL$dynamic().as(v)));
+        }, T.dynamicToNull())]);
+    }
+  }).prototype = ModelCategory.ModelCategory.prototype;
+  dart.addTypeTests(ModelCategory.ModelCategory);
+  dart.addTypeCaches(ModelCategory.ModelCategory);
+  dart.setMethodSignature(ModelCategory.ModelCategory, () => ({
+    __proto__: dart.getMethods(ModelCategory.ModelCategory.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelCategory.ModelCategory, I[0]);
+  dart.setFieldSignature(ModelCategory.ModelCategory, () => ({
+    __proto__: dart.getFields(ModelCategory.ModelCategory.__proto__),
+    status: dart.fieldType(dart.legacy(core.bool)),
+    data: dart.fieldType(dart.legacy(core.List$(dart.legacy(ModelCategory.Data))))
+  }));
+  var isexpanded = dart.privateName(ModelCategory, "Data.isexpanded");
+  var idProductCategory$ = dart.privateName(ModelCategory, "Data.idProductCategory");
+  var idCategoryParent$ = dart.privateName(ModelCategory, "Data.idCategoryParent");
+  var idCity$ = dart.privateName(ModelCategory, "Data.idCity");
+  var categoryName$ = dart.privateName(ModelCategory, "Data.categoryName");
+  var slug$ = dart.privateName(ModelCategory, "Data.slug");
+  var description$ = dart.privateName(ModelCategory, "Data.description");
+  var sequenceNumber$ = dart.privateName(ModelCategory, "Data.sequenceNumber");
+  var image$ = dart.privateName(ModelCategory, "Data.image");
+  var icon$ = dart.privateName(ModelCategory, "Data.icon");
+  var discFrom$ = dart.privateName(ModelCategory, "Data.discFrom");
+  var isPublished$ = dart.privateName(ModelCategory, "Data.isPublished");
+  var createdDate$ = dart.privateName(ModelCategory, "Data.createdDate");
+  var updatedDate$ = dart.privateName(ModelCategory, "Data.updatedDate");
+  var createdBy$ = dart.privateName(ModelCategory, "Data.createdBy");
+  var updatedBy$ = dart.privateName(ModelCategory, "Data.updatedBy");
+  var sub$ = dart.privateName(ModelCategory, "Data.sub");
+  ModelCategory.Data = class Data extends core.Object {
+    get isexpanded() {
+      return this[isexpanded];
+    }
+    set isexpanded(value) {
+      this[isexpanded] = value;
+    }
+    get idProductCategory() {
+      return this[idProductCategory$];
+    }
+    set idProductCategory(value) {
+      this[idProductCategory$] = value;
+    }
+    get idCategoryParent() {
+      return this[idCategoryParent$];
+    }
+    set idCategoryParent(value) {
+      this[idCategoryParent$] = value;
+    }
+    get idCity() {
+      return this[idCity$];
+    }
+    set idCity(value) {
+      this[idCity$] = value;
+    }
+    get categoryName() {
+      return this[categoryName$];
+    }
+    set categoryName(value) {
+      this[categoryName$] = value;
+    }
+    get slug() {
+      return this[slug$];
+    }
+    set slug(value) {
+      this[slug$] = value;
+    }
+    get description() {
+      return this[description$];
+    }
+    set description(value) {
+      this[description$] = value;
+    }
+    get sequenceNumber() {
+      return this[sequenceNumber$];
+    }
+    set sequenceNumber(value) {
+      this[sequenceNumber$] = value;
+    }
+    get image() {
+      return this[image$];
+    }
+    set image(value) {
+      this[image$] = value;
+    }
+    get icon() {
+      return this[icon$];
+    }
+    set icon(value) {
+      this[icon$] = value;
+    }
+    get discFrom() {
+      return this[discFrom$];
+    }
+    set discFrom(value) {
+      this[discFrom$] = value;
+    }
+    get isPublished() {
+      return this[isPublished$];
+    }
+    set isPublished(value) {
+      this[isPublished$] = value;
+    }
+    get createdDate() {
+      return this[createdDate$];
+    }
+    set createdDate(value) {
+      this[createdDate$] = value;
+    }
+    get updatedDate() {
+      return this[updatedDate$];
+    }
+    set updatedDate(value) {
+      this[updatedDate$] = value;
+    }
+    get createdBy() {
+      return this[createdBy$];
+    }
+    set createdBy(value) {
+      this[createdBy$] = value;
+    }
+    get updatedBy() {
+      return this[updatedBy$];
+    }
+    set updatedBy(value) {
+      this[updatedBy$] = value;
+    }
+    get sub() {
+      return this[sub$];
+    }
+    set sub(value) {
+      this[sub$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("id_product_category", this.idProductCategory);
+      data[$_set]("id_category_parent", this.idCategoryParent);
+      data[$_set]("id_city", this.idCity);
+      data[$_set]("category_name", this.categoryName);
+      data[$_set]("slug", this.slug);
+      data[$_set]("description", this.description);
+      data[$_set]("sequence_number", this.sequenceNumber);
+      data[$_set]("image", this.image);
+      data[$_set]("icon", this.icon);
+      data[$_set]("disc_from", this.discFrom);
+      data[$_set]("is_published", this.isPublished);
+      data[$_set]("created_date", this.createdDate);
+      data[$_set]("updated_date", this.updatedDate);
+      data[$_set]("created_by", this.createdBy);
+      data[$_set]("updated_by", this.updatedBy);
+      if (this.sub != null) {
+        data[$_set]("sub", this.sub[$map](T.MapLOfStringL$dynamic(), dart.fn(v => v.toJson(), T.SubLToMapLOfStringL$dynamic()))[$toList]());
+      }
+      return data;
+    }
+  };
+  (ModelCategory.Data.new = function(opts) {
+    let idProductCategory = opts && 'idProductCategory' in opts ? opts.idProductCategory : null;
+    let idCategoryParent = opts && 'idCategoryParent' in opts ? opts.idCategoryParent : null;
+    let idCity = opts && 'idCity' in opts ? opts.idCity : null;
+    let categoryName = opts && 'categoryName' in opts ? opts.categoryName : null;
+    let slug = opts && 'slug' in opts ? opts.slug : null;
+    let description = opts && 'description' in opts ? opts.description : null;
+    let sequenceNumber = opts && 'sequenceNumber' in opts ? opts.sequenceNumber : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    let discFrom = opts && 'discFrom' in opts ? opts.discFrom : null;
+    let isPublished = opts && 'isPublished' in opts ? opts.isPublished : null;
+    let createdDate = opts && 'createdDate' in opts ? opts.createdDate : null;
+    let updatedDate = opts && 'updatedDate' in opts ? opts.updatedDate : null;
+    let createdBy = opts && 'createdBy' in opts ? opts.createdBy : null;
+    let updatedBy = opts && 'updatedBy' in opts ? opts.updatedBy : null;
+    let sub = opts && 'sub' in opts ? opts.sub : null;
+    this[isexpanded] = false;
+    this[idProductCategory$] = idProductCategory;
+    this[idCategoryParent$] = idCategoryParent;
+    this[idCity$] = idCity;
+    this[categoryName$] = categoryName;
+    this[slug$] = slug;
+    this[description$] = description;
+    this[sequenceNumber$] = sequenceNumber;
+    this[image$] = image;
+    this[icon$] = icon;
+    this[discFrom$] = discFrom;
+    this[isPublished$] = isPublished;
+    this[createdDate$] = createdDate;
+    this[updatedDate$] = updatedDate;
+    this[createdBy$] = createdBy;
+    this[updatedBy$] = updatedBy;
+    this[sub$] = sub;
+    ;
+  }).prototype = ModelCategory.Data.prototype;
+  (ModelCategory.Data.fromJson = function(json) {
+    this[isexpanded] = false;
+    this[sub$] = null;
+    this[updatedBy$] = null;
+    this[createdBy$] = null;
+    this[updatedDate$] = null;
+    this[createdDate$] = null;
+    this[isPublished$] = null;
+    this[discFrom$] = null;
+    this[icon$] = null;
+    this[image$] = null;
+    this[sequenceNumber$] = null;
+    this[description$] = null;
+    this[slug$] = null;
+    this[categoryName$] = null;
+    this[idCity$] = null;
+    this[idCategoryParent$] = null;
+    this[idProductCategory$] = null;
+    this.idProductCategory = T.StringL().as(json[$_get]("id_product_category"));
+    this.idCategoryParent = T.StringL().as(json[$_get]("id_category_parent"));
+    this.idCity = T.StringL().as(json[$_get]("id_city"));
+    this.categoryName = T.StringL().as(json[$_get]("category_name"));
+    this.slug = T.StringL().as(json[$_get]("slug"));
+    this.description = T.StringL().as(json[$_get]("description"));
+    this.sequenceNumber = T.StringL().as(json[$_get]("sequence_number"));
+    this.image = T.StringL().as(json[$_get]("image"));
+    this.icon = T.StringL().as(json[$_get]("icon"));
+    this.discFrom = T.StringL().as(json[$_get]("disc_from"));
+    this.isPublished = T.StringL().as(json[$_get]("is_published"));
+    this.createdDate = T.StringL().as(json[$_get]("created_date"));
+    this.updatedDate = T.StringL().as(json[$_get]("updated_date"));
+    this.createdBy = T.StringL().as(json[$_get]("created_by"));
+    this.updatedBy = T.StringL().as(json[$_get]("updated_by"));
+    if (json[$_get]("sub") != null) {
+      this.sub = T.JSArrayOfSubL().of([]);
+      dart.dsend(json[$_get]("sub"), 'forEach', [dart.fn(v => {
+          this.sub[$add](new ModelCategory.Sub.fromJson(T.MapLOfStringL$dynamic().as(v)));
+        }, T.dynamicToNull())]);
+    }
+  }).prototype = ModelCategory.Data.prototype;
+  dart.addTypeTests(ModelCategory.Data);
+  dart.addTypeCaches(ModelCategory.Data);
+  dart.setMethodSignature(ModelCategory.Data, () => ({
+    __proto__: dart.getMethods(ModelCategory.Data.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelCategory.Data, I[0]);
+  dart.setFieldSignature(ModelCategory.Data, () => ({
+    __proto__: dart.getFields(ModelCategory.Data.__proto__),
+    isexpanded: dart.fieldType(dart.legacy(core.bool)),
+    idProductCategory: dart.fieldType(dart.legacy(core.String)),
+    idCategoryParent: dart.fieldType(dart.legacy(core.String)),
+    idCity: dart.fieldType(dart.legacy(core.String)),
+    categoryName: dart.fieldType(dart.legacy(core.String)),
+    slug: dart.fieldType(dart.legacy(core.String)),
+    description: dart.fieldType(dart.legacy(core.String)),
+    sequenceNumber: dart.fieldType(dart.legacy(core.String)),
+    image: dart.fieldType(dart.legacy(core.String)),
+    icon: dart.fieldType(dart.legacy(core.String)),
+    discFrom: dart.fieldType(dart.legacy(core.String)),
+    isPublished: dart.fieldType(dart.legacy(core.String)),
+    createdDate: dart.fieldType(dart.legacy(core.String)),
+    updatedDate: dart.fieldType(dart.legacy(core.String)),
+    createdBy: dart.fieldType(dart.legacy(core.String)),
+    updatedBy: dart.fieldType(dart.legacy(core.String)),
+    sub: dart.fieldType(dart.legacy(core.List$(dart.legacy(ModelCategory.Sub))))
+  }));
+  var idProductCategory$0 = dart.privateName(ModelCategory, "Sub.idProductCategory");
+  var idCategoryParent$0 = dart.privateName(ModelCategory, "Sub.idCategoryParent");
+  var idCity$0 = dart.privateName(ModelCategory, "Sub.idCity");
+  var categoryName$0 = dart.privateName(ModelCategory, "Sub.categoryName");
+  var slug$0 = dart.privateName(ModelCategory, "Sub.slug");
+  var description$0 = dart.privateName(ModelCategory, "Sub.description");
+  var sequenceNumber$0 = dart.privateName(ModelCategory, "Sub.sequenceNumber");
+  var image$0 = dart.privateName(ModelCategory, "Sub.image");
+  var icon$0 = dart.privateName(ModelCategory, "Sub.icon");
+  var discFrom$0 = dart.privateName(ModelCategory, "Sub.discFrom");
+  var isPublished$0 = dart.privateName(ModelCategory, "Sub.isPublished");
+  var createdDate$0 = dart.privateName(ModelCategory, "Sub.createdDate");
+  var updatedDate$0 = dart.privateName(ModelCategory, "Sub.updatedDate");
+  var createdBy$0 = dart.privateName(ModelCategory, "Sub.createdBy");
+  var updatedBy$0 = dart.privateName(ModelCategory, "Sub.updatedBy");
+  var namaCategory$ = dart.privateName(ModelCategory, "Sub.namaCategory");
+  ModelCategory.Sub = class Sub extends core.Object {
+    get idProductCategory() {
+      return this[idProductCategory$0];
+    }
+    set idProductCategory(value) {
+      this[idProductCategory$0] = value;
+    }
+    get idCategoryParent() {
+      return this[idCategoryParent$0];
+    }
+    set idCategoryParent(value) {
+      this[idCategoryParent$0] = value;
+    }
+    get idCity() {
+      return this[idCity$0];
+    }
+    set idCity(value) {
+      this[idCity$0] = value;
+    }
+    get categoryName() {
+      return this[categoryName$0];
+    }
+    set categoryName(value) {
+      this[categoryName$0] = value;
+    }
+    get slug() {
+      return this[slug$0];
+    }
+    set slug(value) {
+      this[slug$0] = value;
+    }
+    get description() {
+      return this[description$0];
+    }
+    set description(value) {
+      this[description$0] = value;
+    }
+    get sequenceNumber() {
+      return this[sequenceNumber$0];
+    }
+    set sequenceNumber(value) {
+      this[sequenceNumber$0] = value;
+    }
+    get image() {
+      return this[image$0];
+    }
+    set image(value) {
+      this[image$0] = value;
+    }
+    get icon() {
+      return this[icon$0];
+    }
+    set icon(value) {
+      this[icon$0] = value;
+    }
+    get discFrom() {
+      return this[discFrom$0];
+    }
+    set discFrom(value) {
+      this[discFrom$0] = value;
+    }
+    get isPublished() {
+      return this[isPublished$0];
+    }
+    set isPublished(value) {
+      this[isPublished$0] = value;
+    }
+    get createdDate() {
+      return this[createdDate$0];
+    }
+    set createdDate(value) {
+      this[createdDate$0] = value;
+    }
+    get updatedDate() {
+      return this[updatedDate$0];
+    }
+    set updatedDate(value) {
+      this[updatedDate$0] = value;
+    }
+    get createdBy() {
+      return this[createdBy$0];
+    }
+    set createdBy(value) {
+      this[createdBy$0] = value;
+    }
+    get updatedBy() {
+      return this[updatedBy$0];
+    }
+    set updatedBy(value) {
+      this[updatedBy$0] = value;
+    }
+    get namaCategory() {
+      return this[namaCategory$];
+    }
+    set namaCategory(value) {
+      this[namaCategory$] = value;
+    }
+    toJson() {
+      let data = new (T.LinkedMapOfStringL$dynamic()).new();
+      data[$_set]("id_product_category", this.idProductCategory);
+      data[$_set]("id_category_parent", this.idCategoryParent);
+      data[$_set]("id_city", this.idCity);
+      data[$_set]("category_name", this.categoryName);
+      data[$_set]("slug", this.slug);
+      data[$_set]("description", this.description);
+      data[$_set]("sequence_number", this.sequenceNumber);
+      data[$_set]("image", this.image);
+      data[$_set]("icon", this.icon);
+      data[$_set]("disc_from", this.discFrom);
+      data[$_set]("is_published", this.isPublished);
+      data[$_set]("created_date", this.createdDate);
+      data[$_set]("updated_date", this.updatedDate);
+      data[$_set]("created_by", this.createdBy);
+      data[$_set]("updated_by", this.updatedBy);
+      data[$_set]("nama_category", this.namaCategory);
+      return data;
+    }
+  };
+  (ModelCategory.Sub.new = function(opts) {
+    let idProductCategory = opts && 'idProductCategory' in opts ? opts.idProductCategory : null;
+    let idCategoryParent = opts && 'idCategoryParent' in opts ? opts.idCategoryParent : null;
+    let idCity = opts && 'idCity' in opts ? opts.idCity : null;
+    let categoryName = opts && 'categoryName' in opts ? opts.categoryName : null;
+    let slug = opts && 'slug' in opts ? opts.slug : null;
+    let description = opts && 'description' in opts ? opts.description : null;
+    let sequenceNumber = opts && 'sequenceNumber' in opts ? opts.sequenceNumber : null;
+    let image = opts && 'image' in opts ? opts.image : null;
+    let icon = opts && 'icon' in opts ? opts.icon : null;
+    let discFrom = opts && 'discFrom' in opts ? opts.discFrom : null;
+    let isPublished = opts && 'isPublished' in opts ? opts.isPublished : null;
+    let createdDate = opts && 'createdDate' in opts ? opts.createdDate : null;
+    let updatedDate = opts && 'updatedDate' in opts ? opts.updatedDate : null;
+    let createdBy = opts && 'createdBy' in opts ? opts.createdBy : null;
+    let updatedBy = opts && 'updatedBy' in opts ? opts.updatedBy : null;
+    let namaCategory = opts && 'namaCategory' in opts ? opts.namaCategory : null;
+    this[idProductCategory$0] = idProductCategory;
+    this[idCategoryParent$0] = idCategoryParent;
+    this[idCity$0] = idCity;
+    this[categoryName$0] = categoryName;
+    this[slug$0] = slug;
+    this[description$0] = description;
+    this[sequenceNumber$0] = sequenceNumber;
+    this[image$0] = image;
+    this[icon$0] = icon;
+    this[discFrom$0] = discFrom;
+    this[isPublished$0] = isPublished;
+    this[createdDate$0] = createdDate;
+    this[updatedDate$0] = updatedDate;
+    this[createdBy$0] = createdBy;
+    this[updatedBy$0] = updatedBy;
+    this[namaCategory$] = namaCategory;
+    ;
+  }).prototype = ModelCategory.Sub.prototype;
+  (ModelCategory.Sub.fromJson = function(json) {
+    this[namaCategory$] = null;
+    this[updatedBy$0] = null;
+    this[createdBy$0] = null;
+    this[updatedDate$0] = null;
+    this[createdDate$0] = null;
+    this[isPublished$0] = null;
+    this[discFrom$0] = null;
+    this[icon$0] = null;
+    this[image$0] = null;
+    this[sequenceNumber$0] = null;
+    this[description$0] = null;
+    this[slug$0] = null;
+    this[categoryName$0] = null;
+    this[idCity$0] = null;
+    this[idCategoryParent$0] = null;
+    this[idProductCategory$0] = null;
+    this.idProductCategory = T.StringL().as(json[$_get]("id_product_category"));
+    this.idCategoryParent = T.StringL().as(json[$_get]("id_category_parent"));
+    this.idCity = T.StringL().as(json[$_get]("id_city"));
+    this.categoryName = T.StringL().as(json[$_get]("category_name"));
+    this.slug = T.StringL().as(json[$_get]("slug"));
+    this.description = T.StringL().as(json[$_get]("description"));
+    this.sequenceNumber = T.StringL().as(json[$_get]("sequence_number"));
+    this.image = T.StringL().as(json[$_get]("image"));
+    this.icon = T.StringL().as(json[$_get]("icon"));
+    this.discFrom = T.StringL().as(json[$_get]("disc_from"));
+    this.isPublished = T.StringL().as(json[$_get]("is_published"));
+    this.createdDate = T.StringL().as(json[$_get]("created_date"));
+    this.updatedDate = T.StringL().as(json[$_get]("updated_date"));
+    this.createdBy = T.StringL().as(json[$_get]("created_by"));
+    this.updatedBy = T.StringL().as(json[$_get]("updated_by"));
+    this.namaCategory = T.StringL().as(json[$_get]("nama_category"));
+  }).prototype = ModelCategory.Sub.prototype;
+  dart.addTypeTests(ModelCategory.Sub);
+  dart.addTypeCaches(ModelCategory.Sub);
+  dart.setMethodSignature(ModelCategory.Sub, () => ({
+    __proto__: dart.getMethods(ModelCategory.Sub.__proto__),
+    toJson: dart.fnType(dart.legacy(core.Map$(dart.legacy(core.String), dart.dynamic)), [])
+  }));
+  dart.setLibraryUri(ModelCategory.Sub, I[0]);
+  dart.setFieldSignature(ModelCategory.Sub, () => ({
+    __proto__: dart.getFields(ModelCategory.Sub.__proto__),
+    idProductCategory: dart.fieldType(dart.legacy(core.String)),
+    idCategoryParent: dart.fieldType(dart.legacy(core.String)),
+    idCity: dart.fieldType(dart.legacy(core.String)),
+    categoryName: dart.fieldType(dart.legacy(core.String)),
+    slug: dart.fieldType(dart.legacy(core.String)),
+    description: dart.fieldType(dart.legacy(core.String)),
+    sequenceNumber: dart.fieldType(dart.legacy(core.String)),
+    image: dart.fieldType(dart.legacy(core.String)),
+    icon: dart.fieldType(dart.legacy(core.String)),
+    discFrom: dart.fieldType(dart.legacy(core.String)),
+    isPublished: dart.fieldType(dart.legacy(core.String)),
+    createdDate: dart.fieldType(dart.legacy(core.String)),
+    updatedDate: dart.fieldType(dart.legacy(core.String)),
+    createdBy: dart.fieldType(dart.legacy(core.String)),
+    updatedBy: dart.fieldType(dart.legacy(core.String)),
+    namaCategory: dart.fieldType(dart.legacy(core.String))
+  }));
+  dart.trackLibraries("packages/bulanan/models/ModelCategory.dart", {
+    "package:bulanan/models/ModelCategory.dart": ModelCategory
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["ModelCategory.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IACO;;;;;;IACM;;;;;;;AAekB,iBAAW;AACV,MAA5B,AAAI,IAAA,QAAC,UAAiB;AACtB,UAAS;AACiD,QAAxD,AAAI,IAAA,QAAC,QAAe,AAAK,AAAuB,2CAAnB,QAAC,KAAM,AAAE,CAAD;;AAEvC,YAAO,KAAI;IACb;;;QAnBoB;QAAa;IAAb;IAAa;;EAAM;mDAEK;;;AACnB,kBAAvB,aAAS,AAAI,IAAA,QAAC;AACd,QAAI,AAAI,IAAA,QAAC;AACQ,MAAf,YAAa;AAGX,MAFW,WAAb,AAAI,IAAA,QAAC,qBAAgB,QAAC;AACU,UAA9B,AAAK,gBAAQ,6DAAc,CAAC;;;EAGlC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAaK;;;;;;IACE;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACG;;;;;;;AA6CmB,iBAAW;AACc,MAApD,AAAI,IAAA,QAAC,uBAA8B;AACe,MAAlD,AAAI,IAAA,QAAC,sBAA6B;AACL,MAA7B,AAAI,IAAA,QAAC,WAAkB;AACkB,MAAzC,AAAI,IAAA,QAAC,iBAAwB;AACL,MAAxB,AAAI,IAAA,QAAC,QAAe;AACkB,MAAtC,AAAI,IAAA,QAAC,eAAsB;AACkB,MAA7C,AAAI,IAAA,QAAC,mBAA0B;AACL,MAA1B,AAAI,IAAA,QAAC,SAAgB;AACG,MAAxB,AAAI,IAAA,QAAC,QAAe;AACa,MAAjC,AAAI,IAAA,QAAC,aAAoB;AACc,MAAvC,AAAI,IAAA,QAAC,gBAAuB;AACW,MAAvC,AAAI,IAAA,QAAC,gBAAuB;AACW,MAAvC,AAAI,IAAA,QAAC,gBAAuB;AACO,MAAnC,AAAI,IAAA,QAAC,cAAqB;AACS,MAAnC,AAAI,IAAA,QAAC,cAAqB;AAC1B,UAAS;AAC+C,QAAtD,AAAI,IAAA,QAAC,OAAc,AAAI,AAAuB,0CAAnB,QAAC,KAAM,AAAE,CAAD;;AAErC,YAAO,KAAI;IACb;;;QA9DU;QACD;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;IAlCJ,mBAAa;IAmBR;IACD;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAAK;0CAEqB;IApC9B,mBAAa;;;;;;;;;;;;;;;;;AAqC+B,6BAA/C,eAAoB,AAAI,IAAA,QAAC;AACoB,4BAA7C,eAAmB,AAAI,IAAA,QAAC;AACA,kBAAxB,eAAS,AAAI,IAAA,QAAC;AACsB,wBAApC,eAAe,AAAI,IAAA,QAAC;AACD,gBAAnB,eAAO,AAAI,IAAA,QAAC;AACqB,uBAAjC,eAAc,AAAI,IAAA,QAAC;AACqB,0BAAxC,eAAiB,AAAI,IAAA,QAAC;AACD,iBAArB,eAAQ,AAAI,IAAA,QAAC;AACM,gBAAnB,eAAO,AAAI,IAAA,QAAC;AACgB,oBAA5B,eAAW,AAAI,IAAA,QAAC;AACkB,uBAAlC,eAAc,AAAI,IAAA,QAAC;AACe,uBAAlC,eAAc,AAAI,IAAA,QAAC;AACe,uBAAlC,eAAc,AAAI,IAAA,QAAC;AACW,qBAA9B,eAAY,AAAI,IAAA,QAAC;AACa,qBAA9B,eAAY,AAAI,IAAA,QAAC;AACjB,QAAI,AAAI,IAAA,QAAC;AACM,MAAb,WAAW;AAGT,MAFU,WAAZ,AAAI,IAAA,QAAC,oBAAe,QAAC;AACS,UAA5B,AAAI,eAAQ,4DAAa,CAAC;;;EAGhC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IA2BO;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;IACA;;;;;;;AAwCsB,iBAAW;AACc,MAApD,AAAI,IAAA,QAAC,uBAA8B;AACe,MAAlD,AAAI,IAAA,QAAC,sBAA6B;AACL,MAA7B,AAAI,IAAA,QAAC,WAAkB;AACkB,MAAzC,AAAI,IAAA,QAAC,iBAAwB;AACL,MAAxB,AAAI,IAAA,QAAC,QAAe;AACkB,MAAtC,AAAI,IAAA,QAAC,eAAsB;AACkB,MAA7C,AAAI,IAAA,QAAC,mBAA0B;AACL,MAA1B,AAAI,IAAA,QAAC,SAAgB;AACG,MAAxB,AAAI,IAAA,QAAC,QAAe;AACa,MAAjC,AAAI,IAAA,QAAC,aAAoB;AACc,MAAvC,AAAI,IAAA,QAAC,gBAAuB;AACW,MAAvC,AAAI,IAAA,QAAC,gBAAuB;AACW,MAAvC,AAAI,IAAA,QAAC,gBAAuB;AACO,MAAnC,AAAI,IAAA,QAAC,cAAqB;AACS,MAAnC,AAAI,IAAA,QAAC,cAAqB;AACe,MAAzC,AAAI,IAAA,QAAC,iBAAwB;AAC7B,YAAO,KAAI;IACb;;;QAvDU;QACD;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;QACA;IAfC;IACD;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;IACA;;EAAc;yCAEW;;;;;;;;;;;;;;;;;AACe,6BAA/C,eAAoB,AAAI,IAAA,QAAC;AACoB,4BAA7C,eAAmB,AAAI,IAAA,QAAC;AACA,kBAAxB,eAAS,AAAI,IAAA,QAAC;AACsB,wBAApC,eAAe,AAAI,IAAA,QAAC;AACD,gBAAnB,eAAO,AAAI,IAAA,QAAC;AACqB,uBAAjC,eAAc,AAAI,IAAA,QAAC;AACqB,0BAAxC,eAAiB,AAAI,IAAA,QAAC;AACD,iBAArB,eAAQ,AAAI,IAAA,QAAC;AACM,gBAAnB,eAAO,AAAI,IAAA,QAAC;AACgB,oBAA5B,eAAW,AAAI,IAAA,QAAC;AACkB,uBAAlC,eAAc,AAAI,IAAA,QAAC;AACe,uBAAlC,eAAc,AAAI,IAAA,QAAC;AACe,uBAAlC,eAAc,AAAI,IAAA,QAAC;AACW,qBAA9B,eAAY,AAAI,IAAA,QAAC;AACa,qBAA9B,eAAY,AAAI,IAAA,QAAC;AACmB,wBAApC,eAAe,AAAI,IAAA,QAAC;EACtB","file":"../../../../../../../../packages/bulanan/models/ModelCategory.dart.lib.js"}');
+  // Exports:
+  return {
+    models__ModelCategory: ModelCategory
+  };
+}));
+
+//# sourceMappingURL=ModelCategory.dart.lib.js.map
