@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       dispose: (_, NetworkApiService service) => service.client.dispose(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Bulanan',
         theme: theme(),
         // home: SplashScreen(),
         // We use routeName so that we dont need to remember the name
